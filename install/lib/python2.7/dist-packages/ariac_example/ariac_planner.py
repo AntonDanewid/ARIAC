@@ -18,9 +18,7 @@ from __future__ import print_function
 import time
 
 import rospy
-import moveit_commander
-import moveit_msgs.msg
-import geometry_msgs.msg
+
 from osrf_gear.msg import Order
 from osrf_gear.msg import VacuumGripperState
 from osrf_gear.srv import ConveyorBeltControl
@@ -111,7 +109,7 @@ def control_conveyor(power):
     return response.success
 
 
-class MyCompetitionClass:
+class Planner:
     def __init__(self):
         self.joint_trajectory_publisher = \
             rospy.Publisher("/ariac/arm/command", JointTrajectory, queue_size=10)
@@ -132,8 +130,6 @@ class MyCompetitionClass:
             'iiwa_joint_7',
             'linear_arm_actuator_joint'
         ]
-
-
 
     def comp_state_callback(self, msg):
         if self.current_comp_state != msg.data:

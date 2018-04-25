@@ -38,7 +38,6 @@ target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
 install(PROGRAMS
   script/ariac_example_node.py
   script/tf2_example.py
-  script/planner_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -60,6 +59,10 @@ install(TARGETS ariac_example_node
 install(FILES
  config/sample_gear_conf.yaml
  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+)
+
+find_package(catkin REQUIRED COMPONENTS
+   moveit_ros_planning_interface
 )
 
 #############

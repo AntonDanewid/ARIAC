@@ -1,8 +1,8 @@
-prefix=/home/ros/helloworld_ws/install
+prefix=/home/ros/ARIAC/install
 
 Name: curlnanton
 Description: Description of curlnanton
 Version: 0.1.0
 Cflags: 
-Libs: -L/home/ros/helloworld_ws/install/lib 
+Libs: -L/home/ros/ARIAC/install/lib 
 Requires: 

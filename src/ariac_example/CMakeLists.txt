@@ -61,9 +61,7 @@ install(FILES
  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
 )
 
-find_package(catkin REQUIRED COMPONENTS
-   moveit_ros_planning_interface
-)
+
 
 #############
 ## Testing ##

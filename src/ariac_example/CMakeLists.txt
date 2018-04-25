@@ -38,6 +38,7 @@ target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
 install(PROGRAMS
   script/ariac_example_node.py
   script/tf2_example.py
+  script/planner_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

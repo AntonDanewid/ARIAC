@@ -1,3 +1,5 @@
+catkin_make
+
 source $PWD/devel/setup.bash
 
-rosrun curlnanton ariac_example_node.py
+rosrun curlnanton planner_node.py

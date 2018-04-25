@@ -23,9 +23,9 @@ catkin_package()
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 ## Declare a C++ executable
-add_executable(ariac_example_node src/ariac_example_node.cpp)
-add_dependencies(ariac_example_node ${catkin_EXPORTED_TARGETS})
-target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
+#add_executable(ariac_example_node src/ariac_example_node.cpp)
+#add_dependencies(ariac_example_node ${catkin_EXPORTED_TARGETS})
+#target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
 
 #############
 ## Install ##
@@ -43,7 +43,7 @@ install(PROGRAMS
 )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS ariac_example_node
+install(TARGETS
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

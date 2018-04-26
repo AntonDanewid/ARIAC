@@ -1,0 +1,16 @@
+Symlinking /home/anton/helloworld_ws/devel/lib/libgeometric_shapes.so
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/geometric_shapes.pc
+Symlinking /home/anton/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake
+Cleaning: (/home/ros/helloworld_ws/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig.cmake, /home/ros/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/geometric_shapes/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake, /home/ros/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/geometric_shapes/lib/libgeometric_shapes.so, /home/ros/helloworld_ws/devel/lib/libgeometric_shapes.so)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/geometric_shapes/lib/pkgconfig/geometric_shapes.pc, /home/ros/helloworld_ws/devel/lib/pkgconfig/geometric_shapes.pc)
+Unlinking: /home/ros/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/share/geometric_shapes/cmake/geometric_shapesConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libgeometric_shapes.so
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/pkgconfig/geometric_shapes.pc
+Already unlinked: {}

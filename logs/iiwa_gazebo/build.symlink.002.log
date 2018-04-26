@@ -1,0 +1,12 @@
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/iiwa_gazebo.pc
+Symlinking /home/anton/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake
+Cleaning: (/home/ros/helloworld_ws/devel/.private/iiwa_gazebo/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake, /home/ros/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/iiwa_gazebo/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake, /home/ros/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/iiwa_gazebo/lib/pkgconfig/iiwa_gazebo.pc, /home/ros/helloworld_ws/devel/lib/pkgconfig/iiwa_gazebo.pc)
+Unlinking: /home/ros/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/pkgconfig/iiwa_gazebo.pc
+Already unlinked: {}

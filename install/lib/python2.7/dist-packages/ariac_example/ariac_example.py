@@ -19,7 +19,7 @@ import time
 import sys
 import copy
 import rospy
-#import moveit_commander
+import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
 from osrf_gear.msg import Order
@@ -135,6 +135,47 @@ class MyCompetitionClass:
         ]
 
 
+
+        moveit_commander.roscpp_initialize(sys.argv)
+        
+        robot = moveit_commander.RobotCommander()
+        #scene = moveit_commander.PlanningSceneInterface()
+        group = moveit_commander.MoveGroupCommander("manipulator")
+        display_trajectory_publisher = rospy.Publisher(
+                                    '/move_group/display_planned_path',
+                                    moveit_msgs.msg.DisplayTrajectory)
+        rospy.sleep(10)
+    
+        print("============ Generating plan 1")
+        current = geometry_msgs.msg.Pose()
+        current = robot.get_current_state()
+        print("ROBOT STATE ", current)
+
+
+        pose_target.orientation.w = 0.05
+        pose_target.position.x = currentx
+        pose_target.position.y = currenty
+        pose_target.position.z = 1.1
+        group.set_pose_target(pose_target)
+        plan1 = group.plan()
+
+
+        display_trajectory.trajectory_start = robot.get_current_state()
+        display_trajectory.trajectory.append(plan1)
+        display_trajectory_publisher.publish(display_trajectory)
+
+
+
+        group.execute(plan1)
+                #rospy.sleep(5)
+        #group.clear_pose_targets()
+        #group_variable_values = group.get_current_joint_values()
+        
+   
+
+
+
+        
 
     def comp_state_callback(self, msg):
         if self.current_comp_state != msg.data:

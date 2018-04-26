@@ -1,0 +1,47 @@
+[  8%] Built target moveit_ros_manipulation_gencfg
+[ 83%] Built target moveit_pick_place_planner
+[100%] Built target moveit_move_group_pick_place_capability
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/anton/helloworld_ws/install/_setup_util.py
+-- Installing: /home/anton/helloworld_ws/install/env.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.bash
+-- Installing: /home/anton/helloworld_ws/install/setup.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.zsh
+-- Installing: /home/anton/helloworld_ws/install/.rosinstall
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_ros_manipulation/PickPlaceDynamicReconfigureConfig.h
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/__init__.py
+Listing /home/anton/helloworld_ws/devel/.private/moveit_ros_manipulation/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_manipulation/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/PickPlaceDynamicReconfigureConfig.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_manipulation/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/__init__.py ...
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/PickPlaceDynamicReconfigureConfig.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/__init__.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/__init__.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_manipulation/cfg/PickPlaceDynamicReconfigureConfig.py
+-- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/moveit_ros_manipulation.pc
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_manipulation/cmake/moveit_ros_manipulationConfig.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_manipulation/cmake/moveit_ros_manipulationConfig-version.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_manipulation/package.xml
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_manipulation/pick_place_capability_plugin_description.xml
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pick_place_planner.so.0.9.11
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pick_place_planner.so
+-- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_pick_place_planner.so.0.9.11" to ""
+-- Up-to-date: /home/anton/helloworld_ws/install/include
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/reachable_valid_pose_filter.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/plan_stage.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/manipulation_pipeline.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/manipulation_plan.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/approach_and_translate_stage.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/manipulation_stage.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/pick_place_params.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/pick_place/pick_place.h
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_pick_place_capability.so.0.9.11
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_pick_place_capability.so
+-- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_move_group_pick_place_capability.so.0.9.11" to ""
+-- Up-to-date: /home/anton/helloworld_ws/install/include
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group_pick_place_capability
+-- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group_pick_place_capability/capability_names.h

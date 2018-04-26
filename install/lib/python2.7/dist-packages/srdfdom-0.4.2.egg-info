@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: srdfdom
+Version: 0.4.2
+Summary: Parser for Semantic Robot Description Format (SRDF).
+Home-page: http://ros.org/wiki/srdfdom
+Author: Dave Coleman <dave@dav.ee>, Isaac I. Y. Saito <130s@2000.jukuin.keio.ac.jp>
+Author-email: UNKNOWN
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

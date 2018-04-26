@@ -1,1 +1,1 @@
-/home/ros/helloworld_ws/devel/.private/moveit_msgs/share/moveit_msgs/cmake/moveit_msgsConfig-version.cmake
+/home/anton/helloworld_ws/devel/.private/moveit_msgs/share/moveit_msgs/cmake/moveit_msgsConfig-version.cmake

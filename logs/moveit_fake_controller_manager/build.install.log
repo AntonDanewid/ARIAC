@@ -1,0 +1,17 @@
+[100%] Built target moveit_fake_controller_manager
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/anton/helloworld_ws/install/_setup_util.py
+-- Installing: /home/anton/helloworld_ws/install/env.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.bash
+-- Installing: /home/anton/helloworld_ws/install/setup.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.zsh
+-- Installing: /home/anton/helloworld_ws/install/.rosinstall
+-- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/moveit_fake_controller_manager.pc
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig-version.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_fake_controller_manager/package.xml
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_fake_controller_manager.so.0.9.11
+-- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_fake_controller_manager.so
+-- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_fake_controller_manager.so.0.9.11" to ""
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_fake_controller_manager/moveit_fake_controller_manager_plugin_description.xml

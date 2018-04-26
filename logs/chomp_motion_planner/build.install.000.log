@@ -1,0 +1,24 @@
+[100%] Built target chomp_motion_planner
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/anton/helloworld_ws/install/_setup_util.py
+-- Installing: /home/anton/helloworld_ws/install/env.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.bash
+-- Installing: /home/anton/helloworld_ws/install/setup.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.zsh
+-- Installing: /home/anton/helloworld_ws/install/.rosinstall
+-- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/chomp_motion_planner.pc
+-- Installing: /home/anton/helloworld_ws/install/share/chomp_motion_planner/cmake/chomp_motion_plannerConfig.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/chomp_motion_planner/cmake/chomp_motion_plannerConfig-version.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/chomp_motion_planner/package.xml
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_optimizer.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_planner.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_trajectory.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/multivariate_gaussian.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_parameters.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_cost.h
+-- Installing: /home/anton/helloworld_ws/install/include/chomp_motion_planner/chomp_utils.h
+-- Installing: /home/anton/helloworld_ws/install/lib/libchomp_motion_planner.so.0.9.11
+-- Installing: /home/anton/helloworld_ws/install/lib/libchomp_motion_planner.so
+-- Set runtime path of "/home/anton/helloworld_ws/install/lib/libchomp_motion_planner.so.0.9.11" to ""

@@ -1,5 +1,3 @@
-sudo rm -r build
-
 cd src
 rosdep install --from-paths . --ignore-src --rosdistro kinetic
 source /opt/ros/kinetic/setup.bash

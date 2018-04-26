@@ -1,0 +1,44 @@
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_warehouse.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_warehouse.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_ros_warehouse.pc
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_init_demo_warehouse
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_import_from_text
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_services
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_save_to_warehouse
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_save_as_text
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_broadcast
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig-version.cmake
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig-version.cmake, /home/ros/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig-version.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig.cmake, /home/ros/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/libmoveit_warehouse.so.0.9.11, /home/ros/helloworld_ws/devel/lib/libmoveit_warehouse.so.0.9.11)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/libmoveit_warehouse.so, /home/ros/helloworld_ws/devel/lib/libmoveit_warehouse.so)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/pkgconfig/moveit_ros_warehouse.pc, /home/ros/helloworld_ws/devel/lib/pkgconfig/moveit_ros_warehouse.pc)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_warehouse_broadcast, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_broadcast)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_warehouse_services, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_services)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_warehouse_import_from_text, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_import_from_text)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_save_to_warehouse, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_save_to_warehouse)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_warehouse_save_as_text, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_save_as_text)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_warehouse/lib/moveit_ros_warehouse/moveit_init_demo_warehouse, /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_init_demo_warehouse)
+Unlinking: /home/ros/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_warehouse.so.0.9.11
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_warehouse.so
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/pkgconfig/moveit_ros_warehouse.pc
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_broadcast
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_services
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_import_from_text
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_save_to_warehouse
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_warehouse_save_as_text
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_warehouse/moveit_init_demo_warehouse
+Already unlinked: {}

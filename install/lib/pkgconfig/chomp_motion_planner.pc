@@ -1,0 +1,8 @@
+prefix=/home/anton/helloworld_ws/install
+
+Name: chomp_motion_planner
+Description: Description of chomp_motion_planner
+Version: 0.9.11
+Cflags: -I/home/anton/helloworld_ws/install/include
+Libs: -L/home/anton/helloworld_ws/install/lib -lchomp_motion_planner
+Requires: 

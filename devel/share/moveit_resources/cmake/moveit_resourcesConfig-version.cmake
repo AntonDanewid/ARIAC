@@ -1,1 +1,1 @@
-/home/ros/helloworld_ws/devel/.private/moveit_resources/share/moveit_resources/cmake/moveit_resourcesConfig-version.cmake
+/home/anton/helloworld_ws/devel/.private/moveit_resources/share/moveit_resources/cmake/moveit_resourcesConfig-version.cmake

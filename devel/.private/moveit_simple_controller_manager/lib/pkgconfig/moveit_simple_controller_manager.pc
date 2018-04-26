@@ -1,8 +1,8 @@
-prefix=/home/ros/helloworld_ws/devel/.private/moveit_simple_controller_manager
+prefix=/home/anton/helloworld_ws/devel/.private/moveit_simple_controller_manager
 
 Name: moveit_simple_controller_manager
 Description: Description of moveit_simple_controller_manager
 Version: 0.9.11
-Cflags: -I/home/ros/helloworld_ws/src/moveit/moveit_plugins/moveit_simple_controller_manager/include
-Libs: -L/home/ros/helloworld_ws/devel/.private/moveit_simple_controller_manager/lib 
+Cflags: -I/home/anton/helloworld_ws/src/moveit/moveit_plugins/moveit_simple_controller_manager/include
+Libs: -L/home/anton/helloworld_ws/devel/.private/moveit_simple_controller_manager/lib 
 Requires: moveit_core actionlib control_msgs

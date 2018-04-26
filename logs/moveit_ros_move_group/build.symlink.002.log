@@ -1,0 +1,36 @@
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_move_group/list_move_group_capabilities
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_move_group/move_group
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_ros_move_group.pc
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig-version.cmake
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig.cmake, /home/ros/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig-version.cmake, /home/ros/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig-version.cmake)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/libmoveit_move_group_capabilities_base.so.0.9.11, /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so.0.9.11)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/libmoveit_move_group_default_capabilities.so.0.9.11, /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so.0.9.11)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/libmoveit_move_group_default_capabilities.so, /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/libmoveit_move_group_capabilities_base.so, /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/pkgconfig/moveit_ros_move_group.pc, /home/ros/helloworld_ws/devel/lib/pkgconfig/moveit_ros_move_group.pc)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/moveit_ros_move_group/list_move_group_capabilities, /home/ros/helloworld_ws/devel/lib/moveit_ros_move_group/list_move_group_capabilities)
+Cleaning: (/home/ros/helloworld_ws/devel/.private/moveit_ros_move_group/lib/moveit_ros_move_group/move_group, /home/ros/helloworld_ws/devel/lib/moveit_ros_move_group/move_group)
+Unlinking: /home/ros/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/share/moveit_ros_move_group/cmake/moveit_ros_move_groupConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so.0.9.11
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so.0.9.11
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_default_capabilities.so
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/libmoveit_move_group_capabilities_base.so
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/pkgconfig/moveit_ros_move_group.pc
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_move_group/list_move_group_capabilities
+Already unlinked: {}
+Unlinking: /home/ros/helloworld_ws/devel/lib/moveit_ros_move_group/move_group
+Already unlinked: {}

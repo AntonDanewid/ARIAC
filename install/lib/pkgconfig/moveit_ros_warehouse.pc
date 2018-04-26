@@ -1,0 +1,8 @@
+prefix=/home/anton/helloworld_ws/install
+
+Name: moveit_ros_warehouse
+Description: Description of moveit_ros_warehouse
+Version: 0.9.11
+Cflags: -I/home/anton/helloworld_ws/install/include
+Libs: -L/home/anton/helloworld_ws/install/lib -lmoveit_warehouse
+Requires: moveit_ros_planning warehouse_ros

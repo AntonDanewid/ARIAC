@@ -1,0 +1,1031 @@
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SaveRobotStateToWarehouse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningSceneComponents
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AllowedCollisionEntry
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceLocation
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPositionFK
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_TrajectoryConstraints
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupAction
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_KinematicSolverInfo
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanResponse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SetPlannerParams
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningScene
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ConstraintEvalResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ApplyPlanningScene
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_Grasp
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanDetailedResponse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetKinematicSolverInfo
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_Constraints
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LoadMap
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PositionConstraint
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LinkScale
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_LinkPadding
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ListRobotStatesInWarehouse
+[  0%] Built target octomap_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RobotTrajectory
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PositionIKRequest
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[  0%] Built target object_recognition_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_WorkspaceParameters
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_OrientedBoundingBox
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPlanningScene
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AllowedCollisionMatrix
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GripperTranslation
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ObjectColor
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlannerParams
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceAction
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupAction
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_SaveMap
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CostSource
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningOptions
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DisplayTrajectory
+[  0%] Built target shape_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceActionGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_QueryPlannerInterfaces
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MotionPlanRequest
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupActionGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetMotionPlan
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RenameRobotStateInWarehouse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GraspPlanning
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveItErrorCodes
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPlannerParams
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_AttachedCollisionObject
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetConstraintAwarePositionIK
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_BoundingVolume
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ContactInformation
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetRobotStateFromWarehouse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DisplayRobotState
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CheckIfRobotStateExistsInWarehouse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_VisibilityConstraint
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetStateValidity
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupActionGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_OrientationConstraint
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_JointConstraint
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PickupResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetPositionIK
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlannerInterfaceDescription
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_MoveGroupFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlanningSceneWorld
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_GetCartesianPath
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteKnownTrajectory
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_DeleteRobotStateFromWarehouse
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryFeedback
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_JointLimits
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_PlaceGoal
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryActionResult
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_CollisionObject
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_ExecuteTrajectoryAction
+[  0%] Built target _moveit_msgs_generate_messages_check_deps_RobotState
+[ 20%] Built target moveit_msgs_generate_messages_nodejs
+[ 20%] Built target geometry_msgs_generate_messages_py
+[ 20%] Built target object_recognition_msgs_generate_messages_py
+[ 20%] Built target shape_msgs_generate_messages_py
+[ 20%] Built target trajectory_msgs_generate_messages_py
+[ 20%] Built target sensor_msgs_generate_messages_py
+[ 20%] Built target std_msgs_generate_messages_py
+[ 20%] Built target actionlib_msgs_generate_messages_py
+[ 20%] Built target octomap_msgs_generate_messages_py
+[ 40%] Built target moveit_msgs_generate_messages_py
+[ 40%] Built target shape_msgs_generate_messages_eus
+[ 40%] Built target octomap_msgs_generate_messages_eus
+[ 40%] Built target sensor_msgs_generate_messages_eus
+[ 40%] Built target trajectory_msgs_generate_messages_eus
+[ 40%] Built target actionlib_msgs_generate_messages_eus
+[ 40%] Built target geometry_msgs_generate_messages_eus
+[ 40%] Built target object_recognition_msgs_generate_messages_eus
+[ 40%] Built target std_msgs_generate_messages_eus
+[ 61%] Built target moveit_msgs_generate_messages_eus
+[ 61%] Built target octomap_msgs_generate_messages_lisp
+[ 61%] Built target shape_msgs_generate_messages_lisp
+[ 61%] Built target object_recognition_msgs_generate_messages_lisp
+[ 61%] Built target geometry_msgs_generate_messages_lisp
+[ 61%] Built target std_msgs_generate_messages_lisp
+[ 61%] Built target trajectory_msgs_generate_messages_lisp
+[ 61%] Built target sensor_msgs_generate_messages_lisp
+[ 61%] Built target actionlib_msgs_generate_messages_lisp
+[ 80%] Built target moveit_msgs_generate_messages_lisp
+[ 80%] Built target object_recognition_msgs_generate_messages_cpp
+[ 80%] Built target octomap_msgs_generate_messages_cpp
+[ 80%] Built target geometry_msgs_generate_messages_cpp
+[ 80%] Built target actionlib_msgs_generate_messages_cpp
+[ 80%] Built target std_msgs_generate_messages_cpp
+[ 80%] Built target trajectory_msgs_generate_messages_cpp
+[ 80%] Built target sensor_msgs_generate_messages_cpp
+[ 80%] Built target shape_msgs_generate_messages_cpp
+[100%] Built target moveit_msgs_generate_messages_cpp
+[100%] Built target moveit_msgs_generate_messages
+[36mInstall the project...[0m
+-- Install configuration: "Release"
+-- Installing: /home/anton/helloworld_ws/install/_setup_util.py
+-- Installing: /home/anton/helloworld_ws/install/env.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.bash
+-- Installing: /home/anton/helloworld_ws/install/setup.sh
+-- Installing: /home/anton/helloworld_ws/install/setup.zsh
+-- Installing: /home/anton/helloworld_ws/install/.rosinstall
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/ExecuteTrajectory.action
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/MoveGroup.action
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/Pickup.action
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/Place.action
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryAction.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryActionGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryActionResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryActionFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ExecuteTrajectoryFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupAction.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupActionGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupActionResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupActionFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveGroupFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupAction.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupActionGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupActionResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupActionFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PickupFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceAction.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceActionGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceActionResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceActionFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceGoal.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceFeedback.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/AllowedCollisionEntry.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/AllowedCollisionMatrix.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/AttachedCollisionObject.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/BoundingVolume.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/CollisionObject.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ConstraintEvalResult.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/Constraints.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/CostSource.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ContactInformation.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/DisplayTrajectory.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/DisplayRobotState.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/Grasp.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/GripperTranslation.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/JointConstraint.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/JointLimits.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/LinkPadding.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/LinkScale.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MotionPlanRequest.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MotionPlanResponse.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MotionPlanDetailedResponse.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/MoveItErrorCodes.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/TrajectoryConstraints.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/ObjectColor.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/OrientationConstraint.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/OrientedBoundingBox.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlaceLocation.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlannerInterfaceDescription.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlannerParams.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlanningScene.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlanningSceneComponents.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlanningSceneWorld.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PlanningOptions.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PositionConstraint.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/RobotState.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/RobotTrajectory.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/VisibilityConstraint.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/WorkspaceParameters.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/KinematicSolverInfo.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/msg/PositionIKRequest.msg
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetMotionPlan.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/ExecuteKnownTrajectory.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetStateValidity.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetCartesianPath.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetPlanningScene.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GraspPlanning.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/ApplyPlanningScene.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/QueryPlannerInterfaces.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetConstraintAwarePositionIK.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetKinematicSolverInfo.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetPositionFK.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetPositionIK.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetPlannerParams.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/SetPlannerParams.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/SaveMap.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/LoadMap.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/SaveRobotStateToWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/ListRobotStatesInWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/GetRobotStateFromWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/RenameRobotStateInWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/DeleteRobotStateFromWarehouse.srv
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/cmake/moveit_msgs-msg-paths.cmake
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveRobotStateToWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetKinematicSolverInfoRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceActionGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/RenameRobotStateInWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetConstraintAwarePositionIK.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/AllowedCollisionEntry.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlanningSceneRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlannerParamsResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlanningOptions.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceActionResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/RobotTrajectory.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/CollisionObject.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ContactInformation.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlanningSceneComponents.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceLocation.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PositionIKRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveMapResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlanningSceneResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveRobotStateToWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ListRobotStatesInWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/OrientationConstraint.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionFKResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetRobotStateFromWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionIKResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlannerInterfaceDescription.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupActionGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetCartesianPathResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveRobotStateToWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlannerParams.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/JointConstraint.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryActionResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceActionFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupAction.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/JointLimits.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteKnownTrajectoryRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ApplyPlanningSceneResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MotionPlanDetailedResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/QueryPlannerInterfaces.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/DisplayTrajectory.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetKinematicSolverInfo.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ConstraintEvalResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetRobotStateFromWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/DisplayRobotState.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetStateValidityRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/DeleteRobotStateFromWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SetPlannerParamsRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MotionPlanRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryActionGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/DeleteRobotStateFromWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/CostSource.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionIK.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlanningScene.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ListRobotStatesInWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/QueryPlannerInterfacesResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetStateValidity.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ApplyPlanningScene.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/WorkspaceParameters.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupActionResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SetPlannerParams.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/OrientedBoundingBox.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetRobotStateFromWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ListRobotStatesInWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ObjectColor.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupAction.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/RenameRobotStateInWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupActionFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetCartesianPathRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetMotionPlanResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/CheckIfRobotStateExistsInWarehouseRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GraspPlanningResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlanningScene.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetMotionPlan.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LinkScale.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/QueryPlannerInterfacesRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetKinematicSolverInfoResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/AttachedCollisionObject.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/CheckIfRobotStateExistsInWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/TrajectoryConstraints.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceAction.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SetPlannerParamsResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryAction.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/KinematicSolverInfo.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/VisibilityConstraint.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteKnownTrajectoryResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetConstraintAwarePositionIKRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveItErrorCodes.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionFK.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlannerParams.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetCartesianPath.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupActionGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetMotionPlanRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/BoundingVolume.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupActionResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GripperTranslation.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PickupActionFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionIKRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LoadMapRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GraspPlanning.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/DeleteRobotStateFromWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/RobotState.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MoveGroupGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPositionFKRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LinkPadding.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteKnownTrajectory.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetPlannerParamsRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/Grasp.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlanningSceneWorld.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveMap.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetStateValidityResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LoadMapResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryResult.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/Constraints.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GraspPlanningRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ApplyPlanningSceneRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetConstraintAwarePositionIKResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/AllowedCollisionMatrix.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/RenameRobotStateInWarehouse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryGoal.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/MotionPlanResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/CheckIfRobotStateExistsInWarehouseResponse.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveMapRequest.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryActionFeedback.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PositionConstraint.h
+-- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LoadMap.h
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GraspPlanning.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetMotionPlan.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/RenameRobotStateInWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/DeleteRobotStateFromWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetKinematicSolverInfo.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetPositionIK.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetCartesianPath.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/SetPlannerParams.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/ExecuteKnownTrajectory.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetPlannerParams.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/SaveRobotStateToWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/ApplyPlanningScene.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetPlanningScene.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/QueryPlannerInterfaces.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetConstraintAwarePositionIK.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetRobotStateFromWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetStateValidity.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/SaveMap.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/ListRobotStatesInWarehouse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetPositionFK.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/LoadMap.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ContactInformation.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/JointLimits.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PositionIKRequest.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlanningScene.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryActionFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupAction.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/DisplayTrajectory.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MotionPlanResponse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/JointConstraint.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupActionFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/BoundingVolume.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceActionResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/LinkScale.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupActionResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/GripperTranslation.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceAction.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceActionGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupAction.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/Grasp.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MotionPlanRequest.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ConstraintEvalResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/KinematicSolverInfo.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupActionGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupActionGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlanningSceneComponents.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/AllowedCollisionMatrix.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/TrajectoryConstraints.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/OrientationConstraint.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/OrientedBoundingBox.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/LinkPadding.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/WorkspaceParameters.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/Constraints.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryActionResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/RobotTrajectory.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryActionGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/AllowedCollisionEntry.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MotionPlanDetailedResponse.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryAction.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveItErrorCodes.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupActionResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlannerInterfaceDescription.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/AttachedCollisionObject.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PositionConstraint.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlanningOptions.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlanningSceneWorld.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/DisplayRobotState.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceActionFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/RobotState.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ObjectColor.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PickupFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlannerParams.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/VisibilityConstraint.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupGoal.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupActionFeedback.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/MoveGroupResult.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/CostSource.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/CollisionObject.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceLocation.l
+-- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/manifest.l
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_LoadMap.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/SaveRobotStateToWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_SaveRobotStateToWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GraspPlanning.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetPlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetPositionIK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_DeleteRobotStateFromWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/DeleteRobotStateFromWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetMotionPlan.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/LoadMap.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetStateValidity.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetPlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_SetPlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetRobotStateFromWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_ApplyPlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetPositionIK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetCartesianPath.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_SaveMap.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetCartesianPath.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_ListRobotStatesInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetPositionFK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetPositionFK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_ExecuteKnownTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/ApplyPlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetStateValidity.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetConstraintAwarePositionIK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/moveit_msgs-srv.asd
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetRobotStateFromWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/ExecuteKnownTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetKinematicSolverInfo.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/SaveMap.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_CheckIfRobotStateExistsInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/SetPlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetPlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_QueryPlannerInterfaces.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_RenameRobotStateInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetPlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/RenameRobotStateInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetKinematicSolverInfo.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GetConstraintAwarePositionIK.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/GetMotionPlan.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/ListRobotStatesInWarehouse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GraspPlanning.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/QueryPlannerInterfaces.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/DisplayRobotState.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlannerInterfaceDescription.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_WorkspaceParameters.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveItErrorCodes.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ContactInformation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_CostSource.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PositionIKRequest.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/AttachedCollisionObject.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/JointConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MotionPlanResponse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MotionPlanDetailedResponse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_BoundingVolume.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_AttachedCollisionObject.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/OrientedBoundingBox.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_Constraints.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_JointConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_CollisionObject.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MotionPlanRequest.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveItErrorCodes.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_DisplayTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/CollisionObject.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_LinkPadding.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlanningOptions.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/RobotState.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/DisplayTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/KinematicSolverInfo.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ObjectColor.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/LinkScale.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_Grasp.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_OrientationConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_VisibilityConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_TrajectoryConstraints.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/TrajectoryConstraints.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ConstraintEvalResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlannerInterfaceDescription.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlanningSceneComponents.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/WorkspaceParameters.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PositionConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_KinematicSolverInfo.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/OrientationConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceLocation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/moveit_msgs-msg.asd
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_GripperTranslation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_LinkScale.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/Grasp.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlannerParams.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_AllowedCollisionEntry.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ConstraintEvalResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/VisibilityConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_DisplayRobotState.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/AllowedCollisionEntry.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/LinkPadding.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_RobotTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_RobotState.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ObjectColor.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlanningSceneWorld.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/BoundingVolume.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MotionPlanResponse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_AllowedCollisionMatrix.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MotionPlanRequest.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlanningSceneWorld.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/CostSource.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupActionFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PositionConstraint.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ContactInformation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_OrientedBoundingBox.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryAction.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlanningScene.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PickupGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PickupActionResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/Constraints.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_JointLimits.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/AllowedCollisionMatrix.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/JointLimits.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/ExecuteTrajectoryActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_MoveGroupGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MotionPlanDetailedResponse.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlanningOptions.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceActionGoal.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/GripperTranslation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlanningSceneComponents.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/MoveGroupFeedback.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PositionIKRequest.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/RobotTrajectory.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceLocation.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryResult.lisp
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/_index.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/ApplyPlanningScene.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/_index.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/SaveMap.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/LoadMap.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetPlannerParams.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetStateValidity.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/SaveRobotStateToWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetMotionPlan.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GraspPlanning.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetPositionFK.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetConstraintAwarePositionIK.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetPositionIK.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetCartesianPath.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/QueryPlannerInterfaces.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetRobotStateFromWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/ExecuteKnownTrajectory.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetKinematicSolverInfo.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/ListRobotStatesInWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/SetPlannerParams.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/RenameRobotStateInWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetPlanningScene.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/DeleteRobotStateFromWarehouse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupActionGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ObjectColor.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlanningSceneComponents.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/BoundingVolume.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/LinkScale.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceActionFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/_index.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupActionResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/AllowedCollisionEntry.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/DisplayTrajectory.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/TrajectoryConstraints.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/RobotState.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlanningScene.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupAction.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/RobotTrajectory.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MotionPlanDetailedResponse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupActionResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PositionIKRequest.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/OrientedBoundingBox.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupActionGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceAction.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/CostSource.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceLocation.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlannerInterfaceDescription.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryActionFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlanningOptions.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryAction.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupActionFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/GripperTranslation.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryActionGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupAction.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/Constraints.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/Grasp.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceActionGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/OrientationConstraint.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/AttachedCollisionObject.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlannerParams.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryActionResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupActionFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/JointConstraint.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/JointLimits.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/AllowedCollisionMatrix.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/WorkspaceParameters.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ContactInformation.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MotionPlanResponse.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/CollisionObject.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/LinkPadding.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/VisibilityConstraint.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ConstraintEvalResult.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlanningSceneWorld.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PickupFeedback.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/DisplayRobotState.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MotionPlanRequest.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveItErrorCodes.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ExecuteTrajectoryGoal.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/KinematicSolverInfo.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PositionConstraint.js
+-- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceActionResult.js
+Listing /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/__init__.py ...
+Listing /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionEntry.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionMatrix.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_AttachedCollisionObject.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_BoundingVolume.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_CollisionObject.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ConstraintEvalResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_Constraints.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ContactInformation.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_CostSource.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayRobotState.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayTrajectory.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryAction.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_Grasp.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_GripperTranslation.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_JointConstraint.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_JointLimits.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_KinematicSolverInfo.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkPadding.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkScale.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanDetailedResponse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanRequest.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanResponse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupAction.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveItErrorCodes.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_ObjectColor.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientationConstraint.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientedBoundingBox.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupAction.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceAction.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceFeedback.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceGoal.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceLocation.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceResult.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerInterfaceDescription.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerParams.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningOptions.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningScene.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneComponents.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneWorld.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionConstraint.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionIKRequest.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotState.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotTrajectory.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_TrajectoryConstraints.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_VisibilityConstraint.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/_WorkspaceParameters.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/msg/__init__.py ...
+Listing /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_ApplyPlanningScene.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_CheckIfRobotStateExistsInWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_DeleteRobotStateFromWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_ExecuteKnownTrajectory.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetCartesianPath.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetConstraintAwarePositionIK.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetKinematicSolverInfo.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetMotionPlan.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlannerParams.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlanningScene.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionFK.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionIK.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetRobotStateFromWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GetStateValidity.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_GraspPlanning.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_ListRobotStatesInWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_LoadMap.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_QueryPlannerInterfaces.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_RenameRobotStateInWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveMap.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveRobotStateToWarehouse.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_SetPlannerParams.py ...
+Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/__init__.py ...
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetStateValidity.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionFK.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_CheckIfRobotStateExistsInWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GraspPlanning.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_CheckIfRobotStateExistsInWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetStateValidity.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_LoadMap.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ApplyPlanningScene.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ListRobotStatesInWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ExecuteKnownTrajectory.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ExecuteKnownTrajectory.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_LoadMap.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/__init__.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlannerParams.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ApplyPlanningScene.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetKinematicSolverInfo.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GraspPlanning.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionIK.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_QueryPlannerInterfaces.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveRobotStateToWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetConstraintAwarePositionIK.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_DeleteRobotStateFromWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetRobotStateFromWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlanningScene.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetRobotStateFromWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_RenameRobotStateInWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_RenameRobotStateInWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_QueryPlannerInterfaces.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetCartesianPath.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlanningScene.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetConstraintAwarePositionIK.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SetPlannerParams.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/__init__.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetMotionPlan.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_ListRobotStatesInWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetCartesianPath.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPlannerParams.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionFK.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveMap.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveMap.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SetPlannerParams.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionIK.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetMotionPlan.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveRobotStateToWarehouse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_DeleteRobotStateFromWarehouse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetKinematicSolverInfo.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/__init__.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotTrajectory.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupAction.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientedBoundingBox.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningScene.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_Constraints.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_TrajectoryConstraints.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanRequest.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkScale.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanDetailedResponse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_CollisionObject.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanDetailedResponse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_JointConstraint.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ConstraintEvalResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_Constraints.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerParams.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionIKRequest.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerParams.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayRobotState.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionConstraint.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionMatrix.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_CollisionObject.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_Grasp.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkPadding.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanRequest.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayTrajectory.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/__init__.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneWorld.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_CostSource.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_JointLimits.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceAction.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_GripperTranslation.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_JointLimits.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_KinematicSolverInfo.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupAction.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AttachedCollisionObject.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_BoundingVolume.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_BoundingVolume.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayTrajectory.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_WorkspaceParameters.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_VisibilityConstraint.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotState.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceAction.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkScale.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AttachedCollisionObject.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryAction.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveItErrorCodes.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ObjectColor.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ObjectColor.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionIKRequest.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneComponents.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_Grasp.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryAction.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerInterfaceDescription.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_CostSource.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientedBoundingBox.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneWorld.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningOptions.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/__init__.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionEntry.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotState.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientationConstraint.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveItErrorCodes.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryActionGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_WorkspaceParameters.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_KinematicSolverInfo.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_VisibilityConstraint.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotTrajectory.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionMatrix.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanResponse.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ExecuteTrajectoryGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_DisplayRobotState.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupActionFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ContactInformation.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningSceneComponents.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupAction.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ConstraintEvalResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_TrajectoryConstraints.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupGoal.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupFeedback.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceFeedback.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_ContactInformation.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceActionGoal.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_AllowedCollisionEntry.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_GripperTranslation.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_JointConstraint.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_OrientationConstraint.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupResult.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceLocation.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlaceLocation.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningOptions.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_LinkPadding.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlanningScene.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MotionPlanResponse.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupResult.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupAction.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PositionConstraint.py
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PlannerInterfaceDescription.pyc
+-- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/__init__.py
+-- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/moveit_msgs.pc
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/cmake/moveit_msgs-msg-extras.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/cmake/moveit_msgsConfig.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/cmake/moveit_msgsConfig-version.cmake
+-- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/package.xml

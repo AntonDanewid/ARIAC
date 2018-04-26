@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: moveit_ros_planning_interface
+Version: 0.9.11
+Summary: Components of MoveIt that offer simpler interfaces to planning and execution
+Home-page: http://moveit.ros.org
+Author: Michael Ferguson <mferguson@fetchrobotics.com>, Michael Görner <me@v4hn.de>, MoveIt! Release Team <moveit_releasers@googlegroups.com>
+Author-email: isucan@google.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

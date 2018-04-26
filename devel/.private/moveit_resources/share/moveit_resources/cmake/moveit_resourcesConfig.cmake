@@ -67,14 +67,14 @@ set(moveit_resources_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(moveit_resources_SOURCE_PREFIX /home/ros/helloworld_ws/src/moveit_resources)
-  set(moveit_resources_DEVEL_PREFIX /home/ros/helloworld_ws/devel/.private/moveit_resources)
+  set(moveit_resources_SOURCE_PREFIX /home/anton/helloworld_ws/src/moveit_resources)
+  set(moveit_resources_DEVEL_PREFIX /home/anton/helloworld_ws/devel/.private/moveit_resources)
   set(moveit_resources_INSTALL_PREFIX "")
   set(moveit_resources_PREFIX ${moveit_resources_DEVEL_PREFIX})
 else()
   set(moveit_resources_SOURCE_PREFIX "")
   set(moveit_resources_DEVEL_PREFIX "")
-  set(moveit_resources_INSTALL_PREFIX /home/ros/helloworld_ws/install)
+  set(moveit_resources_INSTALL_PREFIX /home/anton/helloworld_ws/install)
   set(moveit_resources_PREFIX ${moveit_resources_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(moveit_resources_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ros/helloworld_ws/src/moveit_resources/include;/home/ros/helloworld_ws/devel/.private/moveit_resources/include " STREQUAL " ")
+if(NOT "/home/anton/helloworld_ws/src/moveit_resources/include;/home/anton/helloworld_ws/devel/.private/moveit_resources/include " STREQUAL " ")
   set(moveit_resources_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ros/helloworld_ws/src/moveit_resources/include;/home/ros/helloworld_ws/devel/.private/moveit_resources/include")
+  set(_include_dirs "/home/anton/helloworld_ws/src/moveit_resources/include;/home/anton/helloworld_ws/devel/.private/moveit_resources/include")
   if(NOT "https://github.com/ros-planning/moveit-resources/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/ros-planning/moveit-resources/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://moveit.ros.org " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/ros/helloworld_ws/src/moveit_resources/include;/home/ros/helloworl
         message(FATAL_ERROR "Project 'moveit_resources' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'moveit_resources' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ros/helloworld_ws/src/moveit_resources/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'moveit_resources' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/anton/helloworld_ws/src/moveit_resources/${idir}'.  ${_report}")
     endif()
     _list_append_unique(moveit_resources_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ros/helloworld_ws/devel/.private/moveit_resources/lib;/home/ros/helloworld_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/anton/helloworld_ws/devel/.private/moveit_resources/lib;/home/anton/helloworld_ws/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

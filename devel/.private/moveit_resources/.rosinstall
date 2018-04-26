@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/ros/helloworld_ws/devel/.private/moveit_resources/setup.sh
+    local-name: /home/anton/helloworld_ws/devel/.private/moveit_resources/setup.sh

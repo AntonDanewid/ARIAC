@@ -1,1 +1,1 @@
-/home/ros/helloworld_ws/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig-version.cmake
+/home/anton/helloworld_ws/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig-version.cmake

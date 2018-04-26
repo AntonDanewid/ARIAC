@@ -1,1 +1,1 @@
-/home/ros/helloworld_ws/devel/.private/curlnanton/share/curlnanton/cmake/curlnantonConfig.cmake
+/home/anton/helloworld_ws/devel/.private/curlnanton/share/curlnanton/cmake/curlnantonConfig.cmake

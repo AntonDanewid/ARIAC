@@ -1,1 +1,1 @@
-/home/ros/helloworld_ws/devel/.private/moveit_kinematics/share/moveit_kinematics/cmake/moveit_kinematicsConfig-version.cmake
+/home/anton/helloworld_ws/devel/.private/moveit_kinematics/share/moveit_kinematics/cmake/moveit_kinematicsConfig-version.cmake

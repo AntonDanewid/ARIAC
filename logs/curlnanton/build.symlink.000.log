@@ -1,0 +1,4 @@
+Symlinking /home/ros/helloworld_ws/devel/share/curlnanton/cmake/curlnantonConfig.cmake
+Symlinking /home/ros/helloworld_ws/devel/share/curlnanton/cmake/curlnantonConfig-version.cmake
+Symlinking /home/ros/helloworld_ws/devel/lib/python2.7/dist-packages/ariac_example/__init__.py
+Symlinking /home/ros/helloworld_ws/devel/lib/pkgconfig/curlnanton.pc

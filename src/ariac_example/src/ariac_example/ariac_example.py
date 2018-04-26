@@ -16,7 +16,8 @@
 from __future__ import print_function
 
 import time
-
+import sys
+import copy
 import rospy
 import moveit_commander
 import moveit_msgs.msg

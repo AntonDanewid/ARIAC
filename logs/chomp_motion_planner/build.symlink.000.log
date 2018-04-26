@@ -1,0 +1,5 @@
+Symlinking /home/ros/helloworld_ws/devel/share/chomp_motion_planner/cmake/chomp_motion_plannerConfig-version.cmake
+Symlinking /home/ros/helloworld_ws/devel/share/chomp_motion_planner/cmake/chomp_motion_plannerConfig.cmake
+Symlinking /home/ros/helloworld_ws/devel/lib/libchomp_motion_planner.so.0.9.11
+Symlinking /home/ros/helloworld_ws/devel/lib/libchomp_motion_planner.so
+Symlinking /home/ros/helloworld_ws/devel/lib/pkgconfig/chomp_motion_planner.pc

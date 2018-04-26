@@ -16,9 +16,12 @@
 from __future__ import print_function
 
 import time
-
+import sys
+import copy
 import rospy
-
+#import moveit_commander
+import moveit_msgs.msg
+import geometry_msgs.msg
 from osrf_gear.msg import Order
 from osrf_gear.msg import VacuumGripperState
 from osrf_gear.srv import ConveyorBeltControl
@@ -131,6 +134,8 @@ class MyCompetitionClass:
             'linear_arm_actuator_joint'
         ]
 
+
+
     def comp_state_callback(self, msg):
         if self.current_comp_state != msg.data:
             rospy.loginfo("Competition state: " + str(msg.data))
@@ -161,6 +166,8 @@ class MyCompetitionClass:
         msg.points = [point]
         rospy.loginfo("Sending command:\n" + str(msg))
         self.joint_trajectory_publisher.publish(msg)
+    #def order_print(self, msg):
+
 
 
 def connect_callbacks(comp_class):

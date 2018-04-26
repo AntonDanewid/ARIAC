@@ -1,0 +1,5 @@
+Symlinking /home/ros/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig-version.cmake
+Symlinking /home/ros/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig.cmake
+Symlinking /home/ros/helloworld_ws/devel/lib/libsrdfdom.so
+Symlinking /home/ros/helloworld_ws/devel/lib/python2.7/dist-packages/srdfdom/__init__.py
+Symlinking /home/ros/helloworld_ws/devel/lib/pkgconfig/srdfdom.pc

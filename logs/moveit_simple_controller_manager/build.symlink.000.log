@@ -1,0 +1,5 @@
+Symlinking /home/ros/helloworld_ws/devel/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig-version.cmake
+Symlinking /home/ros/helloworld_ws/devel/share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig.cmake
+Symlinking /home/ros/helloworld_ws/devel/lib/libmoveit_simple_controller_manager.so
+Symlinking /home/ros/helloworld_ws/devel/lib/libmoveit_simple_controller_manager.so.0.9.11
+Symlinking /home/ros/helloworld_ws/devel/lib/pkgconfig/moveit_simple_controller_manager.pc

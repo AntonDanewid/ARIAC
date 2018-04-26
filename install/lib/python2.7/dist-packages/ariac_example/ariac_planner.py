@@ -50,44 +50,6 @@ def start_competition():
     return response.success
 
 
-def control_gripper(enabled):
-    rospy.loginfo("Waiting for gripper control to be ready...")
-    rospy.wait_for_service('/ariac/gripper/control')
-    rospy.loginfo("Gripper control is now ready.")
-    rospy.loginfo("Requesting gripper control...")
-
-    try:
-        gripper_control = rospy.ServiceProxy('/ariac/gripper/control', VacuumGripperControl)
-        response = gripper_control(enabled)
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to control the gripper: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to control the gripper: %s" % response)
-    else:
-        rospy.loginfo("Gripper controlled successfully")
-    return response.success
-
-
-def control_drone(shipment_type):
-    rospy.loginfo("Waiting for drone control to be ready...")
-    name = '/ariac/drone'
-    rospy.wait_for_service(name)
-    rospy.loginfo("Drone control is now ready.")
-    rospy.loginfo("Requesting drone control...")
-
-    try:
-        drone_control = rospy.ServiceProxy(name, DroneControl)
-        response = drone_control(shipment_type)
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to control the drone: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to control the drone: %s" % response)
-    else:
-        rospy.loginfo("Drone controlled successfully")
-    return response.success
-
 
 def control_conveyor(power):
     rospy.loginfo("Waiting for conveyor control to be ready...")
@@ -111,25 +73,11 @@ def control_conveyor(power):
 
 class Planner:
     def __init__(self):
-        self.joint_trajectory_publisher = \
-            rospy.Publisher("/ariac/arm/command", JointTrajectory, queue_size=10)
+        #self.joint_trajectory_publisher = \
+        #    rospy.Publisher("/ariac/arm/command", JointTrajectory, queue_size=10)
         self.current_comp_state = None
         self.received_orders = []
-        self.current_joint_state = None
-        self.current_gripper_state = None
-        self.last_joint_state_print = time.time()
-        self.last_gripper_state_print = time.time()
-        self.has_been_zeroed = False
-        self.arm_joint_names = [
-            'iiwa_joint_1',
-            'iiwa_joint_2',
-            'iiwa_joint_3',
-            'iiwa_joint_4',
-            'iiwa_joint_5',
-            'iiwa_joint_6',
-            'iiwa_joint_7',
-            'linear_arm_actuator_joint'
-        ]
+       
 
     def comp_state_callback(self, msg):
         if self.current_comp_state != msg.data:
@@ -139,6 +87,10 @@ class Planner:
     def order_callback(self, msg):
         rospy.loginfo("Received order:\n" + str(msg))
         self.received_orders.append(msg)
+        control_conveyor(10)
+
+    
+    
 
     def joint_state_callback(self, msg):
         if time.time() - self.last_joint_state_print >= 10:
@@ -146,30 +98,13 @@ class Planner:
             self.last_joint_state_print = time.time()
         self.current_joint_state = msg
 
-    def gripper_state_callback(self, msg):
-        if time.time() - self.last_gripper_state_print >= 10:
-            rospy.loginfo("Current gripper state (throttled to 0.1 Hz):\n" + str(msg))
-            self.last_gripper_state_print = time.time()
-        self.current_gripper_state = msg
+    
 
-    def send_arm_to_state(self, positions):
-        msg = JointTrajectory()
-        msg.joint_names = self.arm_joint_names
-        point = JointTrajectoryPoint()
-        point.positions = positions
-        point.time_from_start = rospy.Duration(1.0)
-        msg.points = [point]
-        rospy.loginfo("Sending command:\n" + str(msg))
-        self.joint_trajectory_publisher.publish(msg)
-    #def order_print(self, msg):
+    
 
 
 
-def connect_callbacks(comp_class):
+def connect_callbacks(planner):
     comp_state_sub = rospy.Subscriber(
-        "/ariac/competition_state", String, comp_class.comp_state_callback)
-    order_sub = rospy.Subscriber("/ariac/orders", Order, comp_class.order_callback)
-    joint_state_sub = rospy.Subscriber(
-        "/ariac/joint_states", JointState, comp_class.joint_state_callback)
-    gripper_state_sub = rospy.Subscriber(
-        "/ariac/gripper/state", VacuumGripperState, comp_class.gripper_state_callback)
+        "/ariac/competition_state", String, planner.comp_state_callback)
+    order_sub = rospy.Subscriber("/ariac/orders", Order, planner.order_callback)

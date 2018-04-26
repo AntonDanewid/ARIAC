@@ -1,0 +1,8 @@
+prefix=/home/ros/helloworld_ws/devel/.private/moveit_resources
+
+Name: moveit_resources
+Description: Description of moveit_resources
+Version: 0.6.3
+Cflags: -I/home/ros/helloworld_ws/src/moveit_resources/include -I/home/ros/helloworld_ws/devel/.private/moveit_resources/include
+Libs: -L/home/ros/helloworld_ws/devel/.private/moveit_resources/lib 
+Requires: 

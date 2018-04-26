@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/ros/ARIAC/install/setup.sh
+    local-name: /home/ros/helloworld_ws/install/setup.sh

@@ -7,14 +7,20 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_srvs
   trajectory_msgs
+  #moveit_commander
+  #moveit_core
 )
 
 ## Uncomment this if the package has a setup.py. This macro ensures
-## modules and global scripts declared therein get installed
+## modules and global scripts declared therein get installHEADed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 catkin_python_setup()
 
-catkin_package()
+catkin_package(
+  #CATKIN_DEPENDS
+  #  moveit_core
+    #moveit_ros_planning_interface
+)
 
 ###########
 ## Build ##
@@ -23,9 +29,9 @@ catkin_package()
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 ## Declare a C++ executable
-add_executable(ariac_example_node src/ariac_example_node.cpp)
-add_dependencies(ariac_example_node ${catkin_EXPORTED_TARGETS})
-target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
+##add_executable(ariac_example_node src/ariac_example_node.cpp)
+##add_dependencies(ariac_example_node ${catkin_EXPORTED_TARGETS})
+##target_link_libraries(ariac_example_node ${catkin_LIBRARIES})
 
 #############
 ## Install ##
@@ -42,7 +48,7 @@ install(PROGRAMS
 )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS ariac_example_node
+install(TARGETS
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

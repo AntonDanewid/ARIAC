@@ -36,8 +36,10 @@ from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 from geometry_msgs.msg import PoseStamped
 import xml.etree.ElementTree as ET
+import sys, tf
 
 
+import dynamic_reconfigure.client
 
 
 
@@ -87,7 +89,7 @@ def control_gripper(enabled):
 
 
 
-class MyCompetitionClass:
+class ArmControll:
     def __init__(self):
         self.joint_trajectory_publisher = \
             rospy.Publisher("/ariac/arm/command", JointTrajectory, queue_size=10)
@@ -118,23 +120,33 @@ class MyCompetitionClass:
 
         self.scene = moveit_commander.PlanningSceneInterface()
         rospy.sleep(2)
-        self.addCollisions(self.scene)
+        #self.addCollisions(self.scene)
         self.group = moveit_commander.MoveGroupCommander("manipulator")
         self.display_trajectory_publisher = rospy.Publisher(
                                     '/move_group/display_planned_path',
                                     moveit_msgs.msg.DisplayTrajectory)
-        rospy.sleep(10)
-    
-        print("============ INITILIZED")
-        self.send_arm_to_state(startbin)
         rospy.sleep(2)
-        self.sendOverBin(2)
-        self.sendBackFromBin(2)
-        self.sendOverBin(4)
-        self.sendBackFromBin(4)
-        self.sendOverBin(3)
-        self.sendBackFromBin(3)
-        self.send_arm_to_state(startbin)
+        self.group.allow_replanning(True)
+        #self.tf_listener = tf.TransformListener()
+
+        # Allow 5 seconds per planning attempt
+        self.group.set_planning_time(5)
+        # Set goal joint tolerance
+        self.group.set_goal_joint_tolerance(0.005)
+        # Set goal goal tolerance
+        self.group.set_goal_tolerance(0.005)
+        # Set goal goal tolerance
+        self.group.set_goal_position_tolerance(0.005)
+        # Set goal orientation tolerance
+        self.group.set_goal_orientation_tolerance(0.005)
+        #client = dynamic_reconfigure.client.Client('move_group/trajectory_execution/')
+        #params = { 'allowed_start_tolerance' : '0.0'}
+        #config = client.update_configuration(params)
+        print("============ INITILIZED")
+        #self.send_arm_to_state(bin3_hover)
+        #rospy.sleep(2)
+        #self.sendOverBin(3)
+        #self.grabPart()
         
 
         #self.sendOverBin(2)
@@ -196,14 +208,21 @@ class MyCompetitionClass:
         self.current_gripper_state = msg
 
     def send_arm_to_state(self, positions):
-        msg = JointTrajectory()
-        msg.joint_names = self.arm_joint_names
-        point = JointTrajectoryPoint()
-        point.positions = positions
-        point.time_from_start = rospy.Duration(1.0)
-        msg.points = [point]
-        rospy.loginfo("Sending command:\n" + str(msg))
-        self.joint_trajectory_publisher.publish(msg)
+        # msg = JointTrajectory()
+        # msg.joint_names = self.arm_joint_names
+        # point = JointTrajectoryPoint()
+        # point.positions = positions
+        # point.time_from_start = rospy.Duration(1.0)
+        # msg.points = [point]
+        # rospy.loginfo("Sending command:\n" + str(msg))
+        # self.joint_trajectory_publisher.publish(msg)
+        #group_variable_values = self.group.get_current_joint_values()
+        #\\group_variable_values = positions
+        self.group.set_joint_value_target(positions)
+        self.group.plan()
+        self.group.go(wait=True)
+
+
         #def order_print(self, msg):
 
     def sendOverBin(self, bin): 
@@ -211,10 +230,12 @@ class MyCompetitionClass:
             self.send_arm_to_state(bin2_init)
             rospy.sleep(2)
             self.send_arm_to_state(bin2_hover)
+            rospy.sleep(2)
         if(bin == 3):
             self.send_arm_to_state(bin3_init)
             rospy.sleep(2)
             self.send_arm_to_state(bin3_hover)
+            rospy.sleep(2)
         if(bin == 4):
             self.send_arm_to_state(bin4_init)
             rospy.sleep(2)
@@ -239,64 +260,36 @@ class MyCompetitionClass:
             rospy.sleep(2)
     
     
+    def grabPart(self):
+        pose_target = geometry_msgs.msg.Pose()
+        pose_target.position.x = -0.9
+        pose_target.position.y = 0.955
+        pose_target.position.z = 0.78
+        #pose_target.orientation.x = - 0.05
+        #pose_target.orientation.y = - 0.087
+        #pose_target.orientation.z = -0.002
+        #pose_target.orientation.w = 0.996
+        xyz = [0, 0, 0]
+        xyz[0] = pose_target.position.x 
+        xyz[1] = pose_target.position.y
+        xyz[2] = pose_target.position.z
+        self.group.set_position_target(xyz)
+        self.group.plan()
+        self.group.go(wait=True)
+        
+
+
+        #self.group.set_pose_target(pose_target)
+        #plan1 = self.group.plan()        
+
     def sendOverTray(self):
         print("no")
 
-    def addCollisions(self, scene):
-        tree = ET.parse("test.xml")
-        root = tree.getroot()
-        i = 0
-        root = root[0]
 
-        for neighbor in root:
-            for neb in neighbor.iter('model'):        
-                for collision in neb.iter('collision'):
-                    poseInt = []
-                    scaleInt = []
-                    for pose in collision.iter('pose'):
-                        poseInt = pose.text.split(" ")
-                        poseInt = list(map(float, poseInt))
-                    #print(poseInt)
-                    i = i + 1
-                    for scale in collision.iter('geometry'):
-                        try:
-                            scaleInt= scale[0][0].text.split(" ")
-                            if(scale[0].tag == "box"):
-                               
-                                box = PoseStamped()
-                                box.header = self.robot.get_planning_frame()
-                                box.pose.position.x = poseInt[0]
-                                box.pose.position.y = poseInt[1]
-                                box.pose.position.z = poseInt[2]
-                                print("Adding box")
-                                self.scene.add_box(str(i), box, scaleInt)
-                            
-                                print('===============================')
-                            if(scale[0].tag == "mesh"):
-                                a = 0
-                            if(scale[0].tag == "cylinder"):
-                                #Fix so that we approximate a box for the cylinder
-                                length = scale[0][0]
-                                radius = scale[0][1]
-                                                        
-                                box = PoseStamped()
-                                box.header = self.robot.get_planning_frame()
-                                box.pose.position.x = poseInt[0]
-                                box.pose.position.y = poseInt[1]
-                                box.pose.position.z = poseInt[2]
-                                self.scene.add_box(str(i), box, (radius*2, radius*2, length))
-                            if(sacle[0].tag == "mesh"):
-                                a=0
-                                
-                        except:
-                            a=0
-
-
-def connect_callbacks(comp_class):
-    order_sub = rospy.Subscriber("/ariac/orders", Order, comp_class.order_callback)
-
-bin3_init = [0.8842504439136532, 1.7269822672085962, 1.5322848955112205, -1.9922189839973683, -1.5687392233618356, 1.2100346569304605, -1.7403053744518617, -0.27145424520942707, 0.0]
-bin3_hover = [2.030708303027902, 1.5310893282578615, 1.5749289822025245, -1.3416422593103556, -1.5923680850468767, 1.253505298922895, -1.1957209389989902, -0.18298717536680742, 0.0]
+#bin3_init = [0.8842504439136532, 1.7269822672085962, 1.5322848955112205, -1.9922189839973683, -1.5687392233618356, 1.2100346569304605, -1.7403053744518617, -0.27145424520942707, 0.0]
+bin3_init = [-1.780048118886426, 1.6693944180336215, 2.8248366387726787, -0.54709608097345, -0.12053863933896025, -1.9436729915697848, 1.3568785660073148, 0.8701813116885472, 0.0]
+#bin3_hover = [2.030708303027902, 1.5310893282578615, 1.5749289822025245, -1.3416422593103556, -1.5923680850468767, 1.253505298922895, -1.1957209389989902, -0.18298717536680742, 0.0]
+bin3_hover = [-2.5846364547017586, 1.8007230116584498, 2.9321449503515318, -0.3729635718692652, 0.09599146144110371, -1.5579043743516792, 0.6283811936378756, 0.5992819901439533, 0.0]
 start = [0, 0, 0, 0 ,0 ,0 ,0, 0, 0]
 startbin = [1.092518983885773, 1.4819056485211508, 1.6481364135030203, -1.989019987811874, -1.4185319842752095, 1.3006881728757307, -1.4940562409131344, -0.33563946341297035, 0.0]
 bin2_hover = [2.1376512939425787, 1.577703386233594, 1.4965436365912836, -1.3189158894505644, -1.6483632779223516, 1.168788523744439, -1.0995023333076688, -0.8582111719843412, 0.0]

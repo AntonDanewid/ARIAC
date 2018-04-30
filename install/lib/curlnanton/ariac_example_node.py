@@ -14,24 +14,72 @@
 # limitations under the License.
 
 from ariac_example import ariac_example
+from std_srvs.srv import Trigger
+from osrf_gear.msg import Order
 import rospy
 
 
+
+class Subscriber: 
+
+    def __init__(self):
+        self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.orderReceived)
+        self.currentOrders = []
+
+    def orderReceived(self, order):
+        self.currentOrders.append(order)
+
+
+
+
 def main():
-    rospy.init_node("ariac_example_node")
 
-    comp_class = ariac_example.MyCompetitionClass()
-    ariac_example.connect_callbacks(comp_class)
+    sub = Subscriber()
+    armcontroll = ariac_example.ArmControll()
+    #Start()
+    rospy.loginfo("=============Setup complete.")
+    armcontroll.sendOverBin(3)
 
-    rospy.loginfo("Setup complete.")
-    ariac_example.start_competition()
 
-    if not comp_class.has_been_zeroed:
-        comp_class.has_been_zeroed = True
-        rospy.loginfo("Sending arm to zero joint positions... TESTIN")
+   # while not rospy.is_shutdown():
+    #    if():
+            
 
+
+
+
+    
+    
+    
     rospy.spin()
+
+
+
+def Start():
+    rospy.loginfo("Waiting for competition to be ready...")
+    rospy.wait_for_service('/ariac/start_competition')
+    rospy.loginfo("Competition is now ready.")
+    rospy.loginfo("Requesting competition start...")
+
+    try:
+        start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
+        response = start()
+    except rospy.ServiceException as exc:
+        rospy.logerr("Failed to start the competition: %s" % exc)
+        return False
+    if not response.success:
+        rospy.logerr("Failed to start the competition: %s" % response)
+    else:
+        rospy.loginfo("Competition started!")
+    return response.success
+
+
+
+
 
 
 if __name__ == '__main__':
     main()
+
+
+

@@ -25,6 +25,12 @@ class Subscriber:
     def __init__(self):
         self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.orderReceived)
         self.currentOrders = []
+        self.current_comp_state = None
+        self.received_orders = []
+        self.current_joint_state = None
+        self.current_gripper_state = None
+        self.last_joint_state_print = time.time()
+        self.last_gripper_state_print = time.time()
 
     def orderReceived(self, order):
         self.currentOrders.append(order)

@@ -1,9 +1,9 @@
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_tools.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_tools.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_tools.so, /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_tools.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_widgets.so, /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_widgets.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/libmoveit_setup_assistant_widgets.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_widgets.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/pkgconfig/moveit_setup_assistant.pc, /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_setup_assistant.pc)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/moveit_setup_assistant/collisions_updater, /home/anton/helloworld_ws/devel/lib/moveit_setup_assistant/collisions_updater)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/lib/moveit_setup_assistant/moveit_setup_assistant, /home/anton/helloworld_ws/devel/lib/moveit_setup_assistant/moveit_setup_assistant)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake, /home/anton/helloworld_ws/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_setup_assistant/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake, /home/anton/helloworld_ws/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake)
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_tools.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_tools.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_widgets.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_setup_assistant_widgets.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_setup_assistant.pc
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_setup_assistant/collisions_updater
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_setup_assistant/moveit_setup_assistant
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_setup_assistant/cmake/moveit_setup_assistantConfig-version.cmake

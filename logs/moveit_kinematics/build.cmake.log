@@ -38,23 +38,6 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.11
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-[33m[1mCMake Warning[0m at /home/anton/helloworld_ws/src/moveit/moveit_kinematics/CMakeLists.txt:24 (find_package):
-  By not providing "Findtrac_ik_kinematics_plugin.cmake" in CMAKE_MODULE_PATH
-  this project has asked CMake to find a package configuration file provided
-  by "trac_ik_kinematics_plugin", but CMake did not find one.
-
-  Could not find a package configuration file provided by
-  "trac_ik_kinematics_plugin" with any of the following names:
-
-    trac_ik_kinematics_pluginConfig.cmake
-    trac_ik_kinematics_plugin-config.cmake
-
-  Add the installation prefix of "trac_ik_kinematics_plugin" to
-  CMAKE_PREFIX_PATH or set "trac_ik_kinematics_plugin_DIR" to a directory
-  containing one of the above files.  If "trac_ik_kinematics_plugin" provides
-  a separate development package or SDK, be sure it has been installed.
-
-
 [36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
 [36m--[0m Checking for one of the modules 'eigen3'
 [36m--[0m Boost version: 1.58.0

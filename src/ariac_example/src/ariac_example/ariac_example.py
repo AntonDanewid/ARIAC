@@ -14,7 +14,9 @@
 # limitations under the License.
 
 from __future__ import print_function
+from tf.transformations import quaternion_from_euler
 
+import math
 import time
 import sys
 import copy
@@ -32,6 +34,16 @@ from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+from geometry_msgs.msg import PoseStamped
+import xml.etree.ElementTree as ET
+
+
+
+
+
+
+
+
 
 
 def start_competition():
@@ -72,44 +84,7 @@ def control_gripper(enabled):
     return response.success
 
 
-def control_drone(shipment_type):
-    rospy.loginfo("Waiting for drone control to be ready...")
-    name = '/ariac/drone'
-    rospy.wait_for_service(name)
-    rospy.loginfo("Drone control is now ready.")
-    rospy.loginfo("Requesting drone control...")
 
-    try:
-        drone_control = rospy.ServiceProxy(name, DroneControl)
-        response = drone_control(shipment_type)
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to control the drone: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to control the drone: %s" % response)
-    else:
-        rospy.loginfo("Drone controlled successfully")
-    return response.success
-
-
-def control_conveyor(power):
-    rospy.loginfo("Waiting for conveyor control to be ready...")
-    name = '/ariac/conveyor/control'
-    rospy.wait_for_service(name)
-    rospy.loginfo("Conveyor control is now ready.")
-    rospy.loginfo("Requesting conveyor control...")
-
-    try:
-        conveyor_control = rospy.ServiceProxy(name, ConveyorBeltControl)
-        response = conveyor_control(power)
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to control the conveyor: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to control the conveyor: %s" % response)
-    else:
-        rospy.loginfo("Conveyor controlled successfully")
-    return response.success
 
 
 class MyCompetitionClass:
@@ -138,59 +113,81 @@ class MyCompetitionClass:
 
         moveit_commander.roscpp_initialize(sys.argv)
         
-        robot = moveit_commander.RobotCommander()
-        #scene = moveit_commander.PlanningSceneInterface()
-        group = moveit_commander.MoveGroupCommander("manipulator")
-        display_trajectory_publisher = rospy.Publisher(
+        self.robot = moveit_commander.RobotCommander()
+        rospy.sleep(2)
+
+        self.scene = moveit_commander.PlanningSceneInterface()
+        rospy.sleep(2)
+        self.addCollisions(self.scene)
+        self.group = moveit_commander.MoveGroupCommander("manipulator")
+        self.display_trajectory_publisher = rospy.Publisher(
                                     '/move_group/display_planned_path',
                                     moveit_msgs.msg.DisplayTrajectory)
         rospy.sleep(10)
     
-        print("============ Generating plan 1")
-        current = geometry_msgs.msg.Pose()
-        current = robot.get_current_state()
-        print("ROBOT STATE ", current)
-
-
-        pose_target.orientation.w = 0.05
-        pose_target.position.x = currentx
-        pose_target.position.y = currenty
-        pose_target.position.z = 1.1
-        group.set_pose_target(pose_target)
-        plan1 = group.plan()
-
-
-        display_trajectory.trajectory_start = robot.get_current_state()
-        display_trajectory.trajectory.append(plan1)
-        display_trajectory_publisher.publish(display_trajectory)
-
-
-
-        group.execute(plan1)
-                #rospy.sleep(5)
-        #group.clear_pose_targets()
-        #group_variable_values = group.get_current_joint_values()
-        
-   
-
-
-
+        print("============ INITILIZED")
+        self.send_arm_to_state(startbin)
+        rospy.sleep(2)
+        self.sendOverBin(2)
+        self.sendBackFromBin(2)
+        self.sendOverBin(4)
+        self.sendBackFromBin(4)
+        self.sendOverBin(3)
+        self.sendBackFromBin(3)
+        self.send_arm_to_state(startbin)
         
 
-    def comp_state_callback(self, msg):
-        if self.current_comp_state != msg.data:
-            rospy.loginfo("Competition state: " + str(msg.data))
-        self.current_comp_state = msg.data
-
+        #self.sendOverBin(2)
+                 
+  
+      
+    
     def order_callback(self, msg):
         rospy.loginfo("Received order:\n" + str(msg))
-        self.received_orders.append(msg)
+             
+        
+        # box = PoseStamped()
+        # box.header = self.robot.get_planning_frame()
+        # box.pose.position.x = 0.27500
+        # box.pose.position.y = -1
+        # box.pose.position.z = 1.4
+        
+        # display_trajectory_publisher = rospy.Publisher(
+        #                             '/move_group/display_planned_path',
+        #                             moveit_msgs.msg.DisplayTrajectory)
 
-    def joint_state_callback(self, msg):
-        if time.time() - self.last_joint_state_print >= 10:
-            rospy.loginfo("Current Joint States (throttled to 0.1 Hz):\n" + str(msg))
-            self.last_joint_state_print = time.time()
-        self.current_joint_state = msg
+        # rospy.loginfo(str(msg.shipments[0].products[0].pose.position.x))
+        # pose_bin1_init = geometry_msgs.msg.Pose()
+
+        # pose_bin1_init.position.x = -0.75
+       
+
+        # pose_bin1_init.position.y = 1.186137
+        # #pose_bin1_init.position.y = -0.4
+
+        # #                                      #roll?         rolll
+        # pose_bin1_init.position.z = 1.186137
+        # #q = quaternion_from_euler(0.064575, 0.329187, -3.060996)
+        # q = quaternion_from_euler(0.329187, 0.064575 , -3.060996)
+
+        # #pose_bin1_init.orientation.x = q[0]
+        # #pose_bin1_init.orientation.y = q[1]
+        # #pose_bin1_init.orientation.z = q[2]
+        # #pose_bin1_init.orientation.w = q[3]
+      
+        # pose_start = geometry_msgs.msg.Pose()
+        # pose_start.position.x = -0.05
+        # pose_start.position.y = 1
+        # pose_start.position.z = 2.01
+        # pose_start.orientation.w = 1
+        # self.group.set_pose_target(pose_bin1_init)
+        # plan1 = self.group.plan()
+      
+        # self.group.set_joint_value_target(start)
+        # plan1 = self.group.plan()
+        # self.group.execute(plan1)
+        # rospy.sleep(10)
+    
 
     def gripper_state_callback(self, msg):
         if time.time() - self.last_gripper_state_print >= 10:
@@ -207,15 +204,102 @@ class MyCompetitionClass:
         msg.points = [point]
         rospy.loginfo("Sending command:\n" + str(msg))
         self.joint_trajectory_publisher.publish(msg)
-    #def order_print(self, msg):
+        #def order_print(self, msg):
 
+    def sendOverBin(self, bin): 
+        if(bin == 2):
+            self.send_arm_to_state(bin2_init)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin2_hover)
+        if(bin == 3):
+            self.send_arm_to_state(bin3_init)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin3_hover)
+        if(bin == 4):
+            self.send_arm_to_state(bin4_init)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin4_hover)
+    
+
+    def sendBackFromBin(self, bin):
+        if(bin == 2):
+            self.send_arm_to_state(bin2_hover)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin2_init)
+            rospy.sleep(2)
+        if(bin == 4): 
+            self.send_arm_to_state(bin4_hover)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin4_init)
+            rospy.sleep(2)
+        if(bin == 3):
+            self.send_arm_to_state(bin3_hover)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin3_init)
+            rospy.sleep(2)
+    
+    
+    def sendOverTray(self):
+        print("no")
+
+    def addCollisions(self, scene):
+        tree = ET.parse("test.xml")
+        root = tree.getroot()
+        i = 0
+        root = root[0]
+
+        for neighbor in root:
+            for neb in neighbor.iter('model'):        
+                for collision in neb.iter('collision'):
+                    poseInt = []
+                    scaleInt = []
+                    for pose in collision.iter('pose'):
+                        poseInt = pose.text.split(" ")
+                        poseInt = list(map(float, poseInt))
+                    #print(poseInt)
+                    i = i + 1
+                    for scale in collision.iter('geometry'):
+                        try:
+                            scaleInt= scale[0][0].text.split(" ")
+                            if(scale[0].tag == "box"):
+                               
+                                box = PoseStamped()
+                                box.header = self.robot.get_planning_frame()
+                                box.pose.position.x = poseInt[0]
+                                box.pose.position.y = poseInt[1]
+                                box.pose.position.z = poseInt[2]
+                                print("Adding box")
+                                self.scene.add_box(str(i), box, scaleInt)
+                            
+                                print('===============================')
+                            if(scale[0].tag == "mesh"):
+                                a = 0
+                            if(scale[0].tag == "cylinder"):
+                                #Fix so that we approximate a box for the cylinder
+                                length = scale[0][0]
+                                radius = scale[0][1]
+                                                        
+                                box = PoseStamped()
+                                box.header = self.robot.get_planning_frame()
+                                box.pose.position.x = poseInt[0]
+                                box.pose.position.y = poseInt[1]
+                                box.pose.position.z = poseInt[2]
+                                self.scene.add_box(str(i), box, (radius*2, radius*2, length))
+                            if(sacle[0].tag == "mesh"):
+                                a=0
+                                
+                        except:
+                            a=0
 
 
 def connect_callbacks(comp_class):
-    comp_state_sub = rospy.Subscriber(
-        "/ariac/competition_state", String, comp_class.comp_state_callback)
     order_sub = rospy.Subscriber("/ariac/orders", Order, comp_class.order_callback)
-    joint_state_sub = rospy.Subscriber(
-        "/ariac/joint_states", JointState, comp_class.joint_state_callback)
-    gripper_state_sub = rospy.Subscriber(
-        "/ariac/gripper/state", VacuumGripperState, comp_class.gripper_state_callback)
+
+bin3_init = [0.8842504439136532, 1.7269822672085962, 1.5322848955112205, -1.9922189839973683, -1.5687392233618356, 1.2100346569304605, -1.7403053744518617, -0.27145424520942707, 0.0]
+bin3_hover = [2.030708303027902, 1.5310893282578615, 1.5749289822025245, -1.3416422593103556, -1.5923680850468767, 1.253505298922895, -1.1957209389989902, -0.18298717536680742, 0.0]
+start = [0, 0, 0, 0 ,0 ,0 ,0, 0, 0]
+startbin = [1.092518983885773, 1.4819056485211508, 1.6481364135030203, -1.989019987811874, -1.4185319842752095, 1.3006881728757307, -1.4940562409131344, -0.33563946341297035, 0.0]
+bin2_hover = [2.1376512939425787, 1.577703386233594, 1.4965436365912836, -1.3189158894505644, -1.6483632779223516, 1.168788523744439, -1.0995023333076688, -0.8582111719843412, 0.0]
+bin2_init = [1.1834538606529188, 1.606397393784972, 1.3479349307800135, -2.021097598382318, -1.7075385940188674, 1.0746057037765455, -1.354026514380564, -1.0339370040978124, 0.0]
+bin4_init = [0.8468802479742044, 1.557319000511594, 1.5085020367811497, -1.9957541406818562, -1.6633651277989463, 1.1952518862140886, -1.9923196606145552, 0.476965360991872, 0.0]
+bin4_hover = [2.2568991548044846, 1.5778967907433996, 1.5845747874402276, -1.1774160457018974, -1.6101804156501398, 1.3317601741295064, -1.4415122391816748, 0.7287825828358929, 0.0]

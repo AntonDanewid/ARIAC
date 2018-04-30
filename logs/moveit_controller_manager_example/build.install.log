@@ -12,6 +12,6 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig-version.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_controller_manager_example/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_controller_manager_example.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_controller_manager_example.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_controller_manager_example.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_controller_manager_example.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_controller_manager_example/moveit_controller_manager_example_plugin_description.xml

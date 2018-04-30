@@ -9,9 +9,9 @@
 -- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/iiwa_gazebo.pc
 -- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/package.xml
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/worlds
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/worlds/iiwa.world
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch/iiwa_gazebo.launch
--- Installing: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch/iiwa_world.launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/package.xml
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/worlds
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/worlds/iiwa.world
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch/iiwa_gazebo.launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/iiwa_gazebo/launch/iiwa_world.launch

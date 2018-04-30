@@ -39,7 +39,7 @@ Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/pytho
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/python2.7/dist-packages/moveit_ros_planning/cfg/SenseForPlanDynamicReconfigureConfig.py ...
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/python2.7/dist-packages/moveit_ros_planning/cfg/TrajectoryExecutionDynamicReconfigureConfig.py ...
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/python2.7/dist-packages/moveit_ros_planning/cfg/__init__.py ...
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning/cfg
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning/cfg
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning/cfg/TrajectoryExecutionDynamicReconfigureConfig.py
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning/cfg/__init__.pyc
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning/cfg/TrajectoryExecutionDynamicReconfigureConfig.pyc
@@ -56,58 +56,58 @@ Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/pytho
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning/package.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning/planning_request_adapters_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_rdf_loader.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_rdf_loader.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_rdf_loader.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_rdf_loader.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/rdf_loader
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/rdf_loader
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rdf_loader/rdf_loader.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_collision_plugin_loader.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_collision_plugin_loader.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_collision_plugin_loader.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_collision_plugin_loader.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/collision_plugin_loader
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/collision_plugin_loader
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/collision_plugin_loader/collision_plugin_loader.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_kinematics_plugin_loader.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_kinematics_plugin_loader.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_kinematics_plugin_loader.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_kinematics_plugin_loader.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/kinematics_plugin_loader
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/kinematics_plugin_loader
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/kinematics_plugin_loader/kinematics_plugin_loader.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_model_loader.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_model_loader.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_robot_model_loader.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_robot_model_loader.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_model_loader
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/robot_model_loader
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_model_loader/robot_model_loader.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_constraint_sampler_manager_loader.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_constraint_sampler_manager_loader.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_constraint_sampler_manager_loader.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_constraint_sampler_manager_loader.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/constraint_sampler_manager_loader
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/constraint_sampler_manager_loader
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/constraint_sampler_manager_loader/constraint_sampler_manager_loader.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_pipeline.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_pipeline.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_planning_pipeline.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_planning_pipeline.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_pipeline
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/planning_pipeline
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_pipeline/planning_pipeline.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_default_planning_request_adapter_plugins.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_default_planning_request_adapter_plugins.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_default_planning_request_adapter_plugins.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_default_planning_request_adapter_plugins.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_planning/moveit_list_request_adapter_plugins
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_planning/moveit_list_request_adapter_plugins" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_monitor.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_monitor.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_monitor.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_monitor.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_monitor
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/planning_scene_monitor
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_monitor/planning_scene_monitor.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_monitor/current_state_monitor.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_monitor/trajectory_monitor.h
@@ -126,18 +126,18 @@ Compiling /home/anton/helloworld_ws/devel/.private/moveit_ros_planning/lib/pytho
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_planning/moveit_publish_scene_from_text
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_planning/moveit_publish_scene_from_text" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_execution_manager.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_execution_manager.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_execution_manager.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_trajectory_execution_manager.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/trajectory_execution_manager
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/trajectory_execution_manager
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/trajectory_execution_manager/trajectory_execution_manager.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_plan_execution.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_plan_execution.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_plan_execution.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_plan_execution.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/plan_execution
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/plan_execution
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/plan_execution/plan_execution.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/plan_execution/plan_representation.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/plan_execution/plan_with_sensing.h

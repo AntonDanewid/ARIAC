@@ -44,6 +44,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 install(PROGRAMS
   script/ariac_example_node.py
   script/tf2_example.py
+  script/planner_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

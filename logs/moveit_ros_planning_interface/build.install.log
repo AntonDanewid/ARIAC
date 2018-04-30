@@ -103,57 +103,57 @@ creating /home/anton/helloworld_ws/build/moveit_ros_planning_interface/lib.linux
 copying python/moveit_ros_planning_interface/__init__.py -> /home/anton/helloworld_ws/build/moveit_ros_planning_interface/lib.linux-x86_64-2.7/moveit_ros_planning_interface
 running install
 running install_lib
-creating /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface
 copying /home/anton/helloworld_ws/build/moveit_ros_planning_interface/lib.linux-x86_64-2.7/moveit_ros_planning_interface/__init__.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/__init__.py to __init__.pyc
 running install_egg_info
+Removing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface-0.9.11.egg-info
 Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface-0.9.11.egg-info
 -- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/moveit_ros_planning_interface.pc
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning_interface/cmake/moveit_ros_planning_interfaceConfig.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning_interface/cmake/moveit_ros_planning_interfaceConfig-version.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning_interface/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_py_bindings_tools.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_py_bindings_tools.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_py_bindings_tools.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_py_bindings_tools.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_roscpp_initializer.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_roscpp_initializer.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_roscpp_initializer.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_roscpp_initializer.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/py_bindings_tools
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/py_bindings_tools
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/py_bindings_tools/py_conversions.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/py_bindings_tools/serialize_msg.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/py_bindings_tools/roscpp_initializer.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_common_planning_interface_objects.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_common_planning_interface_objects.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_common_planning_interface_objects.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_common_planning_interface_objects.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/common_planning_interface_objects
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/common_planning_interface_objects
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/common_planning_interface_objects/common_objects.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_interface.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_interface.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_interface.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_interface.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_planning_scene_interface.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_planning_scene_interface.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_planning_scene_interface.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_planning_scene_interface.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_interface
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/planning_scene_interface
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_interface/planning_scene_interface.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_interface.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_interface.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_interface.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_move_group_interface.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_move_group_interface.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_move_group_interface.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_move_group_interface.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_move_group_interface.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group_interface
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/move_group_interface
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group_interface/move_group.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group_interface/move_group_interface.h
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_robot_interface.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_robot_interface.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_robot_interface.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_planning_interface/_moveit_robot_interface.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning_interface/test/python_move_group.py
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_planning_interface/test/python_move_group_ns.py

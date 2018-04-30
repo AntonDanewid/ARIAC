@@ -87,7 +87,7 @@ class Planner:
     def order_callback(self, msg):
         rospy.loginfo("Received order:\n" + str(msg))
         self.received_orders.append(msg)
-        control_conveyor(10)
+        control_conveyor(50)
 
     
     
@@ -108,3 +108,4 @@ def connect_callbacks(planner):
     comp_state_sub = rospy.Subscriber(
         "/ariac/competition_state", String, planner.comp_state_callback)
     order_sub = rospy.Subscriber("/ariac/orders", Order, planner.order_callback)
+    beam_sub = rospy.Subscriber("/ariac/break_beam_1")

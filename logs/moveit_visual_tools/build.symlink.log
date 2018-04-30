@@ -1,5 +1,5 @@
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_visual_tools/lib/libmoveit_visual_tools.so, /home/anton/helloworld_ws/devel/lib/libmoveit_visual_tools.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_visual_tools/lib/pkgconfig/moveit_visual_tools.pc, /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_visual_tools.pc)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_visual_tools/lib/moveit_visual_tools/moveit_visual_tools_demo, /home/anton/helloworld_ws/devel/lib/moveit_visual_tools/moveit_visual_tools_demo)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_visual_tools/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig-version.cmake, /home/anton/helloworld_ws/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig-version.cmake)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_visual_tools/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig.cmake, /home/anton/helloworld_ws/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig.cmake)
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_visual_tools.so
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_visual_tools.pc
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_visual_tools/moveit_visual_tools_demo
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig-version.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_visual_tools/cmake/moveit_visual_toolsConfig.cmake

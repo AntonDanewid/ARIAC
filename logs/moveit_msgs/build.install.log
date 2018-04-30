@@ -135,12 +135,12 @@
 [100%] Built target moveit_msgs_generate_messages
 [36mInstall the project...[0m
 -- Install configuration: "Release"
--- Installing: /home/anton/helloworld_ws/install/_setup_util.py
--- Installing: /home/anton/helloworld_ws/install/env.sh
--- Installing: /home/anton/helloworld_ws/install/setup.bash
--- Installing: /home/anton/helloworld_ws/install/setup.sh
--- Installing: /home/anton/helloworld_ws/install/setup.zsh
--- Installing: /home/anton/helloworld_ws/install/.rosinstall
+-- Up-to-date: /home/anton/helloworld_ws/install/_setup_util.py
+-- Up-to-date: /home/anton/helloworld_ws/install/env.sh
+-- Up-to-date: /home/anton/helloworld_ws/install/setup.bash
+-- Up-to-date: /home/anton/helloworld_ws/install/setup.sh
+-- Up-to-date: /home/anton/helloworld_ws/install/setup.zsh
+-- Up-to-date: /home/anton/helloworld_ws/install/.rosinstall
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/ExecuteTrajectory.action
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/MoveGroup.action
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/action/Pickup.action
@@ -235,7 +235,7 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/RenameRobotStateInWarehouse.srv
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/srv/DeleteRobotStateFromWarehouse.srv
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_msgs/cmake/moveit_msgs-msg-paths.cmake
--- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit_msgs
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/SaveRobotStateToWarehouseRequest.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/GetKinematicSolverInfoRequest.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PlaceActionGoal.h
@@ -369,8 +369,8 @@
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/ExecuteTrajectoryActionFeedback.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/PositionConstraint.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_msgs/LoadMap.h
--- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs
--- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv
+-- Up-to-date: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs
+-- Up-to-date: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GraspPlanning.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetMotionPlan.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/RenameRobotStateInWarehouse.l
@@ -393,7 +393,7 @@
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/ListRobotStatesInWarehouse.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/GetPositionFK.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/srv/LoadMap.l
--- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg
+-- Up-to-date: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ContactInformation.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/JointLimits.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/ExecuteTrajectoryGoal.l
@@ -462,8 +462,8 @@
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/CollisionObject.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/msg/PlaceLocation.l
 -- Installing: /home/anton/helloworld_ws/install/share/roseus/ros/moveit_msgs/manifest.l
--- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs
--- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv
+-- Up-to-date: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs
+-- Up-to-date: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_LoadMap.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/SaveRobotStateToWarehouse.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_SaveRobotStateToWarehouse.lisp
@@ -510,7 +510,7 @@
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/ListRobotStatesInWarehouse.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/_package_GraspPlanning.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/srv/QueryPlannerInterfaces.lisp
--- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg
+-- Up-to-date: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceResult.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_PlaceActionResult.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryActionGoal.lisp
@@ -647,9 +647,9 @@
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/RobotTrajectory.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/PlaceLocation.lisp
 -- Installing: /home/anton/helloworld_ws/install/share/common-lisp/ros/moveit_msgs/msg/_package_ExecuteTrajectoryResult.lisp
--- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs
+-- Up-to-date: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/_index.js
--- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv
+-- Up-to-date: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/ApplyPlanningScene.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/_index.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/SaveMap.js
@@ -673,7 +673,7 @@
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/CheckIfRobotStateExistsInWarehouse.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/GetPlanningScene.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/srv/DeleteRobotStateFromWarehouse.js
--- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg
+-- Up-to-date: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/MoveGroupActionGoal.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/ObjectColor.js
 -- Installing: /home/anton/helloworld_ws/install/share/gennodejs/ros/moveit_msgs/msg/PlaceGoal.js
@@ -837,8 +837,8 @@ Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dis
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_SaveRobotStateToWarehouse.py ...
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/_SetPlannerParams.py ...
 Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dist-packages/moveit_msgs/srv/__init__.py ...
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetStateValidity.py
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetPositionFK.py
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_CheckIfRobotStateExistsInWarehouse.py
@@ -886,7 +886,7 @@ Compiling /home/anton/helloworld_ws/devel/.private/moveit_msgs/lib/python2.7/dis
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_DeleteRobotStateFromWarehouse.pyc
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/srv/_GetKinematicSolverInfo.pyc
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/__init__.pyc
--- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_RobotTrajectory.py
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_PickupAction.py
 -- Installing: /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_msgs/msg/_MoveGroupActionFeedback.py

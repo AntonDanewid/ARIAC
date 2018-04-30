@@ -52,5 +52,106 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 [36m--[0m  *** Building MoveIt! 0.9.11-Alpha ***
 [36m--[0m Configuring done
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:169 (add_executable):
+  Cannot generate a safe runtime search path for target test_robot_model
+  because there is a cycle in the constraint graph:
+
+    dir 0 is [/home/anton/helloworld_ws/build/moveit_core/gtest]
+    dir 1 is [/home/anton/helloworld_ws/build/moveit_core/gtest/gtest]
+    dir 2 is [/opt/ros/kinetic/lib]
+      dir 3 must precede it due to runtime library [libgeometric_shapes.so]
+      dir 4 must precede it due to runtime library [libmoveit_robot_model.so.0.9.11]
+    dir 3 is [/home/anton/helloworld_ws/install/lib]
+      dir 4 must precede it due to runtime library [libmoveit_robot_model.so.0.9.11]
+    dir 4 is [/home/anton/helloworld_ws/devel/.private/moveit_core/lib]
+
+  Some of these libraries may not be found correctly.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:79 (_catkin_add_executable_with_google_test)
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:28 (_catkin_add_google_test)
+  robot_model/CMakeLists.txt:24 (catkin_add_gtest)
+
+
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:169 (add_executable):
+  Cannot generate a safe runtime search path for target test_robot_state
+  because there is a cycle in the constraint graph:
+
+    dir 0 is [/home/anton/helloworld_ws/build/moveit_core/gtest]
+    dir 1 is [/home/anton/helloworld_ws/build/moveit_core/gtest/gtest]
+    dir 2 is [/opt/ros/kinetic/lib]
+      dir 3 must precede it due to runtime library [libgeometric_shapes.so]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 3 is [/home/anton/helloworld_ws/install/lib]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 4 is [/home/anton/helloworld_ws/devel/.private/moveit_core/lib]
+
+  Some of these libraries may not be found correctly.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:79 (_catkin_add_executable_with_google_test)
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:28 (_catkin_add_google_test)
+  robot_state/CMakeLists.txt:24 (catkin_add_gtest)
+
+
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:169 (add_executable):
+  Cannot generate a safe runtime search path for target test_aabb because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/home/anton/helloworld_ws/build/moveit_core/gtest]
+    dir 1 is [/home/anton/helloworld_ws/build/moveit_core/gtest/gtest]
+    dir 2 is [/opt/ros/kinetic/lib]
+      dir 3 must precede it due to runtime library [libgeometric_shapes.so]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 3 is [/home/anton/helloworld_ws/install/lib]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 4 is [/home/anton/helloworld_ws/devel/.private/moveit_core/lib]
+
+  Some of these libraries may not be found correctly.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:79 (_catkin_add_executable_with_google_test)
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:28 (_catkin_add_google_test)
+  robot_state/CMakeLists.txt:30 (catkin_add_gtest)
+
+
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:169 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_robot_state_complex because there is a cycle in the constraint graph:
+
+    dir 0 is [/home/anton/helloworld_ws/build/moveit_core/gtest]
+    dir 1 is [/home/anton/helloworld_ws/build/moveit_core/gtest/gtest]
+    dir 2 is [/opt/ros/kinetic/lib]
+      dir 3 must precede it due to runtime library [libgeometric_shapes.so]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 3 is [/home/anton/helloworld_ws/install/lib]
+      dir 4 must precede it due to runtime library [libmoveit_robot_state.so.0.9.11]
+    dir 4 is [/home/anton/helloworld_ws/devel/.private/moveit_core/lib]
+
+  Some of these libraries may not be found correctly.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:79 (_catkin_add_executable_with_google_test)
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:28 (_catkin_add_google_test)
+  robot_state/CMakeLists.txt:27 (catkin_add_gtest)
+
+
+[33m[1mCMake Warning[0m at /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:169 (add_executable):
+  Cannot generate a safe runtime search path for target
+  test_time_parameterization because there is a cycle in the constraint
+  graph:
+
+    dir 0 is [/home/anton/helloworld_ws/build/moveit_core/gtest]
+    dir 1 is [/home/anton/helloworld_ws/build/moveit_core/gtest/gtest]
+    dir 2 is [/opt/ros/kinetic/lib]
+      dir 3 must precede it due to runtime library [libgeometric_shapes.so]
+      dir 4 must precede it due to runtime library [libmoveit_trajectory_processing.so.0.9.11]
+    dir 3 is [/home/anton/helloworld_ws/install/lib]
+      dir 4 must precede it due to runtime library [libmoveit_trajectory_processing.so.0.9.11]
+    dir 4 is [/home/anton/helloworld_ws/devel/.private/moveit_core/lib]
+
+  Some of these libraries may not be found correctly.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:79 (_catkin_add_executable_with_google_test)
+  /opt/ros/kinetic/share/catkin/cmake/test/gtest.cmake:28 (_catkin_add_google_test)
+  trajectory_processing/CMakeLists.txt:22 (catkin_add_gtest)
+
+
 [36m--[0m Generating done
 [36m--[0m Build files have been written to: /home/anton/helloworld_ws/build/moveit_core

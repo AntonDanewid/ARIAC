@@ -29,7 +29,6 @@ def main():
     if not comp_class.has_been_zeroed:
         comp_class.has_been_zeroed = True
         rospy.loginfo("Sending arm to zero joint positions... TESTIN")
-        comp_class.send_arm_to_state([0] * len(comp_class.arm_joint_names))
 
     rospy.spin()
 

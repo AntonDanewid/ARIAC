@@ -1,5 +1,5 @@
-Linked: (/home/anton/helloworld_ws/devel/.private/srdfdom/lib/libsrdfdom.so, /home/anton/helloworld_ws/devel/lib/libsrdfdom.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/srdfdom/lib/python2.7/dist-packages/srdfdom/__init__.py, /home/anton/helloworld_ws/devel/lib/python2.7/dist-packages/srdfdom/__init__.py)
-Linked: (/home/anton/helloworld_ws/devel/.private/srdfdom/lib/pkgconfig/srdfdom.pc, /home/anton/helloworld_ws/devel/lib/pkgconfig/srdfdom.pc)
-Linked: (/home/anton/helloworld_ws/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig-version.cmake, /home/anton/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig-version.cmake)
-Linked: (/home/anton/helloworld_ws/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig.cmake, /home/anton/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig.cmake)
+Symlinking /home/anton/helloworld_ws/devel/lib/libsrdfdom.so
+Symlinking /home/anton/helloworld_ws/devel/lib/python2.7/dist-packages/srdfdom/__init__.py
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/srdfdom.pc
+Symlinking /home/anton/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig-version.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/srdfdom/cmake/srdfdomConfig.cmake

@@ -15,16 +15,16 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_visual_tools.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_visual_tools.so" to ""
--- Installing: /home/anton/helloworld_ws/install/include/moveit_visual_tools
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit_visual_tools
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_visual_tools/imarker_end_effector.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_visual_tools/moveit_visual_tools.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit_visual_tools/imarker_robot_state.h
--- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch/debug_settings.gdb
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch/demo.rviz
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch/demo_rviz.launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/launch/demo.launch
--- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/resources
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_visual_tools/resources
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/resources/demo_mesh.stl
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/resources/screenshot.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_visual_tools/resources/demo.png

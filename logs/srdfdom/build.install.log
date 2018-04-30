@@ -18,20 +18,16 @@ copying src/srdfdom/srdf.py -> /home/anton/helloworld_ws/build/srdfdom/lib.linux
 copying src/srdfdom/__init__.py -> /home/anton/helloworld_ws/build/srdfdom/lib.linux-x86_64-2.7/srdfdom
 running install
 running install_lib
-creating /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom
-copying /home/anton/helloworld_ws/build/srdfdom/lib.linux-x86_64-2.7/srdfdom/srdf.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom
-copying /home/anton/helloworld_ws/build/srdfdom/lib.linux-x86_64-2.7/srdfdom/__init__.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom
-byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom/srdf.py to srdf.pyc
-byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom/__init__.py to __init__.pyc
 running install_egg_info
+Removing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom-0.4.2.egg-info
 Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/srdfdom-0.4.2.egg-info
 -- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/srdfdom.pc
 -- Installing: /home/anton/helloworld_ws/install/share/srdfdom/cmake/srdfdomConfig.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/srdfdom/cmake/srdfdomConfig-version.cmake
--- Installing: /home/anton/helloworld_ws/install/share/srdfdom/package.xml
+-- Up-to-date: /home/anton/helloworld_ws/install/share/srdfdom/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libsrdfdom.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libsrdfdom.so" to ""
--- Installing: /home/anton/helloworld_ws/install/include/srdfdom
--- Installing: /home/anton/helloworld_ws/install/include/srdfdom/srdf_writer.h
--- Installing: /home/anton/helloworld_ws/install/include/srdfdom/model.h
--- Installing: /home/anton/helloworld_ws/install/lib/srdfdom/display_srdf
+-- Up-to-date: /home/anton/helloworld_ws/install/include/srdfdom
+-- Up-to-date: /home/anton/helloworld_ws/install/include/srdfdom/srdf_writer.h
+-- Up-to-date: /home/anton/helloworld_ws/install/include/srdfdom/model.h
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/srdfdom/display_srdf

@@ -25,32 +25,32 @@
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_setup_assistant/moveit_setup_assistant
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_setup_assistant/moveit_setup_assistant" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_widgets.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_widgets.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_widgets.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_widgets.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_tools.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_tools.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_tools.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_setup_assistant_tools.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_setup_assistant/collisions_updater
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_setup_assistant/collisions_updater" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/setup_assistant
--- Installing: /home/anton/helloworld_ws/install/include/moveit/setup_assistant/tools
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/setup_assistant
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/setup_assistant/tools
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/setup_assistant/tools/moveit_config_data.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/setup_assistant/tools/compute_default_collisions.h
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/launch/setup_assistant.launch
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/MoveIt_Setup_Asst_xSm.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/moveit_logo.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/MoveIt_Setup_Asst_Sm.png
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/source
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/source
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/source/moveit_logo_large.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/source/MoveIt_Setup_Asst_xSm.xcf
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/resources/source/MoveIt_Setup_Asst_Sm.xcf
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template
--- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template/launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template/launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template/launch/default_warehouse_db.launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template/launch/gdb_settings.gdb
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_setup_assistant/templates/moveit_config_pkg_template/launch/move_group.launch

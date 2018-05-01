@@ -67,7 +67,11 @@ def main():
     invpose.orientation.z =0.78309805686
     invpose.orientation.w =-0.00385227873479
     pose = sub.getLocationOfPart("gear_part")
-    print(pose.position.x)
+    #print(pose.position.x)
+    #sub.translatePose(pose, 'logical_camera_1')
+
+    print(sub.getAmountOfParts("gear_part"))
+
     #pose = armcontroll.transformPose(invpose, [-0.02,0,0], [0,0,0,0], 'logical_camera_1_frame')
     #armcontroll.poseTarget(pose)
     #arm.planPose()

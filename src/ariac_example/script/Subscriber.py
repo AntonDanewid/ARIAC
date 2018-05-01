@@ -25,6 +25,8 @@ from geometry_msgs.msg import PoseStamped
 import xml.etree.ElementTree as ET
 import sys, tf
 import Orders
+import tf2_ros
+import tf2_geometry_msgs  
 
 class Subscriber: 
 
@@ -41,17 +43,20 @@ class Subscriber:
         self.logicalCameraData = None
         self.pastLogicalCameraTime = rospy.get_time()
         self.logicalCameraSubscriber = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent)
+        self.tf_listener = tf.TransformListener()
 
 
 
 
 
+    #Adds order objects to a list
     def orderReceived(self, order):
         o = Orders.Orders(order)
         self.currentOrders.append(o)
 
+
+    #Returns the pose of a requested part i local coordinate system. Needs tranforms
     def getLocationOfPart(self, part): 
-        print(self.logicalCameraData.models)
         for model in self.logicalCameraData.models:
             if model.type == part:
                 pose = geometry_msgs.msg.Pose()
@@ -65,6 +70,7 @@ class Subscriber:
                 return pose
 
     
+    #Adds a logical camera message
     def logicalCameraEvent(self, msg):
         now = rospy.get_time()
         if self.pastLogicalCameraTime + 1.0 < now and len(msg.models) > 0:
@@ -75,4 +81,27 @@ class Subscriber:
         
         self.logicalCameraData = msg
     
+    #Translates a local pose to world pose from the frame provided
+    #Fix problem with nonexisting frame
+    def translatePose(self, pose, frame):
+        targetPose = PoseStamped()
+        targetPose.header.frame_id = 'shipping_box_frame'
+        targetPose.pose.position.x = pose.position.x 
+        targetPose.pose.position.y = pose.position.y
+        targetPose.pose.position.z = pose.position.z
+        targetPose.pose.orientation.x = 0.0 
+        targetPose.pose.orientation.y = 0.0 
+        targetPose.pose.orientation.z = 0.0 
+        targetPose.pose.orientation.w = 0.0 
     
+        transformedPose = self.tf_listener.transformPose('world', targetPose)
+        print(transformedPose)
+
+    #Add for all the different sensors, right now it can only do for the single logical camera
+    def getAmountOfParts(self, partName):
+        amount = 0
+        for model in self.logicalCameraData.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
+        return amount

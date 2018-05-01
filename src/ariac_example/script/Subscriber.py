@@ -54,7 +54,6 @@ class Subscriber:
         print(self.logicalCameraData.models)
         for model in self.logicalCameraData.models:
             if model.type == part:
-                name = part.type
                 pose = geometry_msgs.msg.Pose()
                 pose.position.x = model.pose.position.x
                 pose.position.y = model.pose.position.y
@@ -63,6 +62,7 @@ class Subscriber:
                 pose.orientation.y = model.pose.orientation.y
                 pose.orientation.z = model.pose.orientation.z
                 pose.orientation.w = model.pose.orientation.w
+                return pose
 
     
     def logicalCameraEvent(self, msg):

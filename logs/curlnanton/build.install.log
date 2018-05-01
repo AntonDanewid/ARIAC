@@ -24,7 +24,10 @@ Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/curlnanton
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/cmake/curlnantonConfig.cmake
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/cmake/curlnantonConfig-version.cmake
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/package.xml
--- Installing: /home/anton/helloworld_ws/install/lib/curlnanton/ariac_example_node.py
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/ariac_example_node.py
 -- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/tf2_example.py
+-- Installing: /home/anton/helloworld_ws/install/lib/curlnanton/Subscriber.py
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/Orders.py
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/Product.py
 -- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/planner_node.py
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/config/sample_gear_conf.yaml

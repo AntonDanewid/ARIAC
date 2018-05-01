@@ -13,13 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from ariac_example import ariac_example
 
 
 
 from __future__ import print_function
+from ariac_example import ariac_example
 from tf.transformations import quaternion_from_euler
-
 import math
 import time
 import sys
@@ -41,33 +40,42 @@ from trajectory_msgs.msg import JointTrajectoryPoint
 from geometry_msgs.msg import PoseStamped
 import xml.etree.ElementTree as ET
 import sys, tf
+#import tf2
+#import tf2_geometry_msgs
+import Subscriber
 
-class Subscriber: 
-
-    def __init__(self):
-        self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.orderReceived)
-        self.currentOrders = []
-        self.current_comp_state = None
-        self.received_orders = []
-        self.current_joint_state = None
-        self.current_gripper_state = None
-        self.last_joint_state_print = time.time()
-        self.last_gripper_state_print = time.time()
-
-    def orderReceived(self, order):
-        self.currentOrders.append(order)
 
 
 
 
 def main():
 
-    sub = Subscriber()
-    armcontroll = ariac_example.ArmControll()
-    #Start()
+    sub = Subscriber.Subscriber()
+    rospy.init_node("_ariac_competion_node_")
+    rospy.sleep(2)
+    #armcontroll = ariac_example.ArmControll()
+    Start()
     rospy.loginfo("=============Setup complete.")
-    armcontroll.sendOverBin(3)
+    #armcontroll.sendOverBin(3)
 
+    invpose = geometry_msgs.msg.Pose()    
+    invpose.position.x=0.521671259388
+    invpose.position.y=-0.184750284639
+    invpose.position.z= 0.164743542447
+    invpose.orientation.x = 0.62185046715
+    invpose.orientation.y = 0.00667755907235
+    invpose.orientation.z =0.78309805686
+    invpose.orientation.w =-0.00385227873479
+    #pose = armcontroll.transformPose(invpose, [-0.02,0,0], [0,0,0,0], 'logical_camera_1_frame')
+    #armcontroll.poseTarget(pose)
+    #arm.planPose()
+    #arm.executePlan()
+
+
+    
+    
+    
+    #armcontroll.grabPart()
 
    # while not rospy.is_shutdown():
     #    if():

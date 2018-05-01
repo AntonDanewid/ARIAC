@@ -139,6 +139,21 @@ class ArmControll:
         self.group.set_goal_position_tolerance(0.005)
         # Set goal orientation tolerance
         self.group.set_goal_orientation_tolerance(0.005)
+        
+        collision_object_pub = rospy.Publisher('/collision_object', moveit_msgs.msg.CollisionObject)
+        # shelf_collision_object_msg = moveit_msgs.msg.CollisionObject()
+        # shelf_collision_object_msg.operation = shelf_collision_object_msg.MOVE
+
+        # shelf_collision_object_msg.id = 'shelf'
+        # shelf_collision_object_msg.mesh_poses = [1, 1, 1]
+        # shelf_collision_object_msg.header.stamp = rospy.Time.now()
+        # shelf_collision_object_msg.header.frame_id = base_frame_id
+
+        # collision_object_pub.publish(shelf_collision_object_msg)
+        # rospy.sleep(2)
+        self.tf_listener = tf.TransformListener()
+
+        self.addCollisions(self.scene)
         #client = dynamic_reconfigure.client.Client('move_group/trajectory_execution/')
         #params = { 'allowed_start_tolerance' : '0.0'}
         #config = client.update_configuration(params)
@@ -208,19 +223,19 @@ class ArmControll:
         self.current_gripper_state = msg
 
     def send_arm_to_state(self, positions):
-        # msg = JointTrajectory()
-        # msg.joint_names = self.arm_joint_names
-        # point = JointTrajectoryPoint()
-        # point.positions = positions
-        # point.time_from_start = rospy.Duration(1.0)
-        # msg.points = [point]
-        # rospy.loginfo("Sending command:\n" + str(msg))
-        # self.joint_trajectory_publisher.publish(msg)
+        msg = JointTrajectory()
+        msg.joint_names = self.arm_joint_names
+        point = JointTrajectoryPoint()
+        point.positions = positions
+        point.time_from_start = rospy.Duration(1.0)
+        msg.points = [point]
+        rospy.loginfo("Sending command:\n" + str(msg))
+        self.joint_trajectory_publisher.publish(msg)
         #group_variable_values = self.group.get_current_joint_values()
         #\\group_variable_values = positions
-        self.group.set_joint_value_target(positions)
-        self.group.plan()
-        self.group.go(wait=True)
+        #self.group.set_joint_value_target(positions)
+        #self.group.plan()
+        #self.group.go(wait=True)
 
 
         #def order_print(self, msg):
@@ -240,6 +255,8 @@ class ArmControll:
             self.send_arm_to_state(bin4_init)
             rospy.sleep(2)
             self.send_arm_to_state(bin4_hover)
+            rospy.sleep(2)
+
     
 
     def sendBackFromBin(self, bin):
@@ -276,14 +293,119 @@ class ArmControll:
         self.group.set_position_target(xyz)
         self.group.plan()
         self.group.go(wait=True)
+
+
+
+    def transformPose(self, pose, posOffset, orienOffset, frame):
+            # Transform pose using frame
+        targetPose = PoseStamped()
+        targetPose.header.frame_id = frame
+        targetPose.pose.position.x = pose.position.x + posOffset[0]
+        targetPose.pose.position.y = pose.position.y + posOffset[1]
+        targetPose.pose.position.z = pose.position.z + posOffset[2]
+        targetPose.pose.orientation.x = 0.0 + orienOffset[0]
+        targetPose.pose.orientation.y = 0.0 + orienOffset[1]
+        targetPose.pose.orientation.z = 0.0 + orienOffset[2]
+        targetPose.pose.orientation.w = 0.0 + orienOffset[3]
+            # Transform
+
+        frame = 'lolg'
+
+        transformedPose = self.tf_listener.transformPose('world', targetPose)
+            # Return
+        return transformedPose
         
+
+
+
+    def poseTarget(self, target):
+        # Given a target try and position arm end effector over it, return bool
+        poseTarget = geometry_msgs.msg.Pose()
+        poseTarget.position.x = target.pose.position.x
+        poseTarget.position.y = target.pose.position.y
+        poseTarget.position.z = target.pose.position.z
+        poseTarget.orientation = target.pose.orientation
+        self.group.set_pose_target(poseTarget)
 
 
         #self.group.set_pose_target(pose_target)
         #plan1 = self.group.plan()        
 
+
+    def planPose(self):
+        # Plan arm pose 
+        plan = self.group.plan()
+
+    def executePlan(self):
+        # Execute desired plan
+        self.group.go(wait=True)
+
+
+
+
     def sendOverTray(self):
         print("no")
+
+
+    def addCollisions(self, scene):
+            tree = ET.parse("test.xml")
+            root = tree.getroot()
+            i = 0
+            collision_object_pub = rospy.Publisher('/collision_object', moveit_msgs.msg.CollisionObject)
+            root = root[0]
+
+            for neighbor in root:
+                for neb in neighbor.iter('model'):        
+                    for collision in neb.iter('collision'):
+                        poseInt = []
+                        scaleInt = []
+                        for pose in collision.iter('pose'):
+                            poseInt = pose.text.split(" ")
+                            poseInt = list(map(float, poseInt))
+                        #print(poseInt)
+                        for scale in collision.iter('geometry'):
+                            try:
+                                scaleInt= scale[0][0].text.split(" ")
+                                if(scale[0].tag == "box"):
+                                
+                                    box = PoseStamped()
+                                    box.header = self.robot.get_planning_frame()
+                                    box.pose.position.x = poseInt[0]
+                                    box.pose.position.y = poseInt[1]
+                                    box.pose.position.z = poseInt[2]
+                                    print("Adding box")
+                                    self.scene.add_box(str(i), box, scaleInt)
+                                    self.scene.applyCollisionObject(box)
+                                    
+                                    collision_object = moveit_msgs.msg.CollisionObject()
+                    
+                                    i = i + 1
+
+
+                                    print('===============================')
+                                if(scale[0].tag == "mesh"):
+                                    a = 0
+                                if(scale[0].tag == "cylinder"):
+                                    #Fix so that we approximate a box for the cylinder
+                                    length = scale[0][0]
+                                    radius = scale[0][1]
+                                                            
+                                    box = PoseStamped()
+                                    box.header = self.robot.get_planning_frame()
+                                    box.pose.position.x = poseInt[0]
+                                    box.pose.position.y = poseInt[1]
+                                    box.pose.position.z = poseInt[2]
+                                    self.scene.add_box(str(i), box, (radius*2, radius*2, length))
+                                    i = i + 1
+
+                                if(sacle[0].tag == "mesh"):
+                                    a=0
+                                    
+                            except:
+                                pass
+
+
+
 
 
 #bin3_init = [0.8842504439136532, 1.7269822672085962, 1.5322848955112205, -1.9922189839973683, -1.5687392233618356, 1.2100346569304605, -1.7403053744518617, -0.27145424520942707, 0.0]

@@ -50,9 +50,9 @@ import Subscriber
 
 def main():
 
-    sub = Subscriber.Subscriber()
     rospy.init_node("_ariac_competion_node_")
-    rospy.sleep(2)
+    sub = Subscriber.Subscriber()
+    rospy.sleep(5)
     #armcontroll = ariac_example.ArmControll()
     Start()
     rospy.loginfo("=============Setup complete.")
@@ -66,6 +66,8 @@ def main():
     invpose.orientation.y = 0.00667755907235
     invpose.orientation.z =0.78309805686
     invpose.orientation.w =-0.00385227873479
+    sub.getLocationOfPart("gear_part")
+    
     #pose = armcontroll.transformPose(invpose, [-0.02,0,0], [0,0,0,0], 'logical_camera_1_frame')
     #armcontroll.poseTarget(pose)
     #arm.planPose()
@@ -73,14 +75,11 @@ def main():
 
 
     
-    
-    
     #armcontroll.grabPart()
 
    # while not rospy.is_shutdown():
     #    if():
             
-
 
 
 

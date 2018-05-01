@@ -15,16 +15,16 @@ running install
 running install_lib
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/ariac_example/delivery_caller.py to delivery_caller.pyc
 Sorry: IndentationError: expected an indented block (delivery_caller.py, line 38)
+Sorry: IndentationError: expected an indented block (arm_planner.py, line 45)
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/ariac_example/arm_planner.py to arm_planner.pyc
 running install_egg_info
-Sorry: IndentationError: expected an indented block (arm_planner.py, line 45)
 Removing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/curlnanton-0.1.0.egg-info
 Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/curlnanton-0.1.0.egg-info
 -- Up-to-date: /home/anton/helloworld_ws/install/lib/pkgconfig/curlnanton.pc
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/cmake/curlnantonConfig.cmake
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/cmake/curlnantonConfig-version.cmake
 -- Up-to-date: /home/anton/helloworld_ws/install/share/curlnanton/package.xml
--- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/ariac_example_node.py
+-- Installing: /home/anton/helloworld_ws/install/lib/curlnanton/ariac_example_node.py
 -- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/tf2_example.py
 -- Installing: /home/anton/helloworld_ws/install/lib/curlnanton/Subscriber.py
 -- Up-to-date: /home/anton/helloworld_ws/install/lib/curlnanton/Orders.py

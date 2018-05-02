@@ -43,6 +43,7 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 ## Mark executable scripts (Python etc.) for installation
 install(PROGRAMS
   script/ariac_example_node.py
+  script/ariac_planner_node.py
   script/tf2_example.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

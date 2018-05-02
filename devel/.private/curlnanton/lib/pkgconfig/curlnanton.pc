@@ -1,8 +1,8 @@
-prefix=/home/anton/helloworld_ws/devel/.private/curlnanton
+prefix=/home/ros/helloworld_ws/devel/.private/curlnanton
 
 Name: curlnanton
 Description: Description of curlnanton
 Version: 0.1.0
 Cflags: 
-Libs: -L/home/anton/helloworld_ws/devel/.private/curlnanton/lib 
+Libs: -L/home/ros/helloworld_ws/devel/.private/curlnanton/lib 
 Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/anton/helloworld_ws/devel/.private/moveit_resources
-
-Name: moveit_resources
-Description: Description of moveit_resources
-Version: 0.6.3
-Cflags: -I/home/anton/helloworld_ws/src/moveit_resources/include -I/home/anton/helloworld_ws/devel/.private/moveit_resources/include
-Libs: -L/home/anton/helloworld_ws/devel/.private/moveit_resources/lib 
-Requires: 

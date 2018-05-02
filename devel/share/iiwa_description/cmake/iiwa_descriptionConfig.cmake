@@ -1,1 +1,0 @@
-/home/anton/helloworld_ws/devel/.private/iiwa_description/share/iiwa_description/cmake/iiwa_descriptionConfig.cmake

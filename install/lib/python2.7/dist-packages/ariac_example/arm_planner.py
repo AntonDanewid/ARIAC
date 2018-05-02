@@ -37,10 +37,7 @@ from trajectory_msgs.msg import JointTrajectoryPoint
 
 
 class ArmPlanner:
-    def __init__(self):
-       
-
-       
+    #def __init__(self):
 
     def comp_state_callback(self, msg):
         if self.current_comp_state != msg.data:
@@ -52,8 +49,8 @@ class ArmPlanner:
         self.received_orders.append(msg)
         control_conveyor(51)
 
-    
-    
+
+
 
     def joint_state_callback(self, msg):
         if time.time() - self.last_joint_state_print >= 10:
@@ -61,9 +58,9 @@ class ArmPlanner:
             self.last_joint_state_print = time.time()
         self.current_joint_state = msg
 
-    
 
-    
+
+
 
 
 

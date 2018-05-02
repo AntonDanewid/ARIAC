@@ -29,41 +29,35 @@ from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+#THIS IS A REFERENCE msg.shipments[0].products[0].pose.position.x
 
 
+class Planner:
+    state = 0
+    current_order = 0
+    def recieve_order(self, msg):
+        shipments = msg.shipments
+        print(shipments)
 
 
+    def start_competition(self):
+        rospy.loginfo("Waiting for competition to be ready...")
+        rospy.wait_for_service('/ariac/start_competition')
+        rospy.loginfo("Competition is now ready.")
+        rospy.loginfo("Requesting competition start...")
 
+        try:
+            start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
+            response = start()
+        except rospy.ServiceException as exc:
+            rospy.logerr("Failed to start the competition: %s" % exc)
+            return False
+        if not response.success:
+            rospy.logerr("Failed to start the competition: %s" % response)
+        else:
+            rospy.loginfo("Competition started!")
+        return response.success
 
-
-class ArmPlanner:
-    #def __init__(self):
-
-    def comp_state_callback(self, msg):
-        if self.current_comp_state != msg.data:
-            rospy.loginfo("Competition state: " + str(msg.data))
-        self.current_comp_state = msg.data
-
-    def order_callback(self, msg):
-        rospy.loginfo("Received order:\n" + str(msg))
-        self.received_orders.append(msg)
-        control_conveyor(51)
-
-
-
-
-    def joint_state_callback(self, msg):
-        if time.time() - self.last_joint_state_print >= 10:
-            rospy.loginfo("Current Joint States (throttled to 0.1 Hz):\n" + str(msg))
-            self.last_joint_state_print = time.time()
-        self.current_joint_state = msg
-
-
-
-
-
-
-
-def connect_callbacks(planner):
-    planner_subscriber = rospy.Subscriber(
-        "/ariac/planner", String, planner.comp_state_callback)
+    def Planner(self):
+        start_competition()
+        order_sub = rospy.Subscriber("/ariac/orders", Order, recieve_order)

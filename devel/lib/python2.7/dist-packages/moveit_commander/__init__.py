@@ -1,1 +1,0 @@
-/home/anton/helloworld_ws/devel/.private/moveit_commander/lib/python2.7/dist-packages/moveit_commander/__init__.py

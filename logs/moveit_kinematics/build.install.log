@@ -21,54 +21,54 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/srv_kinematics_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/cached_ik_kinematics_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_kdl_kinematics_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_kdl_kinematics_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_kdl_kinematics_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_kdl_kinematics_plugin.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin/chainiksolver_pos_nr_jl_mimic.hpp
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin/kdl_kinematics_plugin.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin/chainiksolver_vel_pinv_mimic.hpp
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/kdl_kinematics_plugin/joint_mimic.hpp
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_lma_kinematics_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_lma_kinematics_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_lma_kinematics_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_lma_kinematics_plugin.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin/joint_mimic.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin/chainiksolver_vel_pinv_mimic.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin/chainiksolver_pos_lma_jl_mimic.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/lma_kinematics_plugin/lma_kinematics_plugin.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_srv_kinematics_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_srv_kinematics_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_srv_kinematics_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_srv_kinematics_plugin.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/srv_kinematics_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/srv_kinematics_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/srv_kinematics_plugin/srv_kinematics_plugin.h
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_kinematics/create_ikfast_moveit_plugin.py
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_kinematics/round_collada_numbers.py
--- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/ikfast_kinematics_plugin/templates
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_kinematics/ikfast_kinematics_plugin/templates
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/ikfast_kinematics_plugin/templates/ikfast.h
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/ikfast_kinematics_plugin/templates/CMakeLists.txt
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/ikfast_kinematics_plugin/templates/ikfast61_moveit_plugin_template.cpp
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_base.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_base.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_base.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_base.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_cached_ik_kinematics_plugin.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_kinematics/measure_ik_call_cost
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_kinematics/measure_ik_call_cost" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin
--- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/detail
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/detail
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/detail/GreedyKCenters.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/detail/NearestNeighborsGNAT.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/detail/NearestNeighbors.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/cached_ik_kinematics_plugin-inl.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/cached_ik_kinematics_plugin/cached_ik_kinematics_plugin.h
--- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/launch
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_kinematics/launch
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_kinematics/launch/measure_ik_call_cost.launch

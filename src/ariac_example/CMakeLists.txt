@@ -45,6 +45,10 @@ install(PROGRAMS
   script/ariac_example_node.py
   script/ariac_planner_node.py
   script/tf2_example.py
+  script/Subscriber.py
+  script/Orders.py
+  script/Product.py
+  script/planner_node.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -10,10 +10,7 @@ def main():
     planner = ariac_planner.Planner()
 
     rospy.loginfo("Setup complete.")
-    ariac_planner.start_competition()
-
-
-
+    ariac_planner.connect_callbacks(planner)
 
 if __name__ == '__main__':
     main()

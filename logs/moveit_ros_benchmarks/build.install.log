@@ -13,17 +13,17 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/cmake/moveit_ros_benchmarksConfig-version.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_ros_benchmarks.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_ros_benchmarks.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_ros_benchmarks.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_ros_benchmarks.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_benchmarks/moveit_run_benchmark
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_benchmarks/moveit_run_benchmark" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/benchmarks
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/benchmarks
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/benchmarks/BenchmarkOptions.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/benchmarks/BenchmarkExecutor.h
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_benchmarks/moveit_benchmark_statistics.py
--- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/examples
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/examples
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/examples/demo1.yaml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/examples/demo2.yaml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_benchmarks/examples/demo_fanuc.launch

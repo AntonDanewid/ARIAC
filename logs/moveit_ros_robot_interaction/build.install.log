@@ -12,11 +12,11 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig-version.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_interaction.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_interaction.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_robot_interaction.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_robot_interaction.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/robot_interaction
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/kinematic_options.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/robot_interaction.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/interaction_handler.h
@@ -24,6 +24,6 @@
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/interactive_marker_helpers.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/locked_robot_state.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_interaction/interaction.h
--- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/resources
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/resources
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/resources/access-denied.dae
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_robot_interaction/resources/access-denied.stl

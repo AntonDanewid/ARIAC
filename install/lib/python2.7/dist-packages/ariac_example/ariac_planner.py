@@ -172,3 +172,15 @@ class Planner:
             rospy.loginfo("Current Joint States (throttled to 0.1 Hz):\n" + str(msg))
             self.last_joint_state_print = time.time()
         self.current_joint_state = msg
+
+
+
+
+
+
+
+def connect_callbacks(planner):
+    comp_state_sub = rospy.Subscriber(
+        "/ariac/competition_state", String, planner.comp_state_callback)
+    order_sub = rospy.Subscriber("/ariac/orders", Order, planner.order_callback)
+    beam_sub = rospy.Subscriber("/ariac/break_beam_1")

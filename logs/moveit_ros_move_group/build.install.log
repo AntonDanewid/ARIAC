@@ -101,14 +101,14 @@
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_move_group/list_move_group_capabilities
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_move_group/list_move_group_capabilities" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_capabilities_base.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_capabilities_base.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_capabilities_base.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_move_group_capabilities_base.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_default_capabilities.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_default_capabilities.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_move_group_default_capabilities.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_move_group_default_capabilities.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/move_group
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group/capability_names.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group/move_group_context.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/move_group/move_group_capability.h

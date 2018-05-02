@@ -1,16 +1,16 @@
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_pointcloud_octomap_updater_core.so, /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater_core.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_pointcloud_octomap_updater_core.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater_core.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_point_containment_filter.so, /home/anton/helloworld_ws/devel/lib/libmoveit_point_containment_filter.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_point_containment_filter.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_point_containment_filter.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_pointcloud_octomap_updater.so, /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_semantic_world.so, /home/anton/helloworld_ws/devel/lib/libmoveit_semantic_world.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_semantic_world.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_semantic_world.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_occupancy_map_monitor.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_occupancy_map_monitor.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_lazy_free_space_updater.so, /home/anton/helloworld_ws/devel/lib/libmoveit_lazy_free_space_updater.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_lazy_free_space_updater.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_lazy_free_space_updater.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_pointcloud_octomap_updater.so.0.9.11, /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater.so.0.9.11)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/libmoveit_occupancy_map_monitor.so, /home/anton/helloworld_ws/devel/lib/libmoveit_occupancy_map_monitor.so)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/moveit_ros_perception/moveit_occupancy_map_server, /home/anton/helloworld_ws/devel/lib/moveit_ros_perception/moveit_occupancy_map_server)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/lib/pkgconfig/moveit_ros_perception.pc, /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_ros_perception.pc)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig.cmake, /home/anton/helloworld_ws/devel/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig.cmake)
-Linked: (/home/anton/helloworld_ws/devel/.private/moveit_ros_perception/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig-version.cmake, /home/anton/helloworld_ws/devel/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig-version.cmake)
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater_core.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater_core.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_point_containment_filter.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_point_containment_filter.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_semantic_world.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_semantic_world.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_occupancy_map_monitor.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_lazy_free_space_updater.so
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_lazy_free_space_updater.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_pointcloud_octomap_updater.so.0.9.11
+Symlinking /home/anton/helloworld_ws/devel/lib/libmoveit_occupancy_map_monitor.so
+Symlinking /home/anton/helloworld_ws/devel/lib/moveit_ros_perception/moveit_occupancy_map_server
+Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_ros_perception.pc
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig.cmake
+Symlinking /home/anton/helloworld_ws/devel/share/moveit_ros_perception/cmake/moveit_ros_perceptionConfig-version.cmake

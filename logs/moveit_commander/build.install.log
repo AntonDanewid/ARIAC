@@ -23,7 +23,6 @@ copying src/moveit_commander/robot.py -> /home/anton/helloworld_ws/build/moveit_
 copying src/moveit_commander/roscpp_initializer.py -> /home/anton/helloworld_ws/build/moveit_commander/lib.linux-x86_64-2.7/moveit_commander
 running install
 running install_lib
-creating /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander
 copying /home/anton/helloworld_ws/build/moveit_commander/lib.linux-x86_64-2.7/moveit_commander/exception.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander
 copying /home/anton/helloworld_ws/build/moveit_commander/lib.linux-x86_64-2.7/moveit_commander/interpreter.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander
 copying /home/anton/helloworld_ws/build/moveit_commander/lib.linux-x86_64-2.7/moveit_commander/conversions.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander
@@ -41,6 +40,7 @@ byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/mov
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander/robot.py to robot.pyc
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander/roscpp_initializer.py to roscpp_initializer.pyc
 running install_egg_info
+Removing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander-0.9.11.egg-info
 Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_commander-0.9.11.egg-info
 -- Installing: /home/anton/helloworld_ws/install/lib/pkgconfig/moveit_commander.pc
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_commander/cmake/moveit_commanderConfig.cmake

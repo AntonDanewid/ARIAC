@@ -49,26 +49,26 @@ copying src/moveit_ros_visualization/moveitjoy_module.py -> /home/anton/hellowor
 copying src/moveit_ros_visualization/__init__.py -> /home/anton/helloworld_ws/build/moveit_ros_visualization/lib.linux-x86_64-2.7/moveit_ros_visualization
 running install
 running install_lib
-creating /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization
 copying /home/anton/helloworld_ws/build/moveit_ros_visualization/lib.linux-x86_64-2.7/moveit_ros_visualization/moveitjoy_module.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization
 copying /home/anton/helloworld_ws/build/moveit_ros_visualization/lib.linux-x86_64-2.7/moveit_ros_visualization/__init__.py -> /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization/moveitjoy_module.py to moveitjoy_module.pyc
 byte-compiling /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization/__init__.py to __init__.pyc
 running install_egg_info
+Removing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization-0.9.11.egg-info
 Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros_visualization-0.9.11.egg-info
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/motion_planning_rviz_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/trajectory_rviz_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/planning_scene_rviz_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/robot_state_rviz_plugin_description.xml
--- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons
--- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons
+-- Up-to-date: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes/RobotState.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes/MotionPlanning.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes/Trajectory.png
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_visualization/icons/classes/PlanningScene.png
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools/planning_scene_render.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools/render_shapes.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools/trajectory_visualization.h
@@ -77,47 +77,47 @@ Writing /home/anton/helloworld_ws/install/lib/python2.7/dist-packages/moveit_ros
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools/robot_state_visualization.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/rviz_plugin_render_tools/trajectory_panel.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_rviz_plugin_render_tools.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_rviz_plugin_render_tools.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_rviz_plugin_render_tools.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_rviz_plugin_render_tools.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_state_rviz_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/robot_state_rviz_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/robot_state_rviz_plugin/robot_state_display.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin_core.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin_core.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin_core.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin_core.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_robot_state_rviz_plugin.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_rviz_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/planning_scene_rviz_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/planning_scene_rviz_plugin/planning_scene_display.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin_core.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin_core.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin_core.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin_core.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_planning_scene_rviz_plugin.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/motion_planning_rviz_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/motion_planning_rviz_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/motion_planning_rviz_plugin/motion_planning_frame.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/motion_planning_rviz_plugin/motion_planning_display.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/motion_planning_rviz_plugin/motion_planning_param_widget.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin_core.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin_core.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin_core.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_motion_planning_rviz_plugin_core.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/trajectory_rviz_plugin
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/trajectory_rviz_plugin
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/trajectory_rviz_plugin/trajectory_display.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin_core.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin_core.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin_core.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_trajectory_rviz_plugin_core.so.0.9.11" to ""

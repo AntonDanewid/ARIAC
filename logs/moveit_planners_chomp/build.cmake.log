@@ -39,32 +39,5 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 [36m--[0m Boost version: 1.58.0
 [36m--[0m Configuring done
-CMake Warning (dev) at CMakeLists.txt:64 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
-  The dependency target "move_group" of target "chomp_moveit_test" does not
-  exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) at CMakeLists.txt:64 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
-  The dependency target "moveit_move_group_default_capabilities" of target
-  "chomp_moveit_test" does not exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) at CMakeLists.txt:64 (add_dependencies):
-  Policy CMP0046 is not set: Error on non-existent dependency in
-  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
-  Use the cmake_policy command to set the policy and suppress this warning.
-
-  The dependency target "moveit_move_group_pick_place_capability" of target
-  "chomp_moveit_test" does not exist.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
 [36m--[0m Generating done
 [36m--[0m Build files have been written to: /home/anton/helloworld_ws/build/moveit_planners_chomp

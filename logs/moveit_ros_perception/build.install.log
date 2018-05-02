@@ -96,42 +96,42 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_perception/pointcloud_octomap_updater_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_perception/depth_image_octomap_updater_plugin_description.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_lazy_free_space_updater.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_lazy_free_space_updater.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_lazy_free_space_updater.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_lazy_free_space_updater.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/lazy_free_space_updater
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/lazy_free_space_updater
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/lazy_free_space_updater/lazy_free_space_updater.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_point_containment_filter.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_point_containment_filter.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_point_containment_filter.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_point_containment_filter.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/point_containment_filter
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/point_containment_filter
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/point_containment_filter/shape_mask.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_occupancy_map_monitor.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_occupancy_map_monitor.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_occupancy_map_monitor.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_occupancy_map_monitor.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/occupancy_map_monitor
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/occupancy_map_monitor
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/occupancy_map_monitor/occupancy_map.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/occupancy_map_monitor/occupancy_map_monitor.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/occupancy_map_monitor/occupancy_map_updater.h
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/pointcloud_octomap_updater
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/pointcloud_octomap_updater
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/pointcloud_octomap_updater/pointcloud_octomap_updater.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater_core.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater_core.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater_core.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_pointcloud_octomap_updater_core.so.0.9.11" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/semantic_world
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/semantic_world
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/semantic_world/semantic_world.h
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_semantic_world.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_semantic_world.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_semantic_world.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_semantic_world.so.0.9.11" to ""

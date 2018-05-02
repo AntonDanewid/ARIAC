@@ -1,1 +1,0 @@
-/home/ros/helloworld_ws/devel/.private/curlnanton/lib/python2.7/dist-packages/ariac_example/__init__.py

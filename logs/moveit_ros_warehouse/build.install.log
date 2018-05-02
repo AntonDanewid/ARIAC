@@ -18,7 +18,7 @@
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_warehouse/cmake/moveit_ros_warehouseConfig-version.cmake
 -- Installing: /home/anton/helloworld_ws/install/share/moveit_ros_warehouse/package.xml
 -- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_warehouse.so.0.9.11
--- Installing: /home/anton/helloworld_ws/install/lib/libmoveit_warehouse.so
+-- Up-to-date: /home/anton/helloworld_ws/install/lib/libmoveit_warehouse.so
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/libmoveit_warehouse.so.0.9.11" to ""
 -- Installing: /home/anton/helloworld_ws/install/lib/moveit_ros_warehouse/moveit_save_to_warehouse
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_warehouse/moveit_save_to_warehouse" to ""
@@ -34,7 +34,7 @@
 -- Set runtime path of "/home/anton/helloworld_ws/install/lib/moveit_ros_warehouse/moveit_warehouse_services" to ""
 -- Up-to-date: /home/anton/helloworld_ws/install/include
 -- Up-to-date: /home/anton/helloworld_ws/install/include/moveit
--- Installing: /home/anton/helloworld_ws/install/include/moveit/warehouse
+-- Up-to-date: /home/anton/helloworld_ws/install/include/moveit/warehouse
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/warehouse/planning_scene_storage.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/warehouse/moveit_message_storage.h
 -- Installing: /home/anton/helloworld_ws/install/include/moveit/warehouse/constraints_storage.h

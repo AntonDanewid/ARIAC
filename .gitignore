@@ -5,3 +5,6 @@ logs/*
 logs
 
 install/*
+
+devel/*
+devel/

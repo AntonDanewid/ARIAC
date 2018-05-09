@@ -50,7 +50,7 @@ class Subscriber:
         self.currentOrders.append(Orders.Orders(order)) #IM PICKLE REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
-    #Returns the pose of a requested part i local coordinate system. Needs tranforms
+    #Returns the pose of a requested part in local coordinate system. Needs tranforms
     def getLocationOfPart(self, part):
         for model in self.logicalCameraData.models:
             if model.type == part:

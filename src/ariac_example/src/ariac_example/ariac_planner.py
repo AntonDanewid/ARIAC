@@ -91,6 +91,19 @@ class Planner:
         self.conveyor_isactive = False
         rospy.loginfo("Subscribed to arm_planner_out!")
         self.arm_commander = rospy.Publisher("/ariac/arm_planner_in", Product, queue_size=10)
+        self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.orderReceived)
+        self.currentOrders = []
+        self.current_comp_state = None
+        self.received_orders = []
+        self.current_joint_state = None
+        self.current_gripper_state = None
+        self.last_joint_state_print = time.time()
+        self.last_gripper_state_print = time.time()
+        self.materialLocationsService1 = rospy.ServiceProxy('/ariac/material_locations',  GetMaterialLocations)
+        self.logicalCameraData = None
+        self.pastLogicalCameraTime = rospy.get_time()
+        self.logicalCameraSubscriber = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent)
+        self.tf_listener = tf.TransformListener()
 
 
 
@@ -179,13 +192,28 @@ class Planner:
         self.current_joint_state = msg
 
 
+    def start_competition(self, planner):
+        rospy.loginfo("Waiting for competition to be ready...")
+        rospy.wait_for_service('/ariac/start_competition')
+        rospy.loginfo("Competition is now ready.")
+        rospy.loginfo("Requesting competition start...")
+        try:
+            start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
+            response = start()
+            planner.conveyor_isactive = True
+            control_conveyor(100)
+        except rospy.ServiceException as exc:
+            rospy.logerr("Failed to start the competition: %s" % exc)
+        if not response.success:
+            rospy.logerr("Failed to start the competition: %s" % response)
+        else:
+            rospy.loginfo("Competition started!")
+        order_sub1 = rospy.Subscriber("/ariac/orders", Order, self.order_handle)
+        rospy.loginfo("Subscribed to orders!")
+        order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, self.control_drone)
+        rospy.loginfo("Subscribed to break_beam_1!")
+        order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, self.product_shute)
+        rospy.loginfo("Publisher to arm_planner_in initiated")
+        
 
 
-
-
-
-def connect_callbacks(planner):
-    comp_state_sub = rospy.Subscriber(
-        "/ariac/competition_state", String, planner.comp_state_callback)
-    order_sub = rospy.Subscriber("/ariac/orders", Order, planner.order_callback)
-    beam_sub = rospy.Subscriber("/ariac/break_beam_1")

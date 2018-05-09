@@ -43,18 +43,54 @@ import sys, tf
 #import tf2
 #import tf2_geometry_msgs
 import Subscriber
-
+from ariac_example import ariac_planner
 
 
 
 
 def main():
 
+
+    #Fix name to valid
     rospy.init_node("_ariac_competion_node_")
-    sub = Subscriber.Subscriber()
-    rospy.sleep(5)
+
     #armcontroll = ariac_example.ArmControll()
-    Start()
+    planner = ariac_planner.Planner()
+    rospy.sleep(5)
+
+    while not rospy.is_shutdown():
+        if len(planner.recieved_orders) > 0:
+            currentOrder = planner.recieved_orders[0]
+
+            #Check if there are enough parts to fullfill order 
+            possibleToBuild = enoughParts(currentOrder, planner)
+            if not possibleToBuild:
+                planner.recieved_orders.pop(0)   
+            while currentOrder.products > 0 and possibleToBuild:
+                currentProduct = currentOrder.products[0]
+                #Find location of current product
+                
+                #Send arm over the bin of the current product
+                #Send arm to the product location
+                #Attach product to vaccum
+                #Check if product is attached
+                #Move arm avway from bin
+                #Move arm over shipping box
+                #Place product in correct position
+                #Check if part is faulty
+                #If faulty, remove from box, somewhere where it dosnt collide
+                    #If faulty product affects order completion, put back all parts
+                        #Remove order and restart with a new order
+                #Set boolean of completed to true    
+                #End While
+            #If completed, start conveyer belt, call drone and ship.
+            #Repeat all over again
+            #
+
+
+
+            
+
     rospy.loginfo("=============Setup complete.")
     #armcontroll.sendOverBin(3)
 
@@ -79,39 +115,22 @@ def main():
 
 
     
-    #armcontroll.grabPart()
-
-   # while not rospy.is_shutdown():
-    #    if():
+   
             
-
-
-
+def enoughParts(currentOrder, planner)
+    prodDict = {}
+    for product in currentOrder.products:
+        if(product.name in prodDict):
+            prodDict[product.name] = prodDict[product.name] +1
+        else: 
+            prodDict[product.name] = 0
+        for productName in prodDict:
+            if planner.getAmountOfParts(productName) < prodDict[productName]:
+            #We cant fullfill this order because we are missing parts
+                return False
+    return True
     
     
-    
-    rospy.spin()
-
-
-
-def Start():
-    rospy.loginfo("Waiting for competition to be ready...")
-    rospy.wait_for_service('/ariac/start_competition')
-    rospy.loginfo("Competition is now ready.")
-    rospy.loginfo("Requesting competition start...")
-
-    try:
-        start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
-        response = start()
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to start the competition: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to start the competition: %s" % response)
-    else:
-        rospy.loginfo("Competition started!")
-    return response.success
-
 
 
 

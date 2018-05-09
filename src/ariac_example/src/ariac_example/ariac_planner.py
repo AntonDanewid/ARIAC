@@ -32,6 +32,15 @@ from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+from osrf_gear.srv import GetMaterialLocations
+from geometry_msgs.msg import PoseStamped
+import geometry_msgs.msg
+
+from osrf_gear.msg import LogicalCameraImage
+import sys, tf
+
+import tf2_ros
+import tf2_geometry_msgs
 
 def start_competition(planner):
     rospy.loginfo("Waiting for competition to be ready...")
@@ -50,7 +59,7 @@ def start_competition(planner):
         rospy.logerr("Failed to start the competition: %s" % response)
     else:
         rospy.loginfo("Competition started!")
-    order_sub1 = rospy.Subscriber("/ariac/orders", Order, planner.order_handle)
+    #order_sub1 = rospy.Subscriber("/ariac/orders", Order, planner.order_handle)
     rospy.loginfo("Subscribed to orders!")
     order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.control_drone)
     rospy.loginfo("Subscribed to break_beam_1!")
@@ -91,7 +100,7 @@ class Planner:
         self.conveyor_isactive = False
         rospy.loginfo("Subscribed to arm_planner_out!")
         self.arm_commander = rospy.Publisher("/ariac/arm_planner_in", Product, queue_size=10)
-        self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.orderReceived)
+        self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.order_handle)
         self.currentOrders = []
         self.current_comp_state = None
         self.received_orders = []
@@ -100,9 +109,19 @@ class Planner:
         self.last_joint_state_print = time.time()
         self.last_gripper_state_print = time.time()
         self.materialLocationsService1 = rospy.ServiceProxy('/ariac/material_locations',  GetMaterialLocations)
-        self.logicalCameraData = None
-        self.pastLogicalCameraTime = rospy.get_time()
-        self.logicalCameraSubscriber = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent)
+        self.logicalCameraData1 = None
+        self.pastLogicalCameraTime1 = rospy.get_time()
+        self.logicalCameraData2 = None
+        self.pastLogicalCameraTime2 = rospy.get_time()
+
+        self.logicalCameraData3 = None
+        self.pastLogicalCameraTime3 = rospy.get_time()
+
+
+        self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
+        self.logicalCameraSubscriber2 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent2)
+        self.logicalCameraSubscriber3 = rospy.Subscriber("/ariac/logical_camera_3", LogicalCameraImage, self.logicalCameraEvent3)
+
         self.tf_listener = tf.TransformListener()
 
 
@@ -159,11 +178,12 @@ class Planner:
     #and begin handling the order through start_arm() if no other orders are
     #currently beeing handled.
     def order_handle(self, msg):
-        rospy.loginfo("Order recieved.")
+
+        rospy.loginfo("Order recieved. HERE")
         self.recieved_orders.append(Orders.Orders(msg))
-        rospy.loginfo(msg.order_id)
-        if(len(self.recieved_orders) == 1 and not self.conveyor_isactive):
-            self.start_arm()
+        # rospy.loginfo(msg.order_id)
+        # if(len(self.recieved_orders) == 1 and not self.conveyor_isactive):
+        #     self.start_arm()
 
     #is run when the arm acks back. When this happens another product is
     #requested if there are more in the order. Otherwise the conveyor is started
@@ -215,5 +235,105 @@ class Planner:
         order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, self.product_shute)
         rospy.loginfo("Publisher to arm_planner_in initiated")
         
+      #Returns the pose of a requested part in local coordinate system. Needs tranforms
+    def getLocationOfPart(self, part):
+        for model in self.logicalCameraData1.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_1'              
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
+        for model in self.logicalCameraData2.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_2'
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
+        for model in self.logicalCameraData3.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_3'
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
+
+
+    #Adds a logical camera message
+    def logicalCameraEvent1(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime1 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTim1e = rospy.get_time()
+        self.logicalCameraData1 = msg
+    
+    def logicalCameraEvent2(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime2 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTime2 = rospy.get_time()
+        self.logicalCameraData2 = msg
+
+
+    def logicalCameraEvent3(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime3 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTime3 = rospy.get_time()
+        self.logicalCameraData3 = msg
+
+    #Translates a local pose to world pose from the frame provided
+    #Fix problem with nonexisting frame
+    def translatePose(self, pose, frame):
+        # targetPose = PoseStamped()
+        # targetPose.header.frame_id = pose.pose.header.frame_id
+        # targetPose.pose.position.x = pose.pose.position.x
+        # targetPose.pose.position.y = pose.pose.position.y
+        # targetPose.pose.position.z = pose.pose.position.z
+        # targetPose.pose.orientation.x = 0.0
+        # targetPose.pose.orientation.y = 0.0
+        # targetPose.pose.orientation.z = 0.0
+        # targetPose.pose.orientation.w = 0.0
+        transformedPose = self.tf_listener.transformPose('world', pose)
+        print(transformedPose)
+
+    #Add for all the different sensors, right now it can only do for the single logical camera
+    def getAmountOfParts(self, partName):
+        amount = 0
+        for model in self.logicalCameraData1.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
+        for model in self.logicalCameraData2.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
+        for model in self.logicalCameraData3.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
+        return amount
 
 

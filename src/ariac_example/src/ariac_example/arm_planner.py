@@ -29,6 +29,8 @@ from std_msgs.msg import String
 from std_srvs.srv import Trigger
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+from osrf_gear.msg import LogicalCameraImage
+
 
 
 

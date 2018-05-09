@@ -19,11 +19,16 @@ sensors:
     pose:
       xyz: [0.58, 2.25, 1.08]
       rpy: [0, 'pi/2', '-pi/2']
-  depth_camera_1:
-    type: depth_camera
+  logical_camera_3:
+    type: logical_camera
     pose:
       xyz: [-0.535, 2.01, 1.2]
-      rpy: [-1.59, 1.07, 'pi']
+      rpy: [0, 1.16, 'pi']
+  logical_camera_4:
+    type: logical_camera
+    pose:
+      xyz: [-0.535, 0.29, 1.2]
+      rpy: [0, 1.16, 'pi']
   laser_profiler_1:
     type: laser_profiler
     pose:

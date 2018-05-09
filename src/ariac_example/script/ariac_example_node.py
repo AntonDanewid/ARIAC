@@ -44,7 +44,7 @@ import sys, tf
 #import tf2_geometry_msgs
 import Subscriber
 from ariac_example import ariac_planner
-
+#from ariac_example import start_competition
 
 
 
@@ -54,20 +54,38 @@ def main():
     #Fix name to valid
     rospy.init_node("_ariac_competion_node_")
 
-    #armcontroll = ariac_example.ArmControll()
+    armcontroll = ariac_example.ArmControll()
     planner = ariac_planner.Planner()
     rospy.sleep(5)
+    ariac_planner.start_competition(planner)
+
 
     while not rospy.is_shutdown():
+        #print("lol")
         if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
+            print("===============WE HAVE AN ORDER")
 
             #Check if there are enough parts to fullfill order 
             possibleToBuild = enoughParts(currentOrder, planner)
             if not possibleToBuild:
-                planner.recieved_orders.pop(0)   
+                planner.recieved_orders.pop(0)
+            else:
+                print("===============+WE CAN BUILD THIS ORDER")   
             while currentOrder.products > 0 and possibleToBuild:
                 currentProduct = currentOrder.products[0]
+                #Get a location for a product in cameras local coordinate system
+                print(currentProduct.name)
+                productPose = planner.getLocationOfPart(currentProduct.name)
+                
+                #Transform the coordinates to world coordinates, HARD CODED
+                worldPose = planner.translatePose(productPose, 'logical_camera_1')
+                #Locate which bin the part is in
+                bin = 2
+                armcontroll.sendOverBin(2)
+
+                
+                
                 #Find location of current product
                 
                 #Send arm over the bin of the current product
@@ -117,7 +135,7 @@ def main():
     
    
             
-def enoughParts(currentOrder, planner)
+def enoughParts(currentOrder, planner):
     prodDict = {}
     for product in currentOrder.products:
         if(product.name in prodDict):

@@ -1,8 +1,0 @@
-prefix=/home/anton/helloworld_ws/install
-
-Name: moveit_msgs
-Description: Description of moveit_msgs
-Version: 0.8.4
-Cflags: -I/home/anton/helloworld_ws/install/include
-Libs: -L/home/anton/helloworld_ws/install/lib 
-Requires: std_msgs actionlib_msgs sensor_msgs geometry_msgs trajectory_msgs shape_msgs object_recognition_msgs octomap_msgs

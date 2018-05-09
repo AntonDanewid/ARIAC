@@ -1,5 +1,0 @@
-Symlinking /home/anton/helloworld_ws/devel/include/moveit_resources/config.h
-Symlinking /home/anton/helloworld_ws/devel/include/moveit_resources/.config_install.h
-Symlinking /home/anton/helloworld_ws/devel/lib/pkgconfig/moveit_resources.pc
-Symlinking /home/anton/helloworld_ws/devel/share/moveit_resources/cmake/moveit_resourcesConfig-version.cmake
-Symlinking /home/anton/helloworld_ws/devel/share/moveit_resources/cmake/moveit_resourcesConfig.cmake

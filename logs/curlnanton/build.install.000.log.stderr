@@ -1,6 +1,0 @@
-  File "/home/anton/helloworld_ws/install/lib/python2.7/dist-packages/ariac_example/ariac_example.py", line 139
-    print "============ Starting tutorial setup"
-                                               ^
-SyntaxError: invalid syntax
-
-Sorry: IndentationError: expected an indented block (arm_planner.py, line 45)

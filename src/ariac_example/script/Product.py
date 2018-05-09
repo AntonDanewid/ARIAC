@@ -25,8 +25,7 @@ import sys, tf
 
 
 
-class Product: 
+class Product:
     def __init__(self, name, pose):
         self.name = name
         self.pose = pose
-    

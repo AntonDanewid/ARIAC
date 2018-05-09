@@ -18,7 +18,8 @@ from __future__ import print_function
 import time
 
 import rospy
-
+import Orders
+import Product
 from osrf_gear.msg import Order
 from osrf_gear.msg import Product
 from osrf_gear.msg import Proximity
@@ -41,6 +42,8 @@ def start_competition(planner):
     try:
         start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
         response = start()
+        planner.conveyor_isactive = True
+        control_conveyor(100)
     except rospy.ServiceException as exc:
         rospy.logerr("Failed to start the competition: %s" % exc)
     if not response.success:
@@ -51,12 +54,10 @@ def start_competition(planner):
     rospy.loginfo("Subscribed to orders!")
     order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.control_drone)
     rospy.loginfo("Subscribed to break_beam_1!")
-    order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", Product, planner.product_shute)
+    order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, planner.product_shute)
     rospy.loginfo("Publisher to arm_planner_in initiated")
-    order_sub4 = rospy.Subscriber("/ariac/arm_planner_in", Product, planner.product_shute)
-    rospy.loginfo("Publisher to arm_planner_in initiated")
-    control_conveyor(100)
-    planner.conveyor_isactive = True
+    #order_sub4 = rospy.Subscriber("/ariac/arm_planner_in", Product, planner.product_shute)
+    #rospy.loginfo("Publisher to arm_planner_in initiated")
 
 def control_conveyor(power):
     rospy.loginfo("Waiting for conveyor control to be ready...")
@@ -82,7 +83,7 @@ def control_conveyor(power):
 class Planner:
     def __init__(self):
         self.counter = 0
-        self.received_orders = []
+        self.recieved_orders = []
         self.current_ordered_parts = []
         self.current_completed_parts = []
         self.current_part = 0
@@ -102,7 +103,7 @@ class Planner:
         self.counter = self.counter+1
         if self.counter%2 is 1:
             control_conveyor(0)
-            conveyor_isactive = False
+            self.conveyor_isactive = False
             time.sleep(4)
             self.start_arm()
             shipment_type = "package recieved"
@@ -129,28 +130,32 @@ class Planner:
     #no orders available. If current_ordered_parts is empty this method will
     #fill it with the next order.
     def start_arm(self):
-        rospy.loginfo("Arm movement requested.")
-        if(len(self.received_orders) > 0 and not self.conveyor_isactive):
+        rospy.loginfo("start_arm triggered... recieved orders are: ")
+        print(len(self.recieved_orders))
+        print(len(self.recieved_orders) > 0 and not self.conveyor_isactive)
+        if(len(self.recieved_orders) > 0 and not self.conveyor_isactive):
             if(len(self.current_ordered_parts) == 0):
-                self.current_ordered_parts = self.received_orders[0].shipments[0].products
+                self.current_ordered_parts = self.recieved_orders[0].products
             self.current_part = self.current_ordered_parts[0]
             self.current_ordered_parts = self.current_ordered_parts[1:]
-            self.arm_commander.publish(self.current_part)
+            #self.arm_commander.publish(self.current_part)
+            #here we make the arm move mechanicly lel
+            rospy.loginfo("Product request published to arm..")
 
     #is run when a new order is recieved. appends the order to the local list,
     #and begin handling the order through start_arm() if no other orders are
     #currently beeing handled.
     def order_handle(self, msg):
         rospy.loginfo("Order recieved.")
-        self.received_orders.append(msg)
+        self.recieved_orders.append(Orders.Orders(msg))
         rospy.loginfo(msg.order_id)
-        if(len(self.received_orders) == 1 and not self.conveyor_isactive):
+        if(len(self.recieved_orders) == 1 and not self.conveyor_isactive):
             self.start_arm()
 
     #is run when the arm acks back. When this happens another product is
     #requested if there are more in the order. Otherwise the conveyor is started
     def product_shute(self, msg):
-        rospy.loginfo("Arm reported finished with trasnporting.")
+        rospy.loginfo("Arm reported finished with transporting.")
         self.current_completed_parts.append(self.current_part)
         if(len(self.current_ordered_parts) > 0):
 
@@ -163,7 +168,7 @@ class Planner:
             control_conveyor(100)
             self.conveyor_isactive = True
             self.completed_orders.append(self.recieved_orders[0])
-            self.received_orders = self.received_orders[1:]
+            self.recieved_orders = self.recieved_orders[1:]
 
 
 

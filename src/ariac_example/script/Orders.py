@@ -40,8 +40,3 @@ class Orders:
             pose.orientation.w = part.pose.orientation.w
             prod = Product.Product(name, pose)
             self.products.append(prod)
-
-
-
-        
-

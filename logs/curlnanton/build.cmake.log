@@ -14,7 +14,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
 [36m--[0m Using CATKIN_DEVEL_PREFIX: /home/ros/helloworld_ws/devel/.private/curlnanton
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/ros/helloworld_ws/install;/opt/ros/kinetic
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/ros/helloworld_ws/install;/opt/ros/kinetic;/home/ros/helloworld_ws/devel
 [36m--[0m This workspace overlays: /home/ros/helloworld_ws/install;/opt/ros/kinetic
 [36m--[0m Found PythonInterp: /usr/bin/python (found version "2.7.12")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python

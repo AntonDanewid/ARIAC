@@ -31,7 +31,7 @@ from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 
 
-def deliverOrder(): 
+#def deliverOrder():
 
 
 
@@ -41,23 +41,23 @@ class DeliverCaller:
         #    rospy.Publisher("/ariac/arm/command", JointTrajectory, queue_size=10)
         self.current_comp_state = None
         self.received_orders = []
-       
 
-    def comp_state_callback(self, msg):
 
-        
-    def order_callback(self, msg):
-       
-    def
-    
+    #def comp_state_callback(self, msg):
 
-    
 
-    
+    #def order_callback(self, msg):
 
-    
+    #def
 
 
 
-def connect_callbacks(deliver):
-    comp_state_sub = rospy.Subscriber(
+
+
+
+
+
+
+
+#def connect_callbacks(deliver):
+#    comp_state_sub = rospy.Subscriber(

@@ -163,8 +163,8 @@ class Planner:
     #fill it with the next order.
     def start_arm(self):
         rospy.loginfo("start_arm triggered... recieved orders are: ")
-        print(len(self.recieved_orders))
-        print(len(self.recieved_orders) > 0 and not self.conveyor_isactive)
+        #print(len(self.recieved_orders))
+        #print(len(self.recieved_orders) > 0 and not self.conveyor_isactive)
         if(len(self.recieved_orders) > 0 and not self.conveyor_isactive):
             if(len(self.current_ordered_parts) == 0):
                 self.current_ordered_parts = self.recieved_orders[0].products
@@ -207,7 +207,7 @@ class Planner:
 
     def joint_state_callback(self, msg):
         if time.time() - self.last_joint_state_print >= 10:
-            rospy.loginfo("Current Joint States (throttled to 0.1 Hz):\n" + str(msg))
+            #rospy.loginfo("Current Joint States (throttled to 0.1 Hz):\n" + str(msg))
             self.last_joint_state_print = time.time()
         self.current_joint_state = msg
 
@@ -307,15 +307,6 @@ class Planner:
     #Translates a local pose to world pose from the frame provided
     #Fix problem with nonexisting frame
     def translatePose(self, pose, frame):
-        # targetPose = PoseStamped()
-        # targetPose.header.frame_id = pose.pose.header.frame_id
-        # targetPose.pose.position.x = pose.pose.position.x
-        # targetPose.pose.position.y = pose.pose.position.y
-        # targetPose.pose.position.z = pose.pose.position.z
-        # targetPose.pose.orientation.x = 0.0
-        # targetPose.pose.orientation.y = 0.0
-        # targetPose.pose.orientation.z = 0.0
-        # targetPose.pose.orientation.w = 0.0
         transformedPose = self.tf_listener.transformPose('world', pose)
         print("We have transformed the pose to ", transformedPose)
 

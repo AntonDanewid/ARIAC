@@ -277,22 +277,20 @@ class ArmControll:
             rospy.sleep(2)
     
     
-    def grabPart(self):
-        pose_target = geometry_msgs.msg.Pose()
-        pose_target.position.x = -0.9
-        pose_target.position.y = 0.955
-        pose_target.position.z = 0.78
-        #pose_target.orientation.x = - 0.05
-        #pose_target.orientation.y = - 0.087
-        #pose_target.orientation.z = -0.002
-        #pose_target.orientation.w = 0.996
+    def grabPart(self, productPose):
+        
+
+
         xyz = [0, 0, 0]
-        xyz[0] = pose_target.position.x 
-        xyz[1] = pose_target.position.y
-        xyz[2] = pose_target.position.z
+        xyz[0] = productPose.orientation.position.x 
+        xyz[1] = productPose.orientation.position.y
+        xyz[2] = productPose.orientation.position.z
         self.group.set_position_target(xyz)
         self.group.plan()
         self.group.go(wait=True)
+        rospy.sleep(2)
+        control_gripper(True)
+
 
 
 

@@ -58,6 +58,7 @@ def main():
     planner = ariac_planner.Planner()
     rospy.sleep(5)
     ariac_planner.start_competition(planner)
+    rospy.loginfo("=============Setup complete.")
 
 
     while not rospy.is_shutdown():
@@ -77,26 +78,29 @@ def main():
                 #Get a location for a product in cameras local coordinate system
                 print(currentProduct.name)
                 productPose = planner.getLocationOfPart(currentProduct.name)
-                
-                #Transform the coordinates to world coordinates, HARD CODED
+                                #Transform the coordinates to world coordinates
                 worldPose = planner.translatePose(productPose, 'logical_camera_1')
                 #Locate which bin the part is in
-                if "1" is in productPose.header.frame_id:
+                if "1" in productPose.header.frame_id:
                     bin = 1
-                elif 3 is in productPose.header.frame_id:
+                elif "3" in productPose.header.frame_id:
                     bin = 3
                 else:
                     bin = 4
+                print("=================== THE BIN WE ARE MOVING TO IS BIN ", bin)
+                #Send arm over the bin of the current product. THIS DOES NOT WORK CORRECTLY AT THE MOMENT
                 armcontroll.sendOverBin(bin)
-                #Find location of current product
-                
-                #Send arm over the bin of the current product
                 #Send arm to the product location
+                armcontroll.grabPart(worldPose)
                 #Attach product to vaccum
+
                 #Check if product is attached
                 #Move arm avway from bin
                 #Move arm over shipping box
                 #Place product in correct position
+                targetPosition = PoseStamped()
+                targetPosition.pose = currentProduct.pose
+                targetPosition.header.frame_id = 'shipping_box_frame'
                 #Check if part is faulty
                 #If faulty, remove from box, somewhere where it dosnt collide
                     #If faulty product affects order completion, put back all parts
@@ -111,27 +115,7 @@ def main():
 
             
 
-    rospy.loginfo("=============Setup complete.")
-    #armcontroll.sendOverBin(3)
-
-    invpose = geometry_msgs.msg.Pose()    
-    invpose.position.x=0.521671259388
-    invpose.position.y=-0.184750284639
-    invpose.position.z= 0.164743542447
-    invpose.orientation.x = 0.62185046715
-    invpose.orientation.y = 0.00667755907235
-    invpose.orientation.z =0.78309805686
-    invpose.orientation.w =-0.00385227873479
-    pose = sub.getLocationOfPart("gear_part")
-    #print(pose.position.x)
-    #sub.translatePose(pose, 'logical_camera_1')
-
-    print(sub.getAmountOfParts("gear_part"))
-
-    #pose = armcontroll.transformPose(invpose, [-0.02,0,0], [0,0,0,0], 'logical_camera_1_frame')
-    #armcontroll.poseTarget(pose)
-    #arm.planPose()
-    #arm.executePlan()
+  
 
 
     

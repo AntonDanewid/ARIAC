@@ -47,7 +47,7 @@ class Subscriber:
 
     #Adds order objects to a list
     def orderReceived(self, order):
-        self.currentOrders.append(Orders.Orders(order)) #IM PICKLE REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+        self.currentOrders.append(Orders.Orders(order))
 
 
     #Returns the pose of a requested part in local coordinate system. Needs tranforms

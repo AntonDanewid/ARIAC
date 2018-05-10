@@ -81,11 +81,13 @@ def main():
                 #Transform the coordinates to world coordinates, HARD CODED
                 worldPose = planner.translatePose(productPose, 'logical_camera_1')
                 #Locate which bin the part is in
-                bin = 2
-                armcontroll.sendOverBin(2)
-
-                
-                
+                if "1" is in productPose.header.frame_id:
+                    bin = 1
+                elif 3 is in productPose.header.frame_id:
+                    bin = 3
+                else:
+                    bin = 4
+                armcontroll.sendOverBin(bin)
                 #Find location of current product
                 
                 #Send arm over the bin of the current product

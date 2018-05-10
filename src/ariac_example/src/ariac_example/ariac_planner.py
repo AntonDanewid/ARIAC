@@ -111,16 +111,16 @@ class Planner:
         self.materialLocationsService1 = rospy.ServiceProxy('/ariac/material_locations',  GetMaterialLocations)
         self.logicalCameraData1 = None
         self.pastLogicalCameraTime1 = rospy.get_time()
-        self.logicalCameraData2 = None
-        self.pastLogicalCameraTime2 = rospy.get_time()
-
         self.logicalCameraData3 = None
         self.pastLogicalCameraTime3 = rospy.get_time()
 
+        self.logicalCameraData4 = None
+        self.pastLogicalCameraTime4 = rospy.get_time()
+
 
         self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
-        self.logicalCameraSubscriber2 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent2)
         self.logicalCameraSubscriber3 = rospy.Subscriber("/ariac/logical_camera_3", LogicalCameraImage, self.logicalCameraEvent3)
+        self.logicalCameraSubscriber4 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent4)
 
         self.tf_listener = tf.TransformListener()
 
@@ -240,19 +240,7 @@ class Planner:
         for model in self.logicalCameraData1.models:
             if model.type == part:
                 pose = PoseStamped()
-                pose.header.frame_id = 'logical_camera_1'              
-                pose.pose.position.x = model.pose.position.x
-                pose.pose.position.y = model.pose.position.y
-                pose.pose.position.z = model.pose.position.z
-                pose.pose.orientation.x = model.pose.orientation.x
-                pose.pose.orientation.y = model.pose.orientation.y
-                pose.pose.orientation.z = model.pose.orientation.z
-                pose.pose.orientation.w = model.pose.orientation.w
-                return pose
-        for model in self.logicalCameraData2.models:
-            if model.type == part:
-                pose = PoseStamped()
-                pose.header.frame_id = 'logical_camera_2'
+                pose.header.frame_id = 'logical_camera_1_frame'              
                 pose.pose.position.x = model.pose.position.x
                 pose.pose.position.y = model.pose.position.y
                 pose.pose.position.z = model.pose.position.z
@@ -264,7 +252,19 @@ class Planner:
         for model in self.logicalCameraData3.models:
             if model.type == part:
                 pose = PoseStamped()
-                pose.header.frame_id = 'logical_camera_3'
+                pose.header.frame_id = 'logical_camera_3_frame'
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
+        for model in self.logicalCameraData4.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_4_frame'
                 pose.pose.position.x = model.pose.position.x
                 pose.pose.position.y = model.pose.position.y
                 pose.pose.position.z = model.pose.position.z
@@ -285,16 +285,6 @@ class Planner:
             self.pastLogicalCameraTim1e = rospy.get_time()
         self.logicalCameraData1 = msg
     
-    def logicalCameraEvent2(self, msg):
-        now = rospy.get_time()
-        if self.pastLogicalCameraTime2 + 1.0 < now and len(msg.models) > 0:
-            # Log camera
-            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
-            # Set new past time
-            self.pastLogicalCameraTime2 = rospy.get_time()
-        self.logicalCameraData2 = msg
-
-
     def logicalCameraEvent3(self, msg):
         now = rospy.get_time()
         if self.pastLogicalCameraTime3 + 1.0 < now and len(msg.models) > 0:
@@ -303,6 +293,16 @@ class Planner:
             # Set new past time
             self.pastLogicalCameraTime3 = rospy.get_time()
         self.logicalCameraData3 = msg
+
+
+    def logicalCameraEvent4(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime4 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTime4 = rospy.get_time()
+        self.logicalCameraData4 = msg
 
     #Translates a local pose to world pose from the frame provided
     #Fix problem with nonexisting frame
@@ -317,7 +317,7 @@ class Planner:
         # targetPose.pose.orientation.z = 0.0
         # targetPose.pose.orientation.w = 0.0
         transformedPose = self.tf_listener.transformPose('world', pose)
-        print(transformedPose)
+        print("We have transformed the pose to ", transformedPose)
 
     #Add for all the different sensors, right now it can only do for the single logical camera
     def getAmountOfParts(self, partName):
@@ -326,11 +326,11 @@ class Planner:
             if model.type == partName:
                 print("FOUND PART")
                 amount +=1
-        for model in self.logicalCameraData2.models:
+        for model in self.logicalCameraData3.models:
             if model.type == partName:
                 print("FOUND PART")
                 amount +=1
-        for model in self.logicalCameraData3.models:
+        for model in self.logicalCameraData4.models:
             if model.type == partName:
                 print("FOUND PART")
                 amount +=1

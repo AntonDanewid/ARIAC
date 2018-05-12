@@ -63,7 +63,7 @@ def start_competition(planner):
     rospy.loginfo("Subscribed to orders!")
     order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.control_drone)
     rospy.loginfo("Subscribed to break_beam_1!")
-    order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, planner.product_shute)
+    #order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, planner.product_shute)
     rospy.loginfo("Publisher to arm_planner_in initiated")
     #order_sub4 = rospy.Subscriber("/ariac/arm_planner_in", Product, planner.product_shute)
     #rospy.loginfo("Publisher to arm_planner_in initiated")
@@ -187,7 +187,7 @@ class Planner:
 
     #is run when the arm acks back. When this happens another product is
     #requested if there are more in the order. Otherwise the conveyor is started
-    def product_shute(self, msg):
+    def product_shute(self):
         rospy.loginfo("Arm reported finished with transporting.")
         self.current_completed_parts.append(self.current_part)
         if(len(self.current_ordered_parts) > 0):
@@ -232,7 +232,7 @@ class Planner:
         rospy.loginfo("Subscribed to orders!")
         order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, self.control_drone)
         rospy.loginfo("Subscribed to break_beam_1!")
-        order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, self.product_shute)
+        #order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, self.product_shute)
         rospy.loginfo("Publisher to arm_planner_in initiated")
         
       #Returns the pose of a requested part in local coordinate system. Needs tranforms

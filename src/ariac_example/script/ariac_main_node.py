@@ -52,7 +52,7 @@ def main():
 
 
     #Fix name to valid
-    rospy.init_node("_ariac_competion_node_")
+    rospy.init_node("ariac_competion_node")
 
     armcontroll = ariac_example.ArmControll()
     planner = ariac_planner.Planner()
@@ -100,14 +100,28 @@ def main():
                 #Place product in correct position
                 targetPosition = PoseStamped()
                 targetPosition.pose = currentProduct.pose
-                targetPosition.header.frame_id = 'shipping_box_frame'
+                targetPosition.header.frame_id = 'shipping_box_frame' #Double check 
+                worldTarget = planner.translatePose(targetPosition)
+                    #Move arm
                 #Check if part is faulty
+
                 #If faulty, remove from box, somewhere where it dosnt collide
-                    #If faulty product affects order completion, put back all parts
+                faulty = False
+                if faulty:
+                    if not enoughParts(currentOrder, planner):
+                        pass
+                        #If faulty product affects order completion, put back all parts
                         #Remove order and restart with a new order
+                    else:
+                        #Just remove the faulty part
+                        pass
                 #Set boolean of completed to true    
                 #End While
             #If completed, start conveyer belt, call drone and ship.
+            completed = True
+            if completed:
+                planner.proudct_shute()
+            
             #Repeat all over again
             #
 

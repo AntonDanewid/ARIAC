@@ -116,11 +116,16 @@ class Planner:
 
         self.logicalCameraData4 = None
         self.pastLogicalCameraTime4 = rospy.get_time()
-
+        
 
         self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
         self.logicalCameraSubscriber3 = rospy.Subscriber("/ariac/logical_camera_3", LogicalCameraImage, self.logicalCameraEvent3)
         self.logicalCameraSubscriber4 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent4)
+        
+        
+        self.qualityData = None
+        self.faultyProducts = []
+        self.qualityControlSensorSubcriber2 = rospy.Subscriber("/ariac/quality_control_sensor2", LogicalCameraImage, self.quality_control_sensor2)
 
         self.tf_listener = tf.TransformListener()
 
@@ -306,9 +311,10 @@ class Planner:
 
     #Translates a local pose to world pose from the frame provided
     #Fix problem with nonexisting frame
-    def translatePose(self, pose, frame):
+    def translatePose(self, pose):
         transformedPose = self.tf_listener.transformPose('world', pose)
         print("We have transformed the pose to ", transformedPose)
+        return transformedPose
 
     #Add for all the different sensors, right now it can only do for the single logical camera
     def getAmountOfParts(self, partName):
@@ -327,4 +333,23 @@ class Planner:
                 amount +=1
         return amount
 
+    def quality_control_sensor2(self, msg): 
+        self.qualityData = msg
+        self.faultyProducts = []
+        for model in self.qualityData:
+            pose = PoseStamped()
+            pose.header.frame_id = 'quality_control_sensor_2_frame'              
+            pose.pose.position.x = model.pose.position.x
+            pose.pose.position.y = model.pose.position.y
+            pose.pose.position.z = model.pose.position.z
+            pose.pose.orientation.x = model.pose.orientation.x
+            pose.pose.orientation.y = model.pose.orientation.y
+            pose.pose.orientation.z = model.pose.orientation.z
+            pose.pose.orientation.w = model.pose.orientation.w
+            worldPose = self.translatePose(pose)
+            self.faultyProducts.append(worldPose)
 
+    def sensorBlackOutCheck(self): 
+        if rospy.get_time() - self.pastLogicalCameraTime4 > 10000: #Some value,
+            return True 
+        return False

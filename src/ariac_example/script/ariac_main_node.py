@@ -63,7 +63,7 @@ def main():
 
     while not rospy.is_shutdown():
         #print("lol")
-        if len(planner.recieved_orders) > 0:
+        if len(planner.recieved_			orders) > 0:
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
 
@@ -92,7 +92,7 @@ def main():
                 armcontroll.sendOverBin(bin)
                 #Send arm to the product location
                 armcontroll.grabPart(worldPose)
-                #Attach product to vaccum
+                #Attach product to vaccu	m
 
                 #Check if product is attached
                 #Move arm avway from bin
@@ -103,7 +103,7 @@ def main():
                 targetPosition.header.frame_id = 'shipping_box_frame' #Double check 
                 worldTarget = planner.translatePose(targetPosition)
                     #Move arm
-                #Check if part is faulty
+                #Check if part is faulty	
 
                 #If faulty, remove from box, somewhere where it dosnt collide
                 faulty = False
@@ -120,7 +120,7 @@ def main():
             #If completed, start conveyer belt, call drone and ship.
             completed = True
             if completed:
-                planner.proudct_shute()
+                planner.product_shute()
             
             #Repeat all over again
             #

@@ -94,7 +94,7 @@ def main():
                 rospy.sleep
                 armcontroll.sendOverBin(bin)
                 #Send arm to the product location
-                armcontroll.grabPart()
+                armcontroll.grabPart(worldPose)
                 #Attach product to vaccu	m
 
                 #Check if product is attached

@@ -278,7 +278,7 @@ class ArmControll:
     
     
     def grabPart(self, productPose):
-        
+        productPose.pose.position.z =  productPose.pose.position.z  + 0.1
         workspace = [productPose.pose.position.x-0.5, productPose.pose.position.y -0.5, productPose.pose.position.z, productPose.pose.position.x + 0.5, productPose.pose.position.y +0.5, productPose.pose.position.z -0.1]
         self.group.set_workspace(workspace)
         xyz = [0, 0, 0]

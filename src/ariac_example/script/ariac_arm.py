@@ -152,7 +152,6 @@ class ArmControll:
         # collision_object_pub.publish(shelf_collision_object_msg)
         # rospy.sleep(2)
         self.tf_listener = tf.TransformListener()
-        rospy.log("======================================LATEST")
         #self.addCollisions(self.scene)
         #client = dynamic_reconfigure.client.Client('move_group/trajectory_execution/')
         #params = { 'allowed_start_tolerance' : '0.0'}

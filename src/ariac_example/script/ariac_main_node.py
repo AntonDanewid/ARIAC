@@ -44,6 +44,7 @@ import sys, tf
 #import tf2_geometry_msgs
 import Subscriber
 from ariac_example import ariac_planner
+import ariac_arm
 #from ariac_example import start_competition
 
 
@@ -54,16 +55,16 @@ def main():
     #Fix name to valid
     rospy.init_node("ariac_competion_node")
 
-    armcontroll = ariac_example.ArmControll()
+    armcontroll = ariac_arm.ArmControll()
     planner = ariac_planner.Planner()
     rospy.sleep(5)
+    armcontroll.send_start()
     ariac_planner.start_competition(planner)
     rospy.loginfo("=============Setup complete.")
-
-
+    rospy.loginfo("===============================THIS FILE HAS BEEN UPDATED")
     while not rospy.is_shutdown():
         #print("lol")
-        if len(planner.recieved_			orders) > 0:
+        if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
 
@@ -79,19 +80,21 @@ def main():
                 print(currentProduct.name)
                 productPose = planner.getLocationOfPart(currentProduct.name)
                                 #Transform the coordinates to world coordinates
-                worldPose = planner.translatePose(productPose, 'logical_camera_1')
+                worldPose = planner.translatePose(productPose)
                 #Locate which bin the part is in
                 if "1" in productPose.header.frame_id:
-                    bin = 1
-                elif "3" in productPose.header.frame_id:
                     bin = 3
-                else:
+                elif "3" in productPose.header.frame_id:
                     bin = 4
+                else:
+                    bin = 1
                 print("=================== THE BIN WE ARE MOVING TO IS BIN ", bin)
                 #Send arm over the bin of the current product. THIS DOES NOT WORK CORRECTLY AT THE MOMENT
+                bin = 4
+                rospy.sleep
                 armcontroll.sendOverBin(bin)
                 #Send arm to the product location
-                armcontroll.grabPart(worldPose)
+                armcontroll.grabPart()
                 #Attach product to vaccu	m
 
                 #Check if product is attached
@@ -120,9 +123,9 @@ def main():
             #If completed, start conveyer belt, call drone and ship.
             completed = True
             if completed:
-                planner.product_shute()
-            
+                #planner.product_shute()
             #Repeat all over again
+                pass
             #
 
 

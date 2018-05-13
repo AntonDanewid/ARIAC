@@ -13,8 +13,8 @@ Next, install moveit by following the guide provided on the moveit webiste (Migh
 
 Run the followin commands in the following order in separate terminal windows while located in the project directory. 
 * catkin_make install
-* ./run_ariac
-* ./run_moveit
-* ./run_system
+* ./run_ariac.bash
+* ./run_moveit.bash
+* ./run_system.bash
 
 

@@ -59,11 +59,13 @@ def main():
     planner = ariac_planner.Planner()
     rospy.sleep(5)
     armcontroll.send_start()
+    rospy.sleep(2)
     ariac_planner.start_competition(planner)
     rospy.loginfo("=============Setup complete.")
     rospy.loginfo("===============================THIS FILE HAS BEEN UPDATED")
     while not rospy.is_shutdown():
         #print("lol")
+
         if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
@@ -74,7 +76,7 @@ def main():
                 planner.recieved_orders.pop(0)
             else:
                 print("===============+WE CAN BUILD THIS ORDER")   
-            while currentOrder.products > 0 and possibleToBuild:
+            while len(currentOrder.products) > 0 and possibleToBuild:
                 currentProduct = currentOrder.products[0]
                 #Get a location for a product in cameras local coordinate system
                 print(currentProduct.name)
@@ -82,19 +84,20 @@ def main():
                                 #Transform the coordinates to world coordinates
                 worldPose = planner.translatePose(productPose)
                 #Locate which bin the part is in
+                print('================== FRAME ID, ' , productPose.header.frame_id)
                 if "1" in productPose.header.frame_id:
                     bin = 3
                 elif "3" in productPose.header.frame_id:
                     bin = 4
-                else:
-                    bin = 1
+                elif "4" in productPose.header.frame_id:
+                    bin = 2
                 print("=================== THE BIN WE ARE MOVING TO IS BIN ", bin)
                 #Send arm over the bin of the current product. THIS DOES NOT WORK CORRECTLY AT THE MOMENT
-                bin = 4
                 rospy.sleep
                 armcontroll.sendOverBin(bin)
                 #Send arm to the product location
                 armcontroll.grabPart(worldPose)
+                armcontroll.sendBackFromBin(bin)
                 #Attach product to vaccu	m
 
                 #Check if product is attached
@@ -104,7 +107,7 @@ def main():
                 targetPosition = PoseStamped()
                 targetPosition.pose = currentProduct.pose
                 targetPosition.header.frame_id = 'shipping_box_frame' #Double check 
-                worldTarget = planner.translatePose(targetPosition)
+                #worldTarget = planner.translatePose(targetPosition)
                     #Move arm
                 #Check if part is faulty	
 
@@ -119,13 +122,17 @@ def main():
                         #Just remove the faulty part
                         pass
                 #Set boolean of completed to true    
+                currentOrder.products.pop(0)
                 #End While
             #If completed, start conveyer belt, call drone and ship.
             completed = True
             if completed:
                 #planner.product_shute()
+                print("============COMPLETED ORDER")
+                planner.recieved_orders.pop(0)
+
             #Repeat all over again
-                pass
+            
             #
 
 

@@ -141,30 +141,14 @@ class ArmControll:
         self.group.set_goal_orientation_tolerance(0.005)
         
         collision_object_pub = rospy.Publisher('/collision_object', moveit_msgs.msg.CollisionObject)
-        # shelf_collision_object_msg = moveit_msgs.msg.CollisionObject()
-        # shelf_collision_object_msg.operation = shelf_collision_object_msg.MOVE
-
-        # shelf_collision_object_msg.id = 'shelf'
-        # shelf_collision_object_msg.mesh_poses = [1, 1, 1]
-        # shelf_collision_object_msg.header.stamp = rospy.Time.now()
-        # shelf_collision_object_msg.header.frame_id = base_frame_id
-
-        # collision_object_pub.publish(shelf_collision_object_msg)
-        # rospy.sleep(2)
+  
         self.tf_listener = tf.TransformListener()
-        #self.addCollisions(self.scene)
-        #client = dynamic_reconfigure.client.Client('move_group/trajectory_execution/')
-        #params = { 'allowed_start_tolerance' : '0.0'}
-        #config = client.update_configuration(params)
+    
         print("============ INITILIZED ARM LATESTE")
-        #self.send_arm_to_state(bin3_hover)
-        #rospy.sleep(2)
-        #self.sendOverBin(3)
-        #self.grabPart()
+      
         
 
-        #self.sendOverBin(2)
-                 
+ 
   
     def send_start(self):
         self.send_arm_to_state(bin3_init)
@@ -230,15 +214,24 @@ class ArmControll:
         point.time_from_start = rospy.Duration(1.0)
         msg.points = [point]
         rospy.loginfo("Sending command:\n" + str(msg))
-        self.joint_trajectory_publisher.publish(msg)
+
+        test = {}
+        test['iiwa_joint_1'] = positions[0]
+        test['iiwa_joint_2'] = positions[1]
+        test['iiwa_joint_3'] = positions[2]
+        test['iiwa_joint_4'] = positions[3]
+        test['iiwa_joint_5'] = positions[4]
+        test['iiwa_joint_6'] = positions[5]
+        test['iiwa_joint_7'] = positions[6]
+        test['linear_arm_actuator_joint'] = positions[7]
+        #self.joint_trajectory_publisher.publish(msg)
         #group_variable_values = self.group.get_current_joint_values()
         #\\group_variable_values = positions
-        #self.group.set_joint_value_target(positions)
-        #self.group.plan()
-        #self.group.go(wait=True)
+        self.group.set_joint_value_target(test)
+        self.group.plan()
+        self.group.go(wait=True)
 
 
-        #def order_print(self, msg):
 
     def sendOverBin(self, bin): 
         if(bin == 2):
@@ -278,15 +271,42 @@ class ArmControll:
     
     
     def grabPart(self, productPose):
-        productPose.pose.position.z =  productPose.pose.position.z  + 0.1
         workspace = [productPose.pose.position.x-0.5, productPose.pose.position.y -0.5, productPose.pose.position.z, productPose.pose.position.x + 0.5, productPose.pose.position.y +0.5, productPose.pose.position.z -0.1]
         self.group.set_workspace(workspace)
         xyz = [0, 0, 0]
+        
         xyz[0] = productPose.pose.position.x 
         xyz[1] = productPose.pose.position.y
         xyz[2] = productPose.pose.position.z
-        self.group.set_position_target(xyz)
+        #self.group.set_position_target(xyz)
+
+        target = geometry_msgs.msg.Pose()
+        # target.position = productPose.pose.position
+        # target.position.z = target.position.z +0.1
+        
+        #target.orientation.w = -1
+
+        
+        #quaternion = tf.transformations.quaternion_from_euler(0.331586, 0.068785, 1.452098)
+        #type(pose) = geometry_msgs.msg.Pose
+        #norm = quaternion[0]*quaternion[0] + quaternion[1] * quaternion[1] + quaternion[2] * quaternion[2] + quaternion[3]* quaternion[3]
+        target = self.group.get_current_pose().pose
+        print(target.orientation)
+        target.position.x = productPose.pose.position.x
+        target.position.y = productPose.pose.position.y
+        target.position.z = productPose.pose.position.z
+
+
+        target.position.z = target.position.z + 0.1
+        # #norm = math.sqrt(norm)
+        # target.orientation.x = quaternion[0] 
+        # target.orientation.y = quaternion[1] 
+        # target.orientation.z = quaternion[2] 
+        # target.orientation.w = quaternion[3] 
+        #self.group.set_pose_target(target)
+        self.group.set_pose_target(target)
         self.group.plan()
+        print("=================CURRENT STATE IS", self.robot.get_current_state)
         self.group.go(wait=True)
         rospy.sleep(2)
         control_gripper(True)

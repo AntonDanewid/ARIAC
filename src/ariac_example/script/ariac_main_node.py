@@ -51,10 +51,8 @@ import ariac_arm
 
 def main():
 
-
     #Fix name to valid
     rospy.init_node("ariac_competion_node")
-
     armcontroll = ariac_arm.ArmControll()
     planner = ariac_planner.Planner()
     rospy.sleep(5)
@@ -63,6 +61,11 @@ def main():
     ariac_planner.start_competition(planner)
     rospy.loginfo("=============Setup complete.")
     rospy.loginfo("===============================THIS FILE HAS BEEN UPDATED")
+    break_beam_sub = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.callWhenBeamBreaks)
+    rospy.loginfo("=============Subscribed to break_beam_1.")
+    planner.control_conveyor(100)
+    while(conveyor_isactive):
+        time.sleep(1)
     while not rospy.is_shutdown():
         #print("lol")
 
@@ -70,13 +73,16 @@ def main():
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
 
-            #Check if there are enough parts to fullfill order 
+            #Check if there are enough parts to fullfill order
             possibleToBuild = enoughParts(currentOrder, planner)
             if not possibleToBuild:
+                print("===============NOT ENOUGH PARTS, ORDER DUMPED")
                 planner.recieved_orders.pop(0)
             else:
-                print("===============+WE CAN BUILD THIS ORDER")   
+                print("===============WE CAN BUILD THIS ORDER")
             while len(currentOrder.products) > 0 and possibleToBuild:
+                while(conveyor_isactive):
+                    time.sleep(1)
                 currentProduct = currentOrder.products[0]
                 #Get a location for a product in cameras local coordinate system
                 print(currentProduct.name)
@@ -106,10 +112,10 @@ def main():
                 #Place product in correct position
                 targetPosition = PoseStamped()
                 targetPosition.pose = currentProduct.pose
-                targetPosition.header.frame_id = 'shipping_box_frame' #Double check 
+                targetPosition.header.frame_id = 'shipping_box_frame' #Double check
                 #worldTarget = planner.translatePose(targetPosition)
                     #Move arm
-                #Check if part is faulty	
+                #Check if part is faulty
 
                 #If faulty, remove from box, somewhere where it dosnt collide
                 faulty = False
@@ -121,7 +127,7 @@ def main():
                     else:
                         #Just remove the faulty part
                         pass
-                #Set boolean of completed to true    
+                #Set boolean of completed to true
                 currentOrder.products.pop(0)
                 #End While
             #If completed, start conveyer belt, call drone and ship.
@@ -130,42 +136,26 @@ def main():
                 #planner.product_shute()
                 print("============COMPLETED ORDER")
                 planner.recieved_orders.pop(0)
+                planner.control_conveyor(100)
 
             #Repeat all over again
-            
-            #
 
 
 
-            
 
-  
-
-
-    
-   
-            
 def enoughParts(currentOrder, planner):
     prodDict = {}
     for product in currentOrder.products:
         if(product.name in prodDict):
             prodDict[product.name] = prodDict[product.name] +1
-        else: 
+        else:
             prodDict[product.name] = 0
         for productName in prodDict:
             if planner.getAmountOfParts(productName) < prodDict[productName]:
             #We cant fullfill this order because we are missing parts
                 return False
     return True
-    
-    
-
-
-
 
 
 if __name__ == '__main__':
     main()
-
-
-

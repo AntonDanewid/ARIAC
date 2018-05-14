@@ -1,4 +1,0 @@
-iiwa_stack/iiwa_gazebo
-/home/anton/helloworld_ws/devel/.private/iiwa_gazebo/lib/pkgconfig/iiwa_gazebo.pc /home/anton/helloworld_ws/devel/lib/pkgconfig/iiwa_gazebo.pc
-/home/anton/helloworld_ws/devel/.private/iiwa_gazebo/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake /home/anton/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig-version.cmake
-/home/anton/helloworld_ws/devel/.private/iiwa_gazebo/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake /home/anton/helloworld_ws/devel/share/iiwa_gazebo/cmake/iiwa_gazeboConfig.cmake

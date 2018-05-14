@@ -60,32 +60,13 @@ def start_competition(planner):
     else:
         rospy.loginfo("Competition started!")
     #order_sub1 = rospy.Subscriber("/ariac/orders", Order, planner.order_handle)
-    rospy.loginfo("Subscribed to orders!")
-    order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.control_drone)
-    rospy.loginfo("Subscribed to break_beam_1!")
+    #rospy.loginfo("Subscribed to orders!")
+    #order_sub2 = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.control_drone)
+    #rospy.loginfo("Subscribed to break_beam_1!")
     #order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, planner.product_shute)
-    rospy.loginfo("Publisher to arm_planner_in initiated")
+    #rospy.loginfo("Publisher to arm_planner_in initiated")
     #order_sub4 = rospy.Subscriber("/ariac/arm_planner_in", Product, planner.product_shute)
     #rospy.loginfo("Publisher to arm_planner_in initiated")
-
-def control_conveyor(power):
-    rospy.loginfo("Waiting for conveyor control to be ready...")
-    name = '/ariac/conveyor/control'
-    rospy.wait_for_service(name)
-    rospy.loginfo("Conveyor control is now ready.")
-    rospy.loginfo("Requesting conveyor control...")
-
-    try:
-        conveyor_control = rospy.ServiceProxy(name, ConveyorBeltControl)
-        response = conveyor_control(power)
-    except rospy.ServiceException as exc:
-        rospy.logerr("Failed to control the conveyor: %s" % exc)
-        return False
-    if not response.success:
-        rospy.logerr("Failed to control the conveyor: %s" % response)
-    else:
-        rospy.loginfo("Conveyor controlled successfully")
-    return response.success
 
 
 
@@ -116,13 +97,13 @@ class Planner:
 
         self.logicalCameraData4 = None
         self.pastLogicalCameraTime4 = rospy.get_time()
-        
+
 
         self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
         self.logicalCameraSubscriber3 = rospy.Subscriber("/ariac/logical_camera_3", LogicalCameraImage, self.logicalCameraEvent3)
         self.logicalCameraSubscriber4 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent4)
-        
-        
+
+
         self.qualityData = None
         self.faultyProducts = []
         self.qualityControlSensorSubcriber2 = rospy.Subscriber("/ariac/quality_control_sensor2", LogicalCameraImage, self.quality_control_sensor2)
@@ -135,32 +116,51 @@ class Planner:
     #triggered when brake_beam_1 is broken. Will stop the conveyor, call for a
     #drone to pick up a package if one is pressent and ask the arm to start
     #fullfilling the next order if there is one.
-    def control_drone(self, shipment_type):
-        #print("switching it up:",self.counter)
+    def callWhenBeamBreaks(self, shipment_type):
         self.counter = self.counter+1
         if self.counter%2 is 1:
+            print("==============Stopping conveyor and calling drone.")
             control_conveyor(0)
-            self.conveyor_isactive = False
-            time.sleep(4)
-            self.start_arm()
-            shipment_type = "package recieved"
-            rospy.loginfo("Waiting for drone control to be ready...")
-            name = '/ariac/drone'
-            rospy.wait_for_service(name)
-            rospy.loginfo("Drone control is now ready.")
-            rospy.loginfo("Requesting drone control...")
+            control_drone(shipment_type)
 
-            try:
-                drone_control = rospy.ServiceProxy(name, DroneControl)
-                response = drone_control(shipment_type)
-            except rospy.ServiceException as exc:
-                rospy.logerr("Failed to control the drone: %s" % exc)
-                return False
-                if not response.success:
-                    rospy.logerr("Failed to control the drone: %s" % response)
-                else:
-                    rospy.loginfo("Drone controlled successfully")
-                    return response.success
+    def control_drone(shipment_type):
+        rospy.sleep(4)
+        shipment_type = "package recieved"
+        rospy.loginfo("Waiting for drone control to be ready...")
+        name = '/ariac/drone'
+        rospy.wait_for_service(name)
+        rospy.loginfo("Drone control is now ready.")
+        rospy.loginfo("Requesting drone control...")
+        try:
+            drone_control = rospy.ServiceProxy(name, DroneControl)
+            response = drone_control(shipment_type)
+        except rospy.ServiceException as exc:
+            rospy.logerr("Failed to control the drone: %s" % exc)
+            return False
+            if not response.success:
+                rospy.logerr("Failed to control the drone: %s" % response)
+            else:
+                rospy.loginfo("Drone controlled successfully")
+                return response.success
+
+    def control_conveyor(power):
+        self.conveyor_isactive = power != 0
+        rospy.loginfo("Waiting for conveyor control to be ready...")
+        name = '/ariac/conveyor/control'
+        rospy.wait_for_service(name)
+        rospy.loginfo("Conveyor control is now ready.")
+        rospy.loginfo("Requesting conveyor control...")
+        try:
+            conveyor_control = rospy.ServiceProxy(name, ConveyorBeltControl)
+            response = conveyor_control(power)
+        except rospy.ServiceException as exc:
+            rospy.logerr("Failed to control the conveyor: %s" % exc)
+            return False
+        if not response.success:
+            rospy.logerr("Failed to control the conveyor: %s" % response)
+        else:
+            rospy.loginfo("Conveyor controlled successfully")
+        return response.success
 
     #requests the arm to start working on a new order and pick up a product to
     #put in the box. Will do nothing if the conveyor is running or if there are
@@ -183,7 +183,6 @@ class Planner:
     #and begin handling the order through start_arm() if no other orders are
     #currently beeing handled.
     def order_handle(self, msg):
-
         rospy.loginfo("Order recieved. HERE")
         self.recieved_orders.append(Orders.Orders(msg))
         # rospy.loginfo(msg.order_id)
@@ -239,13 +238,13 @@ class Planner:
         rospy.loginfo("Subscribed to break_beam_1!")
         #order_sub3 = rospy.Subscriber("/ariac/arm_planner_out", String, self.product_shute)
         rospy.loginfo("Publisher to arm_planner_in initiated")
-        
+
       #Returns the pose of a requested part in local coordinate system. Needs tranforms
     def getLocationOfPart(self, part):
         for model in self.logicalCameraData1.models:
             if model.type == part:
                 pose = PoseStamped()
-                pose.header.frame_id = 'logical_camera_1_frame'              
+                pose.header.frame_id = 'logical_camera_1_frame'
                 pose.pose.position.x = model.pose.position.x
                 pose.pose.position.y = model.pose.position.y
                 pose.pose.position.z = model.pose.position.z
@@ -289,7 +288,7 @@ class Planner:
             # Set new past time
             self.pastLogicalCameraTim1e = rospy.get_time()
         self.logicalCameraData1 = msg
-    
+
     def logicalCameraEvent3(self, msg):
         now = rospy.get_time()
         if self.pastLogicalCameraTime3 + 1.0 < now and len(msg.models) > 0:
@@ -333,12 +332,12 @@ class Planner:
                 amount +=1
         return amount
 
-    def quality_control_sensor2(self, msg): 
+    def quality_control_sensor2(self, msg):
         self.qualityData = msg
         self.faultyProducts = []
         for model in self.qualityData:
             pose = PoseStamped()
-            pose.header.frame_id = 'quality_control_sensor_2_frame'              
+            pose.header.frame_id = 'quality_control_sensor_2_frame'
             pose.pose.position.x = model.pose.position.x
             pose.pose.position.y = model.pose.position.y
             pose.pose.position.z = model.pose.position.z
@@ -349,7 +348,7 @@ class Planner:
             worldPose = self.translatePose(pose)
             self.faultyProducts.append(worldPose)
 
-    def sensorBlackOutCheck(self): 
+    def sensorBlackOutCheck(self):
         if rospy.get_time() - self.pastLogicalCameraTime4 > 10000: #Some value,
-            return True 
+            return True
         return False

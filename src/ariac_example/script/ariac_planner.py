@@ -52,7 +52,7 @@ def start_competition(planner):
         start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
         response = start()
         planner.conveyor_isactive = True
-        control_conveyor(100)
+        planner.control_conveyor(100)
     except rospy.ServiceException as exc:
         rospy.logerr("Failed to start the competition: %s" % exc)
     if not response.success:
@@ -72,6 +72,7 @@ def start_competition(planner):
 
 class Planner:
     def __init__(self):
+        self.faulty = True
         self.counter = 0
         self.recieved_orders = []
         self.current_ordered_parts = []
@@ -82,6 +83,7 @@ class Planner:
         rospy.loginfo("Subscribed to arm_planner_out!")
         self.arm_commander = rospy.Publisher("/ariac/arm_planner_in", Product, queue_size=10)
         self.order_sub = rospy.Subscriber("/ariac/orders", Order, self.order_handle)
+        self.break_beam_sub = rospy.Subscriber("/ariac/quality_control_sensor_1", LogicalCameraImage, self.setFaulty)
         self.currentOrders = []
         self.current_comp_state = None
         self.received_orders = []
@@ -99,9 +101,22 @@ class Planner:
         self.pastLogicalCameraTime4 = rospy.get_time()
 
 
+
+        self.logicalCameraData5 = None
+        self.pastLogicalCameraTime5 = rospy.get_time()
+
+         self.logicalCameraData5 = None
+        self.pastLogicalCameraTime6 = rospy.get_time()
+
         self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
         self.logicalCameraSubscriber3 = rospy.Subscriber("/ariac/logical_camera_3", LogicalCameraImage, self.logicalCameraEvent3)
         self.logicalCameraSubscriber4 = rospy.Subscriber("/ariac/logical_camera_4", LogicalCameraImage, self.logicalCameraEvent4)
+
+
+
+        self.logicalCameraSubscriber5 = rospy.Subscriber("/ariac/logical_camera_5", LogicalCameraImage, self.logicalCameraEvent5)
+        self.logicalCameraSubscriber6 = rospy.Subscriber("/ariac/logical_camera_6", LogicalCameraImage, self.logicalCameraEvent6)
+
 
 
         self.qualityData = None
@@ -120,10 +135,10 @@ class Planner:
         self.counter = self.counter+1
         if self.counter%2 is 1:
             print("==============Stopping conveyor and calling drone.")
-            control_conveyor(0)
-            control_drone(shipment_type)
+            self.control_conveyor(0)
+            self.control_drone(shipment_type)
 
-    def control_drone(shipment_type):
+    def control_drone(self, shipment_type):
         rospy.sleep(4)
         shipment_type = "package recieved"
         rospy.loginfo("Waiting for drone control to be ready...")
@@ -142,8 +157,11 @@ class Planner:
             else:
                 rospy.loginfo("Drone controlled successfully")
                 return response.success
+    
+    def setFaulty(self, msg):
+        self.faulty = len(msg.models) != 0
 
-    def control_conveyor(power):
+    def control_conveyor(self, power):
         self.conveyor_isactive = power != 0
         rospy.loginfo("Waiting for conveyor control to be ready...")
         name = '/ariac/conveyor/control'
@@ -179,6 +197,7 @@ class Planner:
             #here we make the arm move mechanicly lel
             rospy.loginfo("Product request published to arm..")
 
+
     #is run when a new order is recieved. appends the order to the local list,
     #and begin handling the order through start_arm() if no other orders are
     #currently beeing handled.
@@ -189,6 +208,7 @@ class Planner:
         # if(len(self.recieved_orders) == 1 and not self.conveyor_isactive):
         #     self.start_arm()
 
+    #DEPRECATED
     #is run when the arm acks back. When this happens another product is
     #requested if there are more in the order. Otherwise the conveyor is started
     def product_shute(self):
@@ -202,7 +222,7 @@ class Planner:
         else:
             rospy.loginfo("Order completed. Starting conveyor.")
             self.current_completed_parts = []
-            control_conveyor(100)
+            self.control_conveyor(100)
             self.conveyor_isactive = True
             self.completed_orders.append(self.recieved_orders[0])
             self.recieved_orders = self.recieved_orders[1:]
@@ -224,8 +244,6 @@ class Planner:
         try:
             start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
             response = start()
-            planner.conveyor_isactive = True
-            control_conveyor(100)
         except rospy.ServiceException as exc:
             rospy.logerr("Failed to start the competition: %s" % exc)
         if not response.success:
@@ -277,6 +295,30 @@ class Planner:
                 pose.pose.orientation.z = model.pose.orientation.z
                 pose.pose.orientation.w = model.pose.orientation.w
                 return pose
+     for model in self.logicalCameraData5.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_5_frame'
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
+     for model in self.logicalCameraData6.models:
+            if model.type == part:
+                pose = PoseStamped()
+                pose.header.frame_id = 'logical_camera_6_frame'
+                pose.pose.position.x = model.pose.position.x
+                pose.pose.position.y = model.pose.position.y
+                pose.pose.position.z = model.pose.position.z
+                pose.pose.orientation.x = model.pose.orientation.x
+                pose.pose.orientation.y = model.pose.orientation.y
+                pose.pose.orientation.z = model.pose.orientation.z
+                pose.pose.orientation.w = model.pose.orientation.w
+                return pose
 
 
     #Adds a logical camera message
@@ -307,6 +349,28 @@ class Planner:
             # Set new past time
             self.pastLogicalCameraTime4 = rospy.get_time()
         self.logicalCameraData4 = msg
+
+
+
+
+    def logicalCameraEvent5(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime5 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTime5 = rospy.get_time()
+        self.logicalCameraData5 = msg
+
+
+    def logicalCameraEvent6(self, msg):
+        now = rospy.get_time()
+        if self.pastLogicalCameraTime4 + 1.0 < now and len(msg.models) > 0:
+            # Log camera
+            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
+            # Set new past time
+            self.pastLogicalCameraTime6 = rospy.get_time()
+        self.logicalCameraData6 = msg
 
     #Translates a local pose to world pose from the frame provided
     #Fix problem with nonexisting frame

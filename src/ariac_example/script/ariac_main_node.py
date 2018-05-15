@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-
-
 from __future__ import print_function
 from ariac_example import ariac_example
 from tf.transformations import quaternion_from_euler
@@ -28,6 +25,8 @@ import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
 from osrf_gear.msg import Order
+from osrf_gear.msg import LogicalCameraImage
+from osrf_gear.msg import Proximity
 from osrf_gear.msg import VacuumGripperState
 from osrf_gear.srv import ConveyorBeltControl
 from osrf_gear.srv import DroneControl
@@ -43,7 +42,7 @@ import sys, tf
 #import tf2
 #import tf2_geometry_msgs
 import Subscriber
-from ariac_example import ariac_planner
+import ariac_planner
 import ariac_arm
 #from ariac_example import start_competition
 
@@ -51,7 +50,7 @@ import ariac_arm
 
 def main():
 
-    #Fix name to valid
+    #Fix name to valid#
     rospy.init_node("ariac_competion_node")
     armcontroll = ariac_arm.ArmControll()
     planner = ariac_planner.Planner()
@@ -62,17 +61,18 @@ def main():
     rospy.loginfo("=============Setup complete.")
     rospy.loginfo("===============================THIS FILE HAS BEEN UPDATED")
     break_beam_sub = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.callWhenBeamBreaks)
-    rospy.loginfo("=============Subscribed to break_beam_1.")
+    print("=============Subscribed to break_beam_1.")
     planner.control_conveyor(100)
-    while(conveyor_isactive):
+    time.sleep(1)
+    print("=============waiting for conveyor to stop.")
+    while(planner.conveyor_isactive):
         time.sleep(1)
+    print("========starting for real-real.")
+    
     while not rospy.is_shutdown():
-        #print("lol")
-
         if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
-
             #Check if there are enough parts to fullfill order
             possibleToBuild = enoughParts(currentOrder, planner)
             if not possibleToBuild:
@@ -81,11 +81,11 @@ def main():
             else:
                 print("===============WE CAN BUILD THIS ORDER")
             while len(currentOrder.products) > 0 and possibleToBuild:
-                while(conveyor_isactive):
+                while(planner.conveyor_isactive):
                     time.sleep(1)
                 currentProduct = currentOrder.products[0]
                 #Get a location for a product in cameras local coordinate system
-                print(currentProduct.name)
+                #print(currentProduct.name)
                 productPose = planner.getLocationOfPart(currentProduct.name)
                                 #Transform the coordinates to world coordinates
                 worldPose = planner.translatePose(productPose)
@@ -104,7 +104,7 @@ def main():
                 #Send arm to the product location
                 armcontroll.grabPart(worldPose)
                 armcontroll.sendBackFromBin(bin)
-                #Attach product to vaccu	m
+                #Attach product to vaccum
 
                 #Check if product is attached
                 #Move arm avway from bin
@@ -116,10 +116,9 @@ def main():
                 #worldTarget = planner.translatePose(targetPosition)
                     #Move arm
                 #Check if part is faulty
-
+                armcontroll.sendOverTray()
                 #If faulty, remove from box, somewhere where it dosnt collide
-                faulty = False
-                if faulty:
+                if planner.faulty:
                     if not enoughParts(currentOrder, planner):
                         pass
                         #If faulty product affects order completion, put back all parts
@@ -159,3 +158,4 @@ def enoughParts(currentOrder, planner):
 
 if __name__ == '__main__':
     main()
+    rospy.spin()

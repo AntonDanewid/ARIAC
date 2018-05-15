@@ -115,17 +115,17 @@ class ArmControll:
 
         moveit_commander.roscpp_initialize(sys.argv)
         
-        self.robot = moveit_commander.RobotCommander()
         rospy.sleep(2)
 
         self.scene = moveit_commander.PlanningSceneInterface()
         rospy.sleep(2)
         #self.addCollisions(self.scene)
         self.group = moveit_commander.MoveGroupCommander("manipulator")
+        self.robot = moveit_commander.RobotCommander()
+        
         self.display_trajectory_publisher = rospy.Publisher(
                                     '/move_group/display_planned_path',
                                     moveit_msgs.msg.DisplayTrajectory)
-        rospy.sleep(2)
         self.group.allow_replanning(True)
         #self.tf_listener = tf.TransformListener()
 
@@ -140,7 +140,7 @@ class ArmControll:
         # Set goal orientation tolerance
         self.group.set_goal_orientation_tolerance(0.005)
         
-        collision_object_pub = rospy.Publisher('/collision_object', moveit_msgs.msg.CollisionObject)
+        #collision_object_pub = rospy.Publisher('/collision_object', moveit_msgs.msg.CollisionObject)
   
         self.tf_listener = tf.TransformListener()
     
@@ -228,8 +228,9 @@ class ArmControll:
         #group_variable_values = self.group.get_current_joint_values()
         #\\group_variable_values = positions
         self.group.set_joint_value_target(test)
-        self.group.plan()
-        self.group.go(wait=True)
+        plan = self.group.plan()
+        self.group.execute(plan)
+        #self.group.go(wait=True)
 
 
 
@@ -271,7 +272,7 @@ class ArmControll:
     
     
     def grabPart(self, productPose):
-        workspace = [productPose.pose.position.x-0.5, productPose.pose.position.y -0.5, productPose.pose.position.z, productPose.pose.position.x + 0.5, productPose.pose.position.y +0.5, productPose.pose.position.z -0.1]
+        workspace = [productPose.pose.position.x-0.5, productPose.pose.position.y -0.5, productPose.pose.position.z- 0.5, productPose.pose.position.x + 0.5, productPose.pose.position.y +0.5, productPose.pose.position.z +0.5]
         self.group.set_workspace(workspace)
         xyz = [0, 0, 0]
         
@@ -290,24 +291,37 @@ class ArmControll:
         #quaternion = tf.transformations.quaternion_from_euler(0.331586, 0.068785, 1.452098)
         #type(pose) = geometry_msgs.msg.Pose
         #norm = quaternion[0]*quaternion[0] + quaternion[1] * quaternion[1] + quaternion[2] * quaternion[2] + quaternion[3]* quaternion[3]
+        rospy.sleep(1)
         target = self.group.get_current_pose().pose
         print(target.orientation)
         target.position.x = productPose.pose.position.x
         target.position.y = productPose.pose.position.y
-        target.position.z = productPose.pose.position.z
 
-
-        target.position.z = target.position.z + 0.1
+        target.position.z = productPose.pose.positon.z
+        target.position.z = target.position.z + 0.4
         # #norm = math.sqrt(norm)
         # target.orientation.x = quaternion[0] 
         # target.orientation.y = quaternion[1] 
         # target.orientation.z = quaternion[2] 
         # target.orientation.w = quaternion[3] 
         #self.group.set_pose_target(target)
+        
         self.group.set_pose_target(target)
-        self.group.plan()
+        
+        plan =self.group.plan()
+        self.group.execute(plan)
+     
+        #self.joint_trajectory_publisher.publish(msg)
+        #group_variable_values = self.group.get_current_joint_values()
+        #\\group_variable_values = positions
+        # self.group.set_joint_value_target(test)
+        # plan = self.group.plan()
+        # self.group.execute(plan)
+
+
+
         print("=================CURRENT STATE IS", self.robot.get_current_state)
-        self.group.go(wait=True)
+        #self.group.go(wait=True)
         rospy.sleep(2)
         control_gripper(True)
 
@@ -361,7 +375,8 @@ class ArmControll:
 
 
     def sendOverTray(self):
-        print("no")
+        self.send_arm_to_state(tray_hover)
+        rospy.sleep(2)
 
 
     def addCollisions(self, scene):
@@ -435,3 +450,4 @@ bin2_hover = [2.1376512939425787, 1.577703386233594, 1.4965436365912836, -1.3189
 bin2_init = [1.1834538606529188, 1.606397393784972, 1.3479349307800135, -2.021097598382318, -1.7075385940188674, 1.0746057037765455, -1.354026514380564, -1.0339370040978124, 0.0]
 bin4_init = [0.8468802479742044, 1.557319000511594, 1.5085020367811497, -1.9957541406818562, -1.6633651277989463, 1.1952518862140886, -1.9923196606145552, 0.476965360991872, 0.0]
 bin4_hover = [2.2568991548044846, 1.5778967907433996, 1.5845747874402276, -1.1774160457018974, -1.6101804156501398, 1.3317601741295064, -1.4415122391816748, 0.7287825828358929, 0.0]
+tray_hover = [-0.8611979025883318, 1.6363785472487002, 2.7366883925411187, -0.3535197757359123, 0.4014806936656976, -1.826823355177515, 2.4180902454551028, -1.054525174051686, 0.0]

@@ -105,7 +105,7 @@ class Planner:
         self.logicalCameraData5 = None
         self.pastLogicalCameraTime5 = rospy.get_time()
 
-         self.logicalCameraData5 = None
+        self.logicalCameraData6 = None
         self.pastLogicalCameraTime6 = rospy.get_time()
 
         self.logicalCameraSubscriber1 = rospy.Subscriber("/ariac/logical_camera_1", LogicalCameraImage, self.logicalCameraEvent1)
@@ -295,7 +295,7 @@ class Planner:
                 pose.pose.orientation.z = model.pose.orientation.z
                 pose.pose.orientation.w = model.pose.orientation.w
                 return pose
-     for model in self.logicalCameraData5.models:
+        for model in self.logicalCameraData5.models:
             if model.type == part:
                 pose = PoseStamped()
                 pose.header.frame_id = 'logical_camera_5_frame'
@@ -307,7 +307,7 @@ class Planner:
                 pose.pose.orientation.z = model.pose.orientation.z
                 pose.pose.orientation.w = model.pose.orientation.w
                 return pose
-     for model in self.logicalCameraData6.models:
+        for model in self.logicalCameraData6.models:
             if model.type == part:
                 pose = PoseStamped()
                 pose.header.frame_id = 'logical_camera_6_frame'
@@ -394,7 +394,20 @@ class Planner:
             if model.type == partName:
                 print("FOUND PART")
                 amount +=1
+        for model in self.logicalCameraData5.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
+        for model in self.logicalCameraData6.models:
+            if model.type == partName:
+                print("FOUND PART")
+                amount +=1
         return amount
+        
+        
+        
+        
+
 
     def quality_control_sensor2(self, msg):
         self.qualityData = msg

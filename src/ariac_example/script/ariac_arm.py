@@ -43,30 +43,6 @@ import dynamic_reconfigure.client
 
 
 
-
-
-
-
-
-# def start_competition():
-#     rospy.loginfo("Waiting for competition to be ready...")
-#     rospy.wait_for_service('/ariac/start_competition')
-#     rospy.loginfo("Competition is now ready.")
-#     rospy.loginfo("Requesting competition start...")
-
-#     try:
-#         start = rospy.ServiceProxy('/ariac/start_competition', Trigger)
-#         response = start()
-#     except rospy.ServiceException as exc:
-#         rospy.logerr("Failed to start the competition: %s" % exc)
-#         return False
-#     if not response.success:
-#         rospy.logerr("Failed to start the competition: %s" % response)
-#     else:
-#         rospy.loginfo("Competition started!")
-#     return response.success
-
-
 def control_gripper(enabled):
     rospy.loginfo("Waiting for gripper control to be ready...")
     rospy.wait_for_service('/ariac/gripper/control')
@@ -130,7 +106,7 @@ class ArmControll:
         #self.tf_listener = tf.TransformListener()
 
         # Allow 5 seconds per planning attempt
-        self.group.set_planning_time(5)
+        self.group.set_planning_time(1)
         # Set goal joint tolerance
         self.group.set_goal_joint_tolerance(0.005)
         # Set goal goal tolerance
@@ -156,48 +132,6 @@ class ArmControll:
         self.send_arm_to_state(startbin)
 
  
-        
-        # box = PoseStamped()
-        # box.header = self.robot.get_planning_frame()
-        # box.pose.position.x = 0.27500
-        # box.pose.position.y = -1
-        # box.pose.position.z = 1.4
-        
-        # display_trajectory_publisher = rospy.Publisher(
-        #                             '/move_group/display_planned_path',
-        #                             moveit_msgs.msg.DisplayTrajectory)
-
-        # rospy.loginfo(str(msg.shipments[0].products[0].pose.position.x))
-        # pose_bin1_init = geometry_msgs.msg.Pose()
-
-        # pose_bin1_init.position.x = -0.75
-       
-
-        # pose_bin1_init.position.y = 1.186137
-        # #pose_bin1_init.position.y = -0.4
-
-        # #                                      #roll?         rolll
-        # pose_bin1_init.position.z = 1.186137
-        # #q = quaternion_from_euler(0.064575, 0.329187, -3.060996)
-        # q = quaternion_from_euler(0.329187, 0.064575 , -3.060996)
-
-        # #pose_bin1_init.orientation.x = q[0]
-        # #pose_bin1_init.orientation.y = q[1]
-        # #pose_bin1_init.orientation.z = q[2]
-        # #pose_bin1_init.orientation.w = q[3]
-      
-        # pose_start = geometry_msgs.msg.Pose()
-        # pose_start.position.x = -0.05
-        # pose_start.position.y = 1
-        # pose_start.position.z = 2.01
-        # pose_start.orientation.w = 1
-        # self.group.set_pose_target(pose_bin1_init)
-        # plan1 = self.group.plan()
-      
-        # self.group.set_joint_value_target(start)
-        # plan1 = self.group.plan()
-        # self.group.execute(plan1)
-        # rospy.sleep(10)
     
 
     def gripper_state_callback(self, msg):
@@ -207,14 +141,7 @@ class ArmControll:
         self.current_gripper_state = msg
 
     def send_arm_to_state(self, positions):
-        msg = JointTrajectory()
-        msg.joint_names = self.arm_joint_names
-        point = JointTrajectoryPoint()
-        point.positions = positions
-        point.time_from_start = rospy.Duration(1.0)
-        msg.points = [point]
-        rospy.loginfo("Sending command:\n" + str(msg))
-
+      
         test = {}
         test['iiwa_joint_1'] = positions[0]
         test['iiwa_joint_2'] = positions[1]
@@ -250,6 +177,16 @@ class ArmControll:
             rospy.sleep(2)
             self.send_arm_to_state(bin4_hover)
             rospy.sleep(2)
+        if(bin == 1):
+            self.send_arm_to_state(bin1_init)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin1_hover)
+            rospy.sleep(2)
+        if(bin == 5):
+            self.send_arm_to_state(bin5_init)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin5_hover)
+            rospy.sleep(2)
 
     
 
@@ -268,6 +205,16 @@ class ArmControll:
             self.send_arm_to_state(bin3_hover)
             rospy.sleep(2)
             self.send_arm_to_state(bin3_init)
+            rospy.sleep(2)
+        if(bin == 1):
+            self.send_arm_to_state(bin1_hover)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin1_init)
+            rospy.sleep(2)
+        if(bin == 5):
+            self.send_arm_to_state(bin5_hover)
+            rospy.sleep(2)
+            self.send_arm_to_state(bin5_init)
             rospy.sleep(2)
     
     
@@ -297,7 +244,7 @@ class ArmControll:
         target.position.x = productPose.pose.position.x
         target.position.y = productPose.pose.position.y
 
-        target.position.z = productPose.pose.positon.z
+        target.position.z = productPose.pose.position.z
         target.position.z = target.position.z + 0.4
         # #norm = math.sqrt(norm)
         # target.orientation.x = quaternion[0] 
@@ -311,74 +258,18 @@ class ArmControll:
         plan =self.group.plan()
         self.group.execute(plan)
      
-        #self.joint_trajectory_publisher.publish(msg)
-        #group_variable_values = self.group.get_current_joint_values()
-        #\\group_variable_values = positions
-        # self.group.set_joint_value_target(test)
-        # plan = self.group.plan()
-        # self.group.execute(plan)
-
-
-
         print("=================CURRENT STATE IS", self.robot.get_current_state)
         #self.group.go(wait=True)
         rospy.sleep(2)
         control_gripper(True)
 
-
-
-
-    def transformPose(self, pose, posOffset, orienOffset, frame):
-            # Transform pose using frame
-        targetPose = PoseStamped()
-        targetPose.header.frame_id = frame
-        targetPose.pose.position.x = pose.position.x + posOffset[0]
-        targetPose.pose.position.y = pose.position.y + posOffset[1]
-        targetPose.pose.position.z = pose.position.z + posOffset[2]
-        targetPose.pose.orientation.x = 0.0 + orienOffset[0]
-        targetPose.pose.orientation.y = 0.0 + orienOffset[1]
-        targetPose.pose.orientation.z = 0.0 + orienOffset[2]
-        targetPose.pose.orientation.w = 0.0 + orienOffset[3]
-            # Transform
-
-
-        transformedPose = self.tf_listener.transformPose('world', targetPose)
-            # Return
-        return transformedPose
         
-
-
-
-    def poseTarget(self, target):
-        # Given a target try and position arm end effector over it, return bool
-        poseTarget = geometry_msgs.msg.Pose()
-        poseTarget.position.x = target.pose.position.x
-        poseTarget.position.y = target.pose.position.y
-        poseTarget.position.z = target.pose.position.z
-        poseTarget.orientation = target.pose.orientation
-        self.group.set_pose_target(poseTarget)
-
-
-        #self.group.set_pose_target(pose_target)
-        #plan1 = self.group.plan()        
-
-
-    def planPose(self):
-        # Plan arm pose 
-        plan = self.group.plan()
-
-    def executePlan(self):
-        # Execute desired plan
-        self.group.go(wait=True)
-
-
 
 
     def sendOverTray(self):
         self.send_arm_to_state(tray_hover)
-        rospy.sleep(2)
 
-
+    #depricated
     def addCollisions(self, scene):
             tree = ET.parse("test.xml")
             root = tree.getroot()
@@ -451,3 +342,7 @@ bin2_init = [1.1834538606529188, 1.606397393784972, 1.3479349307800135, -2.02109
 bin4_init = [0.8468802479742044, 1.557319000511594, 1.5085020367811497, -1.9957541406818562, -1.6633651277989463, 1.1952518862140886, -1.9923196606145552, 0.476965360991872, 0.0]
 bin4_hover = [2.2568991548044846, 1.5778967907433996, 1.5845747874402276, -1.1774160457018974, -1.6101804156501398, 1.3317601741295064, -1.4415122391816748, 0.7287825828358929, 0.0]
 tray_hover = [-0.8611979025883318, 1.6363785472487002, 2.7366883925411187, -0.3535197757359123, 0.4014806936656976, -1.826823355177515, 2.4180902454551028, -1.054525174051686, 0.0]
+bin1_init = [1.3793708755075738, 1.558435567281891, 1.4735350443589619, -1.9784768220002888, -1.6477688200110379, 1.1602551531362852, -1.2985084556736135, -1.7899982192596957, 0.0]
+bin1_hover = [2.2729144861551767, 1.6012041023350294, 1.478818104027459, -1.2381851187151671, -1.6299524446384304, 1.2512296580761468, -1.1462208558740326, -1.628012427840683, 0.0]
+bin5_init = [1.0154974533954215, 1.525095174604088, 1.56375866634367, -1.6631755270466329, -1.3580553056424716, 1.2858208813098004, -2.0166371205637095, 1.216047697718676, 0.0]
+bin5_hover = [2.1986133523514013, 1.5475175792295905, 1.4290719906119236, -1.0765814271464365, -1.478640893771149, 1.2640143182807844, -1.404531847709837, 1.4787155474290317, 0.0]

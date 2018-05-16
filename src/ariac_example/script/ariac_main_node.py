@@ -55,11 +55,9 @@ def main():
     armcontroll = ariac_arm.ArmControll()
     planner = ariac_planner.Planner()
     rospy.sleep(5)
-    armcontroll.send_start()
-    rospy.sleep(2)
+    #armcontroll.send_start()
     ariac_planner.start_competition(planner)
     rospy.loginfo("=============Setup complete.")
-    rospy.loginfo("===============================THIS FILE HAS BEEN UPDATED")
     break_beam_sub = rospy.Subscriber("/ariac/break_beam_1_change", Proximity, planner.callWhenBeamBreaks)
     print("=============Subscribed to break_beam_1.")
     planner.control_conveyor(100)
@@ -73,6 +71,8 @@ def main():
         if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
             print("===============WE HAVE AN ORDER")
+            for product in currentOrder.products:
+                print("=========", product.name)
             #Check if there are enough parts to fullfill order
             possibleToBuild = enoughParts(currentOrder, planner)
             if not possibleToBuild:
@@ -97,6 +97,10 @@ def main():
                     bin = 4
                 elif "4" in productPose.header.frame_id:
                     bin = 2
+                elif "5" in productPose.header.frame_id:
+                    bin = 1
+                elif "6" in productPose.header.frame_id:
+                    bin = 5     
                 print("=================== THE BIN WE ARE MOVING TO IS BIN ", bin)
                 #Send arm over the bin of the current product. THIS DOES NOT WORK CORRECTLY AT THE MOMENT
                 rospy.sleep
@@ -118,6 +122,10 @@ def main():
                 #Check if part is faulty
                 armcontroll.sendOverTray()
                 #If faulty, remove from box, somewhere where it dosnt collide
+                #drop part
+                #Do we have sensor blackout? Do not ship anything if this is the case. Wait
+                while planner.sensorBlackOutCheck(): 
+                    rospy.sleep(1)
                 if planner.faulty:
                     if not enoughParts(currentOrder, planner):
                         pass

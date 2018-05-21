@@ -28,6 +28,7 @@ import Orders
 import tf2_ros
 import tf2_geometry_msgs
 
+#Deprecated
 class Subscriber:
 
     def __init__(self):

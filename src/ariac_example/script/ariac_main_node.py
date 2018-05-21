@@ -80,6 +80,7 @@ def main():
                 planner.recieved_orders.pop(0)
             else:
                 print("===============WE CAN BUILD THIS ORDER")
+            placedProducts = []
             while len(currentOrder.products) > 0 and possibleToBuild:
                 while(planner.conveyor_isactive):
                     time.sleep(1)
@@ -87,7 +88,7 @@ def main():
                 #Get a location for a product in cameras local coordinate system
                 #print(currentProduct.name)
                 productPose = planner.getLocationOfPart(currentProduct.name)
-                                #Transform the coordinates to world coordinates
+                                #Transform the coordinates to world coordinatses
                 worldPose = planner.translatePose(productPose)
                 #Locate which bin the part is in
                 print('================== FRAME ID, ' , productPose.header.frame_id)
@@ -103,12 +104,14 @@ def main():
                     bin = 5     
                 print("=================== THE BIN WE ARE MOVING TO IS BIN ", bin)
                 #Send arm over the bin of the current product. THIS DOES NOT WORK CORRECTLY AT THE MOMENT
-                rospy.sleep
-                armcontroll.sendOverBin(bin)
                 #Send arm to the product location
-                armcontroll.grabPart(worldPose)
-                armcontroll.sendBackFromBin(bin)
+                armcontroll.sendOverBin(bin)
+                while not armcontroll.gripperStateData.attached:
+                    armcontroll.grabPart(worldPose, bin)
+                    armcontroll.aboveBin(bin)
+                    #rospy.sleep(1)
                 #Attach product to vaccum
+                armcontroll.sendBackFromBin(bin)
 
                 #Check if product is attached
                 #Move arm avway from bin
@@ -117,13 +120,23 @@ def main():
                 targetPosition = PoseStamped()
                 targetPosition.pose = currentProduct.pose
                 targetPosition.header.frame_id = 'shipping_box_frame' #Double check
-                #worldTarget = planner.translatePose(targetPosition)
                     #Move arm
+                #worldTarget = planner.translatePose(targetPosition)
                 #Check if part is faulty
                 armcontroll.sendOverTray()
+
+                
+                #planner.transformToTray()
                 #If faulty, remove from box, somewhere where it dosnt collide
                 #drop part
+                #Save where the part is if we need to throw it away
+                placedPose = PoseStamped()
+                placedPose.header.frame_id = currentProduct.name
+                placedPose.pose = armcontroll.getArmPosition()
+
+                placedProducts.append(placedPose)
                 #Do we have sensor blackout? Do not ship anything if this is the case. Wait
+
                 while planner.sensorBlackOutCheck(): 
                     rospy.sleep(1)
                 if planner.faulty:

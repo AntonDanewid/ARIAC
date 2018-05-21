@@ -323,12 +323,16 @@ class Planner:
 
     #Adds a logical camera message
     def logicalCameraEvent1(self, msg):
-        now = rospy.get_time()
-        if self.pastLogicalCameraTime1 + 1.0 < now and len(msg.models) > 0:
-            # Log camera
-            #rospy.loginfo("Logic Camera: " + str(len(msg.models)) + " Objects")
-            # Set new past time
-            self.pastLogicalCameraTim1e = rospy.get_time()
+        # for model msg.models:
+        #         pose = PoseStamped()
+        #         pose.header.frame_id = model.typ
+        #         pose.pose.position.x = model.pose.position.x
+        #         pose.pose.position.y = model.pose.position.y
+        #         pose.pose.position.z = model.pose.position.z
+        #         pose.pose.orientation.x = model.pose.orientation.x
+        #         pose.pose.orientation.y = model.pose.orientation.y
+        #         pose.pose.orientation.z = model.pose.orientation.z
+        #         pose.pose.orientation.w = model.pose.orientation.w
         self.logicalCameraData1 = msg
 
     def logicalCameraEvent3(self, msg):
@@ -375,7 +379,9 @@ class Planner:
     #Translates a local pose to world pose from the frame provided
     #Fix problem with nonexisting frame
     def translatePose(self, pose):
-        transformedPose = self.tf_listener.transformPose('world', pose)
+        now = rospy.get_time()
+
+        transformedPose = self.tf_listener.transformPose('world', pose,)
         print("We have transformed the pose to ", transformedPose)
         return transformedPose
 
@@ -429,3 +435,12 @@ class Planner:
         if rospy.get_time() - self.pastLogicalCameraTime4 > 10000: #Some value,
             return True
         return False
+
+    def transformToTray(self):  
+        frame = 'shipping_box_frame'
+        local_pose = geometry_msgs.msg.PoseStamped()
+        local_pose.header.frame_id = frame
+        local_pose.pose.position.x = 0.15
+        local_pose.pose.position.y = 0.15
+        world_pose = self.tf_listener.transformPose(local_pose, 'world')
+        print("worldpose", world_pose)

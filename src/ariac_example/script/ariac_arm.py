@@ -52,6 +52,7 @@ def control_gripper(enabled):
     try:
         gripper_control = rospy.ServiceProxy('/ariac/gripper/control', VacuumGripperControl)
         response = gripper_control(enabled)
+        
     except rospy.ServiceException as exc:
         rospy.logerr("Failed to control the gripper: %s" % exc)
         return False
@@ -75,6 +76,8 @@ class ArmControll:
         self.current_gripper_state = None
         self.last_joint_state_print = time.time()
         self.last_gripper_state_print = time.time()
+        self.gripperStateSubscriber = rospy.Subscriber("/ariac/gripper/state", VacuumGripperState, self.vacuumGripperState)
+
         self.has_been_zeroed = False
         self.arm_joint_names = [
             'iiwa_joint_1',
@@ -110,7 +113,7 @@ class ArmControll:
         # Set goal joint tolerance
         self.group.set_goal_joint_tolerance(0.005)
         # Set goal goal tolerance
-        self.group.set_goal_tolerance(0.005)
+        self.group.set_goal_tolerance(0.05)
         # Set goal goal tolerance
         self.group.set_goal_position_tolerance(0.005)
         # Set goal orientation tolerance
@@ -123,6 +126,9 @@ class ArmControll:
         print("============ INITILIZED ARM LATESTE")
       
         
+    
+    def vacuumGripperState(self, msg):
+        self.gripperStateData = msg
 
  
   
@@ -142,84 +148,98 @@ class ArmControll:
 
     def send_arm_to_state(self, positions):
       
-        test = {}
-        test['iiwa_joint_1'] = positions[0]
-        test['iiwa_joint_2'] = positions[1]
-        test['iiwa_joint_3'] = positions[2]
-        test['iiwa_joint_4'] = positions[3]
-        test['iiwa_joint_5'] = positions[4]
-        test['iiwa_joint_6'] = positions[5]
-        test['iiwa_joint_7'] = positions[6]
-        test['linear_arm_actuator_joint'] = positions[7]
-        #self.joint_trajectory_publisher.publish(msg)
-        #group_variable_values = self.group.get_current_joint_values()
-        #\\group_variable_values = positions
-        self.group.set_joint_value_target(test)
-        plan = self.group.plan()
-        self.group.execute(plan)
-        #self.group.go(wait=True)
+        # test = {}
+        # test['iiwa_joint_1'] = positions[0]
+        # test['iiwa_joint_2'] = positions[1]
+        # test['iiwa_joint_3'] = positions[2]
+        # test['iiwa_joint_4'] = positions[3]
+        # test['iiwa_joint_5'] = positions[4]
+        # test['iiwa_joint_6'] = positions[5]
+        # test['iiwa_joint_7'] = positions[6]
+        # test['linear_arm_actuator_joint'] = positions[7]
+        # #self.joint_trajectory_publisher.publish(msg)
+        # #group_variable_values = self.group.get_current_joint_values()
+        # #\\group_variable_values = positions
+        
+        # self.group.set_joint_value_target(test)
+        # plan = self.group.plan()
+        # self.group.execute(plan)
+        # #self.group.go(wait=True)
+        msg = JointTrajectory()
+        msg.joint_names = self.arm_joint_names
+        point = JointTrajectoryPoint()
+        point.positions = positions
+        point.time_from_start = rospy.Duration(2.0)
+        msg.points = [point]
+        rospy.loginfo("Sending command:\n" + str(msg))
+        self.joint_trajectory_publisher.publish(msg)
+        rospy.sleep(4)
+        
 
 
+    def aboveBin(self, bin):
+        if(bin == 2):
+            self.send_arm_to_state(bin2_hover)
+            #rospy.sleep(2)
+        if(bin == 3):
+            self.send_arm_to_state(bin3_hover)
+            #rospy.sleep(2)
+        if(bin == 4):
+            self.send_arm_to_state(bin4_hover)
+            #rospy.sleep(2)
+        if(bin == 1):
+            self.send_arm_to_state(bin1_hover)
+            #rospy.sleep(2)
+        if(bin == 5):
+            self.send_arm_to_state(bin5_hover)
+            #rospy.sleep(2)
 
     def sendOverBin(self, bin): 
         if(bin == 2):
             self.send_arm_to_state(bin2_init)
-            rospy.sleep(2)
             self.send_arm_to_state(bin2_hover)
-            rospy.sleep(2)
         if(bin == 3):
             self.send_arm_to_state(bin3_init)
-            rospy.sleep(2)
             self.send_arm_to_state(bin3_hover)
-            rospy.sleep(2)
         if(bin == 4):
             self.send_arm_to_state(bin4_init)
-            rospy.sleep(2)
             self.send_arm_to_state(bin4_hover)
-            rospy.sleep(2)
         if(bin == 1):
             self.send_arm_to_state(bin1_init)
-            rospy.sleep(2)
             self.send_arm_to_state(bin1_hover)
-            rospy.sleep(2)
         if(bin == 5):
             self.send_arm_to_state(bin5_init)
-            rospy.sleep(2)
             self.send_arm_to_state(bin5_hover)
-            rospy.sleep(2)
 
-    
+    def getArmPosition(self):
+        currentPose = self.group.get_current_pose().pose
+        return currentPose
+
 
     def sendBackFromBin(self, bin):
         if(bin == 2):
             self.send_arm_to_state(bin2_hover)
-            rospy.sleep(2)
             self.send_arm_to_state(bin2_init)
-            rospy.sleep(2)
         if(bin == 4): 
             self.send_arm_to_state(bin4_hover)
-            rospy.sleep(2)
             self.send_arm_to_state(bin4_init)
-            rospy.sleep(2)
         if(bin == 3):
             self.send_arm_to_state(bin3_hover)
-            rospy.sleep(2)
             self.send_arm_to_state(bin3_init)
-            rospy.sleep(2)
         if(bin == 1):
             self.send_arm_to_state(bin1_hover)
-            rospy.sleep(2)
             self.send_arm_to_state(bin1_init)
-            rospy.sleep(2)
         if(bin == 5):
             self.send_arm_to_state(bin5_hover)
-            rospy.sleep(2)
             self.send_arm_to_state(bin5_init)
-            rospy.sleep(2)
     
-    
-    def grabPart(self, productPose):
-        workspace = [productPose.pose.position.x-0.5, productPose.pose.position.y -0.5, productPose.pose.position.z- 0.5, productPose.pose.position.x + 0.5, productPose.pose.position.y +0.5, productPose.pose.position.z +0.5]
+
+
+    def sendToDefault(self):
+        self.send_arm_to_state(bin2_init)
+
+    def grabPart(self, productPose, bin):
+        workspace = [productPose.pose.position.x-1, productPose.pose.position.y -1, productPose.pose.position.z- 1, productPose.pose.position.x + 1, productPose.pose.position.y +1, productPose.pose.position.z +1]
         self.group.set_workspace(workspace)
         xyz = [0, 0, 0]
         
@@ -239,13 +259,19 @@ class ArmControll:
         #type(pose) = geometry_msgs.msg.Pose
         #norm = quaternion[0]*quaternion[0] + quaternion[1] * quaternion[1] + quaternion[2] * quaternion[2] + quaternion[3]* quaternion[3]
         rospy.sleep(1)
-        target = self.group.get_current_pose().pose
-        print(target.orientation)
+        q = tf.transformations.quaternion_from_euler(math.pi, -0.19 , math.pi)
+        #target = self.group.get_current_pose().pose
+        #print(target)
         target.position.x = productPose.pose.position.x
         target.position.y = productPose.pose.position.y
-
         target.position.z = productPose.pose.position.z
-        target.position.z = target.position.z + 0.4
+        target.position.z = target.position.z + 0.01
+        target.orientation = productPose.pose.orientation
+        target.orientation.x = q[0]
+        target.orientation.y = q[1]
+        target.orientation.z = q[2]
+        target.orientation.w = q[3]
+
         # #norm = math.sqrt(norm)
         # target.orientation.x = quaternion[0] 
         # target.orientation.y = quaternion[1] 
@@ -254,20 +280,25 @@ class ArmControll:
         #self.group.set_pose_target(target)
         
         self.group.set_pose_target(target)
-        
-        plan =self.group.plan()
+        plan = self.group.plan()
         self.group.execute(plan)
-     
-        print("=================CURRENT STATE IS", self.robot.get_current_state)
-        #self.group.go(wait=True)
-        rospy.sleep(2)
         control_gripper(True)
+        rospy.sleep(2)
+        self.group.clear_pose_targets()
+        #self.group.go(wait=True)
+        target.position.z = target.position.z +0.1
+        self.group.set_pose_target(target)
+        plan = self.group.plan()
+        self.group.execute(plan)
+        
+
 
         
 
 
     def sendOverTray(self):
         self.send_arm_to_state(tray_hover)
+        control_gripper(False)
 
     #depricated
     def addCollisions(self, scene):
@@ -342,7 +373,7 @@ bin2_init = [1.1834538606529188, 1.606397393784972, 1.3479349307800135, -2.02109
 bin4_init = [0.8468802479742044, 1.557319000511594, 1.5085020367811497, -1.9957541406818562, -1.6633651277989463, 1.1952518862140886, -1.9923196606145552, 0.476965360991872, 0.0]
 bin4_hover = [2.2568991548044846, 1.5778967907433996, 1.5845747874402276, -1.1774160457018974, -1.6101804156501398, 1.3317601741295064, -1.4415122391816748, 0.7287825828358929, 0.0]
 tray_hover = [-0.8611979025883318, 1.6363785472487002, 2.7366883925411187, -0.3535197757359123, 0.4014806936656976, -1.826823355177515, 2.4180902454551028, -1.054525174051686, 0.0]
-bin1_init = [1.3793708755075738, 1.558435567281891, 1.4735350443589619, -1.9784768220002888, -1.6477688200110379, 1.1602551531362852, -1.2985084556736135, -1.7899982192596957, 0.0]
-bin1_hover = [2.2729144861551767, 1.6012041023350294, 1.478818104027459, -1.2381851187151671, -1.6299524446384304, 1.2512296580761468, -1.1462208558740326, -1.628012427840683, 0.0]
+bin1_init = [1.5059364911187982, 1.5478383821864652, 1.4550001215770054, -2.0193890213433576, -1.707862681218283, 1.1587538358854728, -1.0217710625897434, -1.792131992370477, 0.0]
+bin1_hover = [2.204578831747247, 1.2784184529772462, 1.0168776282037637, -1.5354965316174551, -1.3856246645965555, 0.7548218117776422, 0.9225695037662627, -1.6682694023881863, 0.0]
 bin5_init = [1.0154974533954215, 1.525095174604088, 1.56375866634367, -1.6631755270466329, -1.3580553056424716, 1.2858208813098004, -2.0166371205637095, 1.216047697718676, 0.0]
 bin5_hover = [2.1986133523514013, 1.5475175792295905, 1.4290719906119236, -1.0765814271464365, -1.478640893771149, 1.2640143182807844, -1.404531847709837, 1.4787155474290317, 0.0]

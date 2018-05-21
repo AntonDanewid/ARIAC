@@ -66,7 +66,8 @@ def main():
     while(planner.conveyor_isactive):
         time.sleep(1)
     print("========starting for real-real.")
-    
+    placedProducts = []
+
     while not rospy.is_shutdown():
         if len(planner.recieved_orders) > 0:
             currentOrder = planner.recieved_orders[0]
@@ -78,6 +79,9 @@ def main():
             if not possibleToBuild:
                 print("===============NOT ENOUGH PARTS, ORDER DUMPED")
                 planner.recieved_orders.pop(0)
+                for part in placedProducts:
+                    #remove from bin
+                    pass
             else:
                 print("===============WE CAN BUILD THIS ORDER")
             placedProducts = []
@@ -122,10 +126,12 @@ def main():
                 targetPosition.header.frame_id = 'shipping_box_frame' #Double check
                     #Move arm
                 #worldTarget = planner.translatePose(targetPosition)
-                #Check if part is faulty
-                armcontroll.sendOverTray()
+                #Did we manage to place the part in the shipping box? 
+                suc    = armcontroll.sendOverTray()
+                if not suc:
+                    break
+                    
 
-                
                 #planner.transformToTray()
                 #If faulty, remove from box, somewhere where it dosnt collide
                 #drop part
@@ -133,7 +139,7 @@ def main():
                 placedPose = PoseStamped()
                 placedPose.header.frame_id = currentProduct.name
                 placedPose.pose = armcontroll.getArmPosition()
-
+                
                 placedProducts.append(placedPose)
                 #Do we have sensor blackout? Do not ship anything if this is the case. Wait
 
@@ -151,8 +157,7 @@ def main():
                 currentOrder.products.pop(0)
                 #End While
             #If completed, start conveyer belt, call drone and ship.
-            completed = True
-            if completed:
+            if len(currentOrder.products) == 0:
                 #planner.product_shute()
                 print("============COMPLETED ORDER")
                 planner.recieved_orders.pop(0)

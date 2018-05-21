@@ -173,7 +173,7 @@ class ArmControll:
         msg.points = [point]
         rospy.loginfo("Sending command:\n" + str(msg))
         self.joint_trajectory_publisher.publish(msg)
-        rospy.sleep(4)
+        rospy.sleep(3)
         
 
 
@@ -298,7 +298,12 @@ class ArmControll:
 
     def sendOverTray(self):
         self.send_arm_to_state(tray_hover)
+        if not self.gripperStateData.attached: 
+            return False
+            control_gripper(False)
         control_gripper(False)
+        return True
+
 
     #depricated
     def addCollisions(self, scene):
